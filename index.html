@@ -9,6 +9,7 @@
       gtag('js', new Date());
       gtag('config', 'G-LWK9E7E7HK');
     </script>
+    <!-- AdSense 脚本 - 已优化加载方式 -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347946979767466"
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -29,40 +30,179 @@
             color: #1d1d1f;
         }
         
-        .game-container {
-            aspect-ratio: 16/9;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
+        .game-card {
+            position: relative;
+            transition: transform 0.2s ease;
         }
-        
+
         .game-frame {
             width: 100%;
-            height: 100%;
+            aspect-ratio: 16/9;
             border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            z-index: 1;
+        }
+
+        .game-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            z-index: 2;
+        }
+
+        /* 保持父容器一致性 */
+        .game-container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        .category-filter {
+            display: inline-flex;
+            padding: 0.25rem;
+            background-color: #f3f4f6;
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .category-btn.active {
+            background-color: #3b82f6;
+            color: white;
         }
     </style>
+
+<!-- 响应式高度自适应脚本 -->
+<script>
+// 父页面监听消息（需游戏页面配合）
+window.addEventListener('message', function(e) {
+    // 验证消息来源
+    if (!e.origin.match(/^(https:\/\/|\/\/)([^\/]+\.)?(zenkergame\.online|example\.com)/)) return;
+    
+    // 处理高度调整请求
+    if (e.data && e.data.height) {
+        const iframe = document.querySelector(`iframe[src="${e.origin}${e.data.path}"]`);
+        if (iframe) {
+            iframe.style.height = `${Math.min(Math.max(e.data.height, 400), 1080)}px`;
+            iframe.classList.add('transition-all', 'duration-300');
+        }
+    }
+});
+
+// 自动触发同源iframe高度检测
+function autoResizeIframe() {
+    const iframes = document.querySelectorAll('iframe.game-frame');
+    iframes.forEach(iframe => {
+        try {
+            // 同源检测
+            const contentHeight = iframe.contentWindow.document.body.scrollHeight;
+            iframe.style.height = `${Math.max(contentHeight, 400)}px`;
+        } catch (e) {
+            // 跨域情况：发送高度请求
+            iframe.contentWindow.postMessage({ requestHeight: true }, '*');
+        }
+    });
+}
+
+// 页面加载后执行
+window.addEventListener('load', () => {
+    autoResizeIframe();
+    initGameFilters();
+});
+
+// 筛选功能实现
+function initGameFilters() {
+    document.querySelectorAll('.category-filter').forEach(filter => {
+        const sectionId = filter.closest('section').id;
+        const gameContainer = document.getElementById(`${sectionId}Games`);
+        
+        filter.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 更新按钮状态
+                filter.querySelectorAll('.category-btn').forEach(b => 
+                    b.classList.remove('active')
+                );
+                btn.classList.add('active');
+
+                // 筛选游戏
+                const filterValue = btn.dataset.filter;
+                const games = gameContainer.querySelectorAll('.game-card');
+                
+                games.forEach(game => {
+                    if (filterValue === 'all' || game.dataset.category === filterValue) {
+                        game.style.display = 'block';
+                        // 触发重新计算高度
+                        setTimeout(() => {
+                            const iframe = game.querySelector('iframe');
+                            if (iframe) autoResizeIframe();
+                        }, 300);
+                    } else {
+                        game.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+}
+</script>
 </head>
 <body class="min-h-screen">
     <header class="bg-white shadow-sm">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 <div class="text-2xl font-bold text-gray-900">Zenkergame Online</div>
-                <div class="space-x-4">
-                    <a href="#game" class="text-gray-600 hover:text-gray-900">Play Now</a>
-                    <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
-                    <a href="#features" class="text-gray-600 hover:text-gray-900">Features</a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-sm font-medium text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#categories" class="text-sm font-medium text-gray-700 hover:text-blue-600">Categories</a>
+                    <a href="#casual" class="text-sm font-medium text-gray-700 hover:text-blue-600">🎯 Casual Games</a>
+                    <a href="#retro" class="text-sm font-medium text-gray-700 hover:text-blue-600">🕹️ Retro Classics</a>
+                    <a href="#arcade" class="text-sm font-medium text-gray-700 hover:text-blue-600">🏆 Arcade Games</a>
+                    <a href="#about" class="text-sm font-medium text-gray-700 hover:text-blue-600">About</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="text-gray-700 hover:text-blue-600 focus:outline-none" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <section class="text-center mb-12">
+        <section id="home" class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Zenkergame Online</h1>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Embark on an epic survival adventure where you battle against waves of relentless monsters in this thrilling action-packed game.</p>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">Embark on an epic survival adventure where you battle against waves of relentless monsters in this thrilling action-packed game.</p>
+    
+    <!-- 响应式横幅广告 - 970x90/728x90/320x50 自适应 -->
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center; margin: 0 auto 2rem auto;"
+         data-ad-layout="in-article"
+         data-ad-format="auto"
+         data-ad-client="ca-pub-8347946979767466"
+         data-ad-slot="1234567890"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
         </section>
 
         <section id="game" class="mb-16">
@@ -74,6 +214,201 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
+            </div>
+        </section>
+
+        <!-- Category Sections -->
+        <!-- Casual Games Section -->
+        <section id="casual" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">🎯 Casual & Puzzle</h2>
+            
+            <div class="game-container" id="casualGames">
+                <!-- 为每个游戏卡片添加数据属性 -->
+                <div class="game-card mb-8" data-category="puzzle">
+                    <h3 class="text-xl font-bold mb-2">2048 Game</h3>
+                    <p class="text-gray-600 mb-4">Classic number merging puzzle game</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/2048"
+                            title="2048 Game"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please try a different browser or visit the <a href="https://www.crazygames.com/embed/2048">game page directly</a>.</p>
+                        </iframe>
+                        <div class="game-loader">
+                            <div class="spinner"></div>
+                            <p>Loading game...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card mb-8" data-category="arcade">
+                    <h3 class="text-xl font-bold mb-2">Bubble Tanks 2</h3>
+                    <p class="text-gray-600 mb-4">An exciting bubble - shooter game</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/bubble-tanks-2" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"
+                            title="Bubble Tanks 2"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please try a different browser or visit the <a href="https://www.crazygames.com/embed/bubble-tanks-2">game page directly</a>.</p>
+                        </iframe>
+                        <div class="game-loader">
+                            <div class="spinner"></div>
+                            <p>Loading game...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card mb-8" data-category="puzzle">
+                    <h3 class="text-xl font-bold mb-2">Slope Car</h3>
+                    <p class="text-gray-600 mb-4">Driving your car on a randomized slope and go as far as possible</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/slope-car" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"
+                            title="Slope Car"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please try a different browser or visit the <a href="https://www.crazygames.com/embed/slope-car">game page directly</a>.</p>
+                        </iframe>
+                        <div class="game-loader">
+                            <div class="spinner"></div>
+                            <p>Loading game...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card mb-8" data-category="strategy">
+                    <h3 class="text-xl font-bold mb-2">BlockBuster Puzzle</h3>
+                    <p class="text-gray-600 mb-4">Prove your skills as a true puzzle master with every level you advance</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/blockbuster-puzzle" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"
+                            title="Run 3"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please try a different browser or visit the <a href="https://www.crazygames.com/embed/blockbuster-puzzle">game page directly</a>.</p>
+                        </iframe>
+                        <div class="game-loader">
+                            <div class="spinner"></div>
+                            <p>Loading game...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="retro" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">🕹️ Classic Retro</h2>
+            <div class="game-container" id="retroGames">
+                <div class="game-card mb-8" data-category="arcade">
+                    <h3 class="text-xl font-bold mb-2">Endless Waves Survival</h3>
+                    <p class="text-gray-600 mb-4">How long will you survive the next run?</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/endless-waves-survival" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"
+                            title="Endless Waves Survival"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please try a different browser or visit the <a href="https://www.crazygames.com/embed/endless-waves-survival">game page directly</a>.</p>
+                        </iframe>
+                        <div class="game-loader">
+                            <div class="spinner"></div>
+                            <p>Loading game...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card mb-8" data-category="strategy">
+                    <h3 class="text-xl font-bold mb-2">Street Fighter 2</h3>
+                    <p class="text-gray-600 mb-4">Classic fighting game</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/street-fighter-2" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"
+                            title="Street Fighter 2"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please try a different browser or visit the <a href="https://www.crazygames.com/embed/street-fighter-2">game page directly</a>.</p>
+                        </iframe>
+                        <div class="game-loader">
+                            <div class="spinner"></div>
+                            <p>Loading game...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card mb-8" data-category="puzzle">
+                    <h3 class="text-xl font-bold mb-2">Bobb's World</h3>
+                    <p class="text-gray-600 mb-4">Classic platformer game</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/bobb-s-world" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"
+                            title="Bobb's World"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please try a different browser or visit the <a href="https://www.crazygames.com/embed/bobb-s-world">game page directly</a>.</p>
+                        </iframe>
+                        <div class="game-loader">
+                            <div class="spinner"></div>
+                            <p>Loading game...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="arcade" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">🏆 Arcade Challenge</h2>
+            <div class="game-container" id="arcadeGames">
+                <div class="game-card mb-8" data-category="arcade">
+                    <h3 class="text-xl font-bold mb-2">Craft Drill</h3>
+                    <p class="text-gray-600 mb-4">Craft Drill is a casual arcade game</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/idle-craft-drill" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"
+                            title="Arcade Game"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                <div class="game-card mb-8" data-category="strategy">
+                    <h3 class="text-xl font-bold mb-2">Draw Crash Race</h3>
+                    <p class="text-gray-600 mb-4">Show off your drawing skills</p>
+                    <div class="relative">
+                        <iframe 
+                            loading="lazy"
+                            class="game-frame"
+                            src="https://www.crazygames.com/embed/draw-crash-race"
+                            title="Arcade Game"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                            <p>Your browser does not support iframes. Please try a different browser or visit the <a href="https://www.crazygames.com/embed/draw-crash-race">game page directly</a>.</p>
+                        </iframe>
+                        <div class="game-loader">
+                            <div class="spinner"></div>
+                            <p>Loading game...</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -109,17 +444,26 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-6">About Zenkergame Online</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
-                    <p class="text-gray-600 mb-4">Zenkergame Online is an intense online game that puts your skills to the ultimate test. As a lone survivor in a world overrun by monsters, you must use your wits, weapons, and strategic thinking to stay alive.</p>
-                    <p class="text-gray-600">With each wave of monsters becoming increasingly challenging, you'll need to upgrade your abilities, collect resources, and master the art of survival to become the ultimate Zenkergame Online.</p>
+                    <p class="text-gray-600 mb-4">Zenkergame Online is your ultimate destination for instant-play games across multiple genres. Whether you're looking for casual puzzles, retro classics, or arcade challenges, our platform offers a diverse collection of browser-based games that require no downloads or installations.</p>
+                    <p class="text-gray-600 mb-4">Explore hundreds of handpicked games that work seamlessly on both desktop and mobile devices. From brain-teasing puzzles to adrenaline-pumping action games, there's something for every type of gamer - all completely free to play.</p>
+                    <p class="text-gray-600 mb-4">Our carefully curated game library features:</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 mt-2">
+                        <li>🎯 Casual puzzle games for quick mental challenges</li>
+                        <li>🕹️ Classic retro games with nostalgic gameplay</li>
+                        <li>🏆 Competitive arcade titles for skill mastery</li>
+                        <li>🧩 Strategic games requiring tactical thinking</li>
+                    </ul>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Game Features</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Platform Features</h3>
                     <ul class="space-y-2 text-gray-600">
-                        <li>• Dynamic monster waves with increasing difficulty</li>
-                        <li>• Character progression and ability upgrades</li>
-                        <li>• Strategic gameplay mechanics</li>
-                        <li>• Stunning visual effects</li>
-                        <li>• Smooth controls and responsive gameplay</li>
+                        <li>• Instant play - No downloads required</li>
+                        <li>• Cross-device compatibility (PC/Mobile/Tablet)</li>
+                        <li>• Regularly updated game collection</li>
+                        <li>• Community-rated favorites</li>
+                        <li>• Personalized game recommendations</li>
+                        <li>• Responsive design for all screen sizes</li>
+                        <li>• Integrated game progress tracking</li>
                     </ul>
                 </div>
             </div>
@@ -129,20 +473,50 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Game Features</h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Survival Mechanics</h3>
-                    <p class="text-gray-600">Master the art of survival with unique mechanics and strategic gameplay elements.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">🎮 Instant Play</h3>
+                    <p class="text-gray-600">Play thousands of browser-based games instantly without downloads or installations. All games run directly in your web browser with WebGL and HTML5 technology.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Character Progression</h3>
-                    <p class="text-gray-600">Level up your character and unlock powerful abilities to face stronger monsters.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">🕹️ Retro Collection</h3>
+                    <p class="text-gray-600">Explore our curated collection of retro classics reimagined for modern browsers. From pixel art platformers to nostalgic arcade titles, experience gaming history with updated controls and visuals.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Dynamic Combat</h3>
-                    <p class="text-gray-600">Engage in intense battles with various monster types and unique attack patterns.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">🏆 Skill Challenges</h3>
+                    <p class="text-gray-600">Test your abilities with competitive arcade games, puzzle challenges, and strategy titles. Track your progress and compete with players worldwide through integrated leaderboards.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">🔍 Smart Curation</h3>
+                    <p class="text-gray-600">Discover games tailored to your preferences through our intelligent recommendation system. Filter by genre, difficulty level, or playtime duration to find your perfect match.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">📱 Mobile Ready</h3>
+                    <p class="text-gray-600">Seamless touch controls and responsive design ensure optimal gameplay on smartphones, tablets, and desktop computers. Continue your game progress across devices.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">🔄 Daily Updates</h3>
+                    <p class="text-gray-600">Enjoy new game additions daily across all categories. Our editorial team handpicks the best new releases and trending titles from global developers.</p>
                 </div>
             </div>
         </section>
     </main>
+
+<!-- 在游戏分类之间插入矩形广告 -->
+<section id="features" class="mb-16">
+    <!-- 原有内容 -->
+</section>
+
+<!-- 响应式矩形广告 -->
+<div class="max-w-4xl mx-auto my-12">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-pub-8347946979767466"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-ad-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
 
     <footer class="bg-white border-t">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -150,6 +524,17 @@
                 <p>&copy; 2025 zenkergame.online. All rights reserved.</p>
             </div>
         </div>
+    <!-- 在页脚上方插入链接单元 -->
+    <div class="max-w-4xl mx-auto my-8 px-4">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-format="link"
+             data-ad-client="ca-pub-8347946979767466"
+             data-ad-slot="1234567890"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
     </footer>
 </body>
 </html> 
