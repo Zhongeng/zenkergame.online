@@ -1,0 +1,40 @@
+<svg width="400" height="225" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="225" fill="url(#bg)"/>
+  
+  <!-- Game blocks -->
+  <rect x="50" y="50" width="25" height="25" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <rect x="75" y="50" width="25" height="25" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <rect x="100" y="50" width="25" height="25" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <rect x="125" y="50" width="25" height="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <rect x="150" y="50" width="25" height="25" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  
+  <rect x="50" y="75" width="25" height="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <rect x="75" y="75" width="25" height="25" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <rect x="100" y="75" width="25" height="25" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="125" y="75" width="25" height="25" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <rect x="150" y="75" width="25" height="25" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  
+  <rect x="50" y="100" width="25" height="25" fill="#2ecc71" stroke="#27ae60" stroke-width="2"/>
+  <rect x="75" y="100" width="25" height="25" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="100" y="100" width="25" height="25" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <rect x="125" y="100" width="25" height="25" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <rect x="150" y="100" width="25" height="25" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  
+  <!-- Falling piece -->
+  <rect x="250" y="80" width="25" height="25" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <rect x="275" y="80" width="25" height="25" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <rect x="250" y="105" width="25" height="25" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  <rect x="275" y="105" width="25" height="25" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ecf0f1" text-anchor="middle">BLOCKBUSTER</text>
+  <text x="200" y="190" font-family="Arial, sans-serif" font-size="16" fill="#bdc3c7" text-anchor="middle">Puzzle Game</text>
+</svg>

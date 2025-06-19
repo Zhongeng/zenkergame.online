@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWK9E7E7HK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LWK9E7E7HK');
+    </script>
+    <!-- AdSense 脚本 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347946979767466"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play games on Zenkergame Online - An exciting game platform with various games across multiple categories.">
+    <meta name="keywords" content="online games, arcade games, casual games, retro games">
+    <meta name="author" content="zenkergame.online">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zenkergame.online">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title id="page-title">Game - Zenkergame Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+        }
+        
+        .game-frame {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            z-index: 1;
+        }
+
+        .game-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            z-index: 2;
+        }
+
+        .game-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #3b82f6;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 0.5rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-900">Zenkergame Online</div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">Home</a>
+                    <a href="index.html#casual" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">🎯 Casual</a>
+                    <a href="index.html#retro" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">🕹️ Retro</a>
+                    <a href="index.html#arcade" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">🏆 Arcade</a>
+                    <a href="index.html#about" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">About</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu, show/hide based on menu state -->
+            <div id="mobile-menu" class="md:hidden hidden pt-2 pb-2">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="text-base font-medium text-gray-700 hover:text-blue-600 block">Home</a>
+                    <a href="index.html#casual" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🎯 Casual</a>
+                    <a href="index.html#retro" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🕹️ Retro</a>
+                    <a href="index.html#arcade" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🏆 Arcade</a>
+                    <a href="index.html#about" class="text-base font-medium text-gray-700 hover:text-blue-600 block">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <section id="game-section" class="mb-8">
+            <h1 id="game-title" class="text-3xl font-bold text-gray-900 mb-4 text-center">Loading Game...</h1>
+            <div class="game-container">
+                <div id="game-frame-container" class="relative">
+                    <iframe 
+                        id="game-frame"
+                        class="game-frame"
+                        src=""
+                        title="Game"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                        <p>Your browser does not support iframes. Please try a different browser.</p>
+                    </iframe>
+                    <div class="game-loader" id="game-loader">
+                        <div class="spinner"></div>
+                        <p>Loading game...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏说明部分 -->
+        <section id="game-description" class="mb-8">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">How to Play</h2>
+                <div id="game-instructions" class="text-gray-600">
+                    Loading game instructions...
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关游戏推荐 -->
+        <section id="related-games" class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">You May Also Like</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="related-games-container">
+                <!-- 相关游戏将通过JavaScript动态加载 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 响应式矩形广告 -->
+    <div class="max-w-4xl mx-auto my-6">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-client="ca-pub-8347946979767466"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-ad-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <footer class="bg-white border-t">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="text-center text-gray-600">
+                <p>&copy; 2025 zenkergame.online. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 解析URL参数
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split('&');
+            
+            for (let i = 0; i < pairs.length; i++) {
+                const pair = pairs[i].split('=');
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+            }
+            
+            return params;
+        }
+        
+        // 加载游戏
+        function loadGame() {
+            const params = getUrlParams();
+            const gameId = params.id || '';
+            const gameTitle = params.title || 'Game';
+            const gameSrc = params.src || '';
+            
+            // 设置页面标题
+            document.getElementById('page-title').textContent = `${gameTitle} - Zenkergame Online`;
+            document.getElementById('game-title').textContent = gameTitle;
+            
+            // 设置iframe源
+            const gameFrame = document.getElementById('game-frame');
+            gameFrame.src = gameSrc;
+            gameFrame.title = gameTitle;
+            
+            // 游戏加载完成后隐藏加载器
+            gameFrame.onload = function() {
+                document.getElementById('game-loader').style.display = 'none';
+            };
+            
+            // 设置游戏说明
+            setGameInstructions(gameId);
+            
+            // 加载相关游戏
+            loadRelatedGames(gameId);
+        }
+        
+        // 设置游戏说明
+        function setGameInstructions(gameId) {
+            const gameInstructions = {
+                '2048': 'Use arrow keys to move the tiles. When two tiles with the same number touch, they merge into one. Try to reach the 2048 tile!',
+                'bubble-tanks-2': 'Control your bubble tank with WASD or arrow keys. Shoot with the mouse. Collect bubbles to grow and upgrade your tank.',
+                'slope-car': 'Use arrow keys or WASD to control your car. Try to stay on the slope as long as possible without falling off.',
+                'blockbuster-puzzle': 'Click and drag blocks to create complete lines. Clear lines to score points and advance to the next level.',
+                'endless-waves-survival': 'Move with WASD or arrow keys. Shoot with the mouse. Survive as many waves of enemies as possible.',
+                'street-fighter-2': 'Use arrow keys to move, A/S/D for punches, Z/X/C for kicks. Combine movements for special moves.',
+                'bobbs-world': 'Use arrow keys to move and jump. Collect coins and power-ups while avoiding enemies.',
+                'idle-craft-drill': 'Click to drill and collect resources. Upgrade your equipment to drill faster and deeper.',
+                'draw-crash-race': 'Draw a line to create a path for your vehicle. Avoid obstacles and reach the finish line.',
+                '8-ball-billiards-classic': 'Aim with the mouse and click to shoot. Pot all your assigned balls (stripes or solids) before the 8-ball.',
+                'flag-arena': 'Move with WASD or arrow keys. Capture the flag and hold it as long as possible while avoiding or eliminating opponents.',
+                'zenker-survivors': 'Move with WASD or arrow keys. Survive waves of monsters, collect experience to level up and choose new abilities.'
+            };
+            
+            document.getElementById('game-instructions').textContent = gameInstructions[gameId] || 'Use mouse and keyboard to play. Refer to in-game instructions for specific controls.';
+        }
+        
+        // 加载相关游戏
+        function loadRelatedGames(currentGameId) {
+            // 游戏数据
+            const allGames = [
+                {id: '2048', title: '2048 Game', category: 'puzzle', image: 'images/2048_game.svg', src: 'https://www.crazygames.com/embed/2048'},
+                {id: 'bubble-tanks-2', title: 'Bubble Tanks 2', category: 'arcade', image: 'images/bubble-tanks-2.svg', src: 'https://www.crazygames.com/embed/bubble-tanks-2'},
+                {id: 'slope-car', title: 'Slope Car', category: 'puzzle', image: 'images/slope-car.svg', src: 'https://www.crazygames.com/embed/slope-car'},
+                {id: 'blockbuster-puzzle', title: 'BlockBuster Puzzle', category: 'strategy', image: 'images/blockbuster-puzzle.svg', src: 'https://www.crazygames.com/embed/blockbuster-puzzle'},
+                {id: 'endless-waves-survival', title: 'Endless Waves Survival', category: 'arcade', image: 'images/endless-waves-survival.svg', src: 'https://www.crazygames.com/embed/endless-waves-survival'},
+                {id: 'street-fighter-2', title: 'Street Fighter 2', category: 'strategy', image: 'images/street-fighter-2.svg', src: 'https://www.crazygames.com/embed/street-fighter-2'},
+                {id: 'bobbs-world', title: 'Bobb\'s World', category: 'puzzle', image: 'images/bobbs-world.svg', src: 'https://www.crazygames.com/embed/bobb-s-world'},
+                {id: 'idle-craft-drill', title: 'Craft Drill', category: 'arcade', image: 'images/idle-craft-drill.svg', src: 'https://www.crazygames.com/embed/idle-craft-drill'},
+                {id: 'draw-crash-race', title: 'Draw Crash Race', category: 'strategy', image: 'images/draw-crash-race.svg', src: 'https://www.crazygames.com/embed/draw-crash-race'},
+                {id: '8-ball-billiards-classic', title: '8 Ball Billiards Classic', category: 'sports', image: 'images/8-ball-billiards-classic.svg', src: 'https://www.crazygames.com/embed/8-ball-billiards-classic'},
+                {id: 'flag-arena', title: 'Flag Arena', category: 'action', image: 'images/flag-arena.svg', src: 'https://www.crazygames.com/embed/flag-arena---capture-dominate'},
+                {id: 'zenker-survivors', title: 'Zenker Survivors', category: 'action', image: 'images/zenker-survivors.svg', src: 'https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html'}
+            ];
+            
+            // 过滤掉当前游戏
+            const relatedGames = allGames.filter(game => game.id !== currentGameId);
+            
+            // 随机选择4个游戏
+            const shuffled = relatedGames.sort(() => 0.5 - Math.random());
+            const selected = shuffled.slice(0, 4);
+            
+            // 清空容器
+            const container = document.getElementById('related-games-container');
+            container.innerHTML = '';
+            
+            // 添加相关游戏
+            selected.forEach(game => {
+                const gameCard = document.createElement('div');
+                gameCard.className = 'game-card bg-white rounded-lg overflow-hidden shadow-md';
+                gameCard.innerHTML = `
+                    <a href="game.html?id=${game.id}&title=${encodeURIComponent(game.title)}&src=${encodeURIComponent(game.src)}">
+                        <img src="${game.image}" alt="${game.title}" class="w-full h-32 object-cover">
+                        <div class="p-3">
+                            <h3 class="text-lg font-bold">${game.title}</h3>
+                        </div>
+                    </a>
+                `;
+                container.appendChild(gameCard);
+            });
+        }
+        
+        // 移动菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', loadGame);
+    </script>
+</body>
+</html>

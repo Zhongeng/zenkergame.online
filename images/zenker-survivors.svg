@@ -1,0 +1,54 @@
+<svg width="400" height="225" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="225" fill="url(#bg)"/>
+  
+  <!-- Player character -->
+  <circle cx="200" cy="112" r="10" fill="#00aaff"/>
+  <rect x="195" y="122" width="10" height="15" fill="#00aaff"/>
+  <rect x="192" y="137" width="5" height="10" fill="#00aaff"/>
+  <rect x="203" y="137" width="5" height="10" fill="#00aaff"/>
+  <rect x="188" y="125" width="5" height="10" fill="#00aaff"/>
+  <rect x="207" y="125" width="5" height="10" fill="#00aaff"/>
+  
+  <!-- Monsters -->
+  <circle cx="120" cy="80" r="8" fill="#ff0000"/>
+  <polygon points="120,72 115,85 125,85" fill="#ff0000"/>
+  
+  <circle cx="280" cy="140" r="8" fill="#ff0000"/>
+  <polygon points="280,132 275,145 285,145" fill="#ff0000"/>
+  
+  <circle cx="80" cy="160" r="8" fill="#ff0000"/>
+  <polygon points="80,152 75,165 85,165" fill="#ff0000"/>
+  
+  <circle cx="320" cy="70" r="8" fill="#ff0000"/>
+  <polygon points="320,62 315,75 325,75" fill="#ff0000"/>
+  
+  <!-- Experience orbs -->
+  <circle cx="150" cy="100" r="3" fill="#00ff00"/>
+  <circle cx="250" cy="120" r="3" fill="#00ff00"/>
+  <circle cx="180" cy="160" r="3" fill="#00ff00"/>
+  
+  <!-- Weapon effects -->
+  <circle cx="200" cy="112" r="25" fill="none" stroke="#ffff00" stroke-width="2" opacity="0.5"/>
+  <line x1="200" y1="87" x2="200" y2="137" stroke="#ffff00" stroke-width="3" opacity="0.7"/>
+  <line x1="175" y1="112" x2="225" y2="112" stroke="#ffff00" stroke-width="3" opacity="0.7"/>
+  
+  <!-- UI Elements -->
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Level: 15</text>
+  <text x="20" y="40" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Time: 8:42</text>
+  
+  <!-- Health bar -->
+  <rect x="20" y="50" width="80" height="6" fill="#ff0000"/>
+  <rect x="20" y="50" width="65" height="6" fill="#00ff00"/>
+  
+  <!-- Title -->
+  <text x="200" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">ZENKER SURVIVORS</text>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="14" fill="#aaaaaa" text-anchor="middle">Survive the Monster Waves</text>
+</svg>

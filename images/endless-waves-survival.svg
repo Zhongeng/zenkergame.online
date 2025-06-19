@@ -1,0 +1,46 @@
+<svg width="400" height="225" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="225" fill="url(#bg)"/>
+  
+  <!-- Player character -->
+  <circle cx="200" cy="150" r="8" fill="#00ff00"/>
+  <rect x="196" y="158" width="8" height="12" fill="#00ff00"/>
+  <rect x="194" y="170" width="4" height="8" fill="#00ff00"/>
+  <rect x="202" y="170" width="4" height="8" fill="#00ff00"/>
+  <rect x="192" y="160" width="4" height="8" fill="#00ff00"/>
+  <rect x="204" y="160" width="4" height="8" fill="#00ff00"/>
+  
+  <!-- Enemies -->
+  <circle cx="100" cy="100" r="6" fill="#ff0000"/>
+  <circle cx="300" cy="120" r="6" fill="#ff0000"/>
+  <circle cx="150" cy="80" r="6" fill="#ff0000"/>
+  <circle cx="250" cy="90" r="6" fill="#ff0000"/>
+  <circle cx="80" cy="180" r="6" fill="#ff0000"/>
+  <circle cx="320" cy="170" r="6" fill="#ff0000"/>
+  
+  <!-- Projectiles -->
+  <circle cx="180" cy="130" r="2" fill="#ffff00"/>
+  <circle cx="220" cy="140" r="2" fill="#ffff00"/>
+  <circle cx="190" cy="120" r="2" fill="#ffff00"/>
+  
+  <!-- Explosion effects -->
+  <circle cx="130" cy="110" r="8" fill="#ff6600" opacity="0.7"/>
+  <circle cx="130" cy="110" r="12" fill="#ffff00" opacity="0.3"/>
+  
+  <!-- Wave indicator -->
+  <text x="50" y="30" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">WAVE 5</text>
+  
+  <!-- Health bar -->
+  <rect x="50" y="40" width="100" height="8" fill="#ff0000"/>
+  <rect x="50" y="40" width="75" height="8" fill="#00ff00"/>
+  
+  <!-- Title -->
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">ENDLESS WAVES SURVIVAL</text>
+</svg>
