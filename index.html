@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWK9E7E7HK"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHL12BQ5FS"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LWK9E7E7HK');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JHL12BQ5FS');
     </script>
     <!-- AdSense 脚本 - 已优化加载方式 -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347946979767466"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zenkergame Online - An exciting game platform with various games across multiple categories. Experience intense action and strategic gameplay in this thrilling adventure.">
-    <meta name="keywords" content="Zenker Survivors, survival game, online games, arcade games, casual games, retro games">
+    <meta name="description"
+        content="Zenkergame Online - An exciting game platform with various games across multiple categories. Experience intense action and strategic gameplay in this thrilling adventure.">
+    <meta name="keywords"
+        content="Zenker Survivors, survival game, online games, arcade games, casual games, retro games">
     <meta name="author" content="zenkergame.online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://zenkergame.online">
@@ -23,30 +26,30 @@
     <title>Zenkergame Online - Game Collection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
         body {
-            font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
             background-attachment: fixed;
             color: #e2e8f0;
             min-height: 100vh;
         }
-        
+
         .game-card .p-4 {
             color: white;
         }
-        
+
         .game-card h3 {
             color: #ffffff !important;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
-        
+
         .game-card p {
             color: #e5e7eb !important;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
-        
+
         body::before {
             content: '';
             position: fixed;
@@ -54,14 +57,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: -1;
         }
-        
+
         .game-card {
             transition: all 0.3s ease;
             height: 100%;
@@ -71,7 +74,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .game-card::before {
             content: '';
             position: absolute;
@@ -82,11 +85,11 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transition: left 0.5s ease;
         }
-        
+
         .game-card:hover::before {
             left: 100%;
         }
-        
+
         .game-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.3);
@@ -99,10 +102,10 @@
             width: 100%;
             border-radius: 0.5rem 0.5rem 0 0;
             background-color: #e5e7eb;
-            background-image: linear-gradient(45deg, #f3f4f6 25%, transparent 25%), 
-                              linear-gradient(-45deg, #f3f4f6 25%, transparent 25%), 
-                              linear-gradient(45deg, transparent 75%, #f3f4f6 75%), 
-                              linear-gradient(-45deg, transparent 75%, #f3f4f6 75%);
+            background-image: linear-gradient(45deg, #f3f4f6 25%, transparent 25%),
+                linear-gradient(-45deg, #f3f4f6 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #f3f4f6 75%),
+                linear-gradient(-45deg, transparent 75%, #f3f4f6 75%);
             background-size: 20px 20px;
             background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
             display: flex;
@@ -111,7 +114,7 @@
             color: #6b7280;
             font-size: 0.875rem;
         }
-        
+
         .game-thumbnail img {
             width: 100%;
             height: 100%;
@@ -138,11 +141,11 @@
             background-color: #3b82f6;
             color: white;
         }
-        
+
         .nav-link {
             position: relative;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -154,35 +157,49 @@
             transition: width 0.3s ease;
             box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
         }
-        
+
         .nav-link:hover::after,
         .nav-link.active::after {
             width: 100%;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
-        
+
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-            50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+            }
         }
-        
+
         .floating {
             animation: float 6s ease-in-out infinite;
         }
-        
+
         .glow-effect {
             animation: glow 2s ease-in-out infinite;
         }
-        
+
         .section-title {
             position: relative;
             display: inline-block;
         }
-        
+
         .section-title::before {
             content: '';
             position: absolute;
@@ -192,7 +209,7 @@
             height: 2px;
             background: linear-gradient(90deg, transparent, #06b6d4);
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -204,43 +221,61 @@
         }
     </style>
 </head>
+
 <body class="min-h-screen">
     <header class="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-white font-['Orbitron']">
-                    <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                <div class="text-2xl font-bold text-white font-['Poppins']">
+                    <span
+                        class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                         Zenkergame Online
                     </span>
                 </div>
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
                     <a href="#" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link active">Home</a>
-                    <a href="#casual" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🎯 Casual</a>
-                    <a href="#retro" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🕹️ Retro</a>
-                    <a href="#arcade" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🏆 Arcade</a>
-                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">About</a>
+                    <a href="#casual" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🎯
+                        Casual</a>
+                    <a href="#retro" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🕹️
+                        Retro</a>
+                    <a href="#arcade" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🏆
+                        Arcade</a>
+                    <a href="guides.html"
+                        class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">Guides</a>
+                    <a href="reviews.html"
+                        class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">Reviews</a>
+                    <a href="about.html"
+                        class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">About</a>
                 </nav>
-                
+
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button type="button" id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none" aria-expanded="false">
+                    <button type="button" id="mobile-menu-button"
+                        class="text-gray-700 hover:text-blue-600 focus:outline-none" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Mobile menu, show/hide based on menu state -->
             <div id="mobile-menu" class="md:hidden hidden pt-2 pb-2">
                 <div class="flex flex-col space-y-2">
-                    <a href="#" class="text-base font-medium text-gray-700 hover:text-blue-600 block">Home</a>
-                    <a href="#casual" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🎯 Casual</a>
-                    <a href="#retro" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🕹️ Retro</a>
-                    <a href="#arcade" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🏆 Arcade</a>
-                    <a href="#about" class="text-base font-medium text-gray-700 hover:text-blue-600 block">About</a>
+                    <a href="#" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">Home</a>
+                    <a href="#casual" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🎯
+                        Casual</a>
+                    <a href="#retro" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🕹️ Retro</a>
+                    <a href="#arcade" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🏆
+                        Arcade</a>
+                    <a href="guides.html"
+                        class="text-base font-medium text-gray-300 hover:text-cyan-400 block">Guides</a>
+                    <a href="reviews.html"
+                        class="text-base font-medium text-gray-300 hover:text-cyan-400 block">Reviews</a>
+                    <a href="about.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">About</a>
                 </div>
             </div>
         </nav>
@@ -248,15 +283,16 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <section id="home" class="text-center mb-8 floating">
-            <h1 class="text-4xl md:text-6xl font-bold mb-3 font-['Orbitron']">
+            <h1 class="text-4xl md:text-6xl font-bold mb-3 font-['Poppins']">
                 <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                     ZENKERGAME
                 </span>
                 <br>
                 <span class="text-white text-3xl md:text-4xl">ONLINE</span>
             </h1>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-4 font-semibold">Explore our collection of exciting games across multiple categories. Click on any game to start playing!</p>
-    
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-4 font-semibold">Explore our collection of exciting
+                games across multiple categories. Click on any game to start playing!</p>
+
             <!-- 响应式横幅广告
             <ins class="adsbygoogle"
                  style="display:block; text-align:center; margin: 0 auto 2rem auto;"
@@ -271,18 +307,19 @@
 
         <!-- Casual Games Section -->
         <section id="casual" class="mb-8">
-            <h2 class="text-3xl font-bold text-white mb-4 text-center font-['Orbitron'] section-title">
+            <h2 class="text-3xl font-bold text-white mb-4 text-center font-['Poppins'] section-title">
                 <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
                     🎯 CASUAL & PUZZLE
                 </span>
             </h2>
-            
+
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="casualGames">
                 <!-- 2048 Game -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="puzzle">
                     <a href="game.html?id=2048&title=2048%20Game&src=https://www.crazygames.com/embed/2048">
                         <div class="game-thumbnail">
-                            <img src="images/2048_game.svg" alt="2048 Game" onerror="this.style.display='none'; this.parentElement.innerHTML='🎮<br>2048';">
+                            <img src="images/2048_game.svg" alt="2048 Game"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🎮<br>2048';">
                         </div>
                         <div class="p-4 relative z-10">
                             <h3 class="text-xl font-bold mb-2 text-white">2048 Game</h3>
@@ -293,9 +330,11 @@
 
                 <!-- Bubble Tanks 2 -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="arcade">
-                    <a href="game.html?id=bubble-tanks-2&title=Bubble%20Tanks%202&src=https://www.crazygames.com/embed/bubble-tanks-2">
+                    <a
+                        href="game.html?id=bubble-tanks-2&title=Bubble%20Tanks%202&src=https://www.crazygames.com/embed/bubble-tanks-2">
                         <div class="game-thumbnail">
-                            <img src="images/bubble-tanks-2.svg" alt="Bubble Tanks 2" onerror="this.style.display='none'; this.parentElement.innerHTML='🫧<br>Bubble Tanks';">
+                            <img src="images/bubble-tanks-2.svg" alt="Bubble Tanks 2"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🫧<br>Bubble Tanks';">
                         </div>
                         <div class="p-4 relative z-10">
                             <h3 class="text-xl font-bold mb-2 text-white">Bubble Tanks 2</h3>
@@ -308,7 +347,8 @@
                 <div class="game-card rounded-lg overflow-hidden" data-category="puzzle">
                     <a href="game.html?id=slope-car&title=Slope%20Car&src=https://www.crazygames.com/embed/slope-car">
                         <div class="game-thumbnail">
-                            <img src="images/slope-car.svg" alt="Slope Car" onerror="this.style.display='none'; this.parentElement.innerHTML='🚗<br>Slope Car';">
+                            <img src="images/slope-car.svg" alt="Slope Car"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🚗<br>Slope Car';">
                         </div>
                         <div class="p-4 relative z-10">
                             <h3 class="text-xl font-bold mb-2 text-white">Slope Car</h3>
@@ -319,9 +359,11 @@
 
                 <!-- BlockBuster Puzzle -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="puzzle">
-                    <a href="game.html?id=blockbuster-puzzle&title=BlockBuster%20Puzzle&src=https://www.crazygames.com/embed/blockbuster-puzzle">
+                    <a
+                        href="game.html?id=blockbuster-puzzle&title=BlockBuster%20Puzzle&src=https://www.crazygames.com/embed/blockbuster-puzzle">
                         <div class="game-thumbnail">
-                            <img src="images/blockbuster-puzzle.svg" alt="BlockBuster Puzzle" onerror="this.style.display='none'; this.parentElement.innerHTML='🧩<br>BlockBuster';">
+                            <img src="images/blockbuster-puzzle.svg" alt="BlockBuster Puzzle"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🧩<br>BlockBuster';">
                         </div>
                         <div class="p-4 relative z-10">
                             <h3 class="text-xl font-bold mb-2 text-white">BlockBuster Puzzle</h3>
@@ -334,18 +376,20 @@
 
         <!-- Retro Games Section -->
         <section id="retro" class="mb-8">
-            <h2 class="text-3xl font-bold text-white mb-4 text-center font-['Orbitron'] section-title">
+            <h2 class="text-3xl font-bold text-white mb-4 text-center font-['Poppins'] section-title">
                 <span class="bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
                     🕹️ RETRO & CLASSIC
                 </span>
             </h2>
-            
+
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="retroGames">
                 <!-- Street Fighter 2 -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="retro">
-                    <a href="game.html?id=street-fighter-2&title=Street%20Fighter%202&src=https://www.crazygames.com/embed/street-fighter-2">
+                    <a
+                        href="game.html?id=street-fighter-2&title=Street%20Fighter%202&src=https://www.crazygames.com/embed/street-fighter-2">
                         <div class="game-thumbnail">
-                            <img src="images/street-fighter-2.svg" alt="Street Fighter 2" onerror="this.style.display='none'; this.parentElement.innerHTML='🥊<br>Street Fighter';">
+                            <img src="images/street-fighter-2.svg" alt="Street Fighter 2"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🥊<br>Street Fighter';">
                         </div>
                         <div class="p-4">
                             <h3 class="text-xl font-bold mb-2">Street Fighter 2</h3>
@@ -356,9 +400,11 @@
 
                 <!-- Bobb's World -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="retro">
-                    <a href="game.html?id=bobbs-world&title=Bobb's%20World&src=https://www.crazygames.com/embed/bobb-s-world">
+                    <a
+                        href="game.html?id=bobbs-world&title=Bobb's%20World&src=https://www.crazygames.com/embed/bobb-s-world">
                         <div class="game-thumbnail">
-                            <img src="images/bobbs-world.svg" alt="Bobb's World" onerror="this.style.display='none'; this.parentElement.innerHTML='🌍<br>Bobb\\'s World';">
+                            <img src="images/bobbs-world.svg" alt="Bobb's World"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🌍<br>Bobb\\'s World';">
                         </div>
                         <div class="p-4">
                             <h3 class="text-xl font-bold mb-2">Bobb's World</h3>
@@ -369,9 +415,11 @@
 
                 <!-- 8 Ball Billiards Classic -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="sports">
-                    <a href="game.html?id=8-ball-billiards-classic&title=8%20Ball%20Billiards%20Classic&src=https://www.crazygames.com/embed/8-ball-billiards-classic">
+                    <a
+                        href="game.html?id=8-ball-billiards-classic&title=8%20Ball%20Billiards%20Classic&src=https://www.crazygames.com/embed/8-ball-billiards-classic">
                         <div class="game-thumbnail">
-                            <img src="images/8-ball-billiards-classic.svg" alt="8 Ball Billiards Classic" onerror="this.style.display='none'; this.parentElement.innerHTML='🎱<br>8 Ball Pool';">
+                            <img src="images/8-ball-billiards-classic.svg" alt="8 Ball Billiards Classic"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🎱<br>8 Ball Pool';">
                         </div>
                         <div class="p-4">
                             <h3 class="text-xl font-bold mb-2">8 Ball Billiards Classic</h3>
@@ -384,18 +432,20 @@
 
         <!-- Arcade Games Section -->
         <section id="arcade" class="mb-8">
-            <h2 class="text-3xl font-bold text-white mb-4 text-center font-['Orbitron'] section-title">
+            <h2 class="text-3xl font-bold text-white mb-4 text-center font-['Poppins'] section-title">
                 <span class="bg-gradient-to-r from-red-500 to-purple-600 bg-clip-text text-transparent">
                     🏆 ARCADE & ACTION
                 </span>
             </h2>
-            
+
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="arcadeGames">
                 <!-- Endless Waves Survival -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="arcade">
-                    <a href="game.html?id=endless-waves-survival&title=Endless%20Waves%20Survival&src=https://www.crazygames.com/embed/endless-waves-survival">
+                    <a
+                        href="game.html?id=endless-waves-survival&title=Endless%20Waves%20Survival&src=https://www.crazygames.com/embed/endless-waves-survival">
                         <div class="game-thumbnail">
-                            <img src="images/endless-waves-survival.svg" alt="Endless Waves Survival" onerror="this.style.display='none'; this.parentElement.innerHTML='⚔️<br>Survival';">
+                            <img src="images/endless-waves-survival.svg" alt="Endless Waves Survival"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='⚔️<br>Survival';">
                         </div>
                         <div class="p-4">
                             <h3 class="text-xl font-bold mb-2">Endless Waves Survival</h3>
@@ -406,9 +456,11 @@
 
                 <!-- Flag Arena -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="action">
-                    <a href="game.html?id=flag-arena&title=Flag%20Arena&src=https://www.crazygames.com/embed/flag-arena---capture-dominate">
+                    <a
+                        href="game.html?id=flag-arena&title=Flag%20Arena&src=https://www.crazygames.com/embed/flag-arena---capture-dominate">
                         <div class="game-thumbnail">
-                            <img src="images/flag-arena.svg" alt="Flag Arena" onerror="this.style.display='none'; this.parentElement.innerHTML='🏁<br>Flag Arena';">
+                            <img src="images/flag-arena.svg" alt="Flag Arena"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🏁<br>Flag Arena';">
                         </div>
                         <div class="p-4">
                             <h3 class="text-xl font-bold mb-2">Flag Arena</h3>
@@ -419,9 +471,11 @@
 
                 <!-- Zenker Survivors -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="action">
-                    <a href="game.html?id=zenker-survivors&title=Zenker%20Survivors&src=https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html">
+                    <a
+                        href="game.html?id=zenker-survivors&title=Zenker%20Survivors&src=https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html">
                         <div class="game-thumbnail">
-                            <img src="images/zenker-survivors.svg" alt="Zenker Survivors" onerror="this.style.display='none'; this.parentElement.innerHTML='👹<br>Zenker Survivors';">
+                            <img src="images/zenker-survivors.svg" alt="Zenker Survivors"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='👹<br>Zenker Survivors';">
                         </div>
                         <div class="p-4">
                             <h3 class="text-xl font-bold mb-2">Zenker Survivors</h3>
@@ -432,9 +486,11 @@
 
                 <!-- Draw Crash Race -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="strategy">
-                    <a href="game.html?id=draw-crash-race&title=Draw%20Crash%20Race&src=https://www.crazygames.com/embed/draw-crash-race">
+                    <a
+                        href="game.html?id=draw-crash-race&title=Draw%20Crash%20Race&src=https://www.crazygames.com/embed/draw-crash-race">
                         <div class="game-thumbnail">
-                            <img src="images/draw-crash-race.svg" alt="Draw Crash Race" onerror="this.style.display='none'; this.parentElement.innerHTML='🏎️<br>Draw Race';">
+                            <img src="images/draw-crash-race.svg" alt="Draw Crash Race"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='🏎️<br>Draw Race';">
                         </div>
                         <div class="p-4">
                             <h3 class="text-xl font-bold mb-2">Draw Crash Race</h3>
@@ -445,9 +501,11 @@
 
                 <!-- Idle Craft Drill -->
                 <div class="game-card rounded-lg overflow-hidden" data-category="idle">
-                    <a href="game.html?id=idle-craft-drill&title=Idle%20Craft%20Drill&src=https://www.crazygames.com/embed/idle-craft-drill">
+                    <a
+                        href="game.html?id=idle-craft-drill&title=Idle%20Craft%20Drill&src=https://www.crazygames.com/embed/idle-craft-drill">
                         <div class="game-thumbnail">
-                            <img src="images/idle-craft-drill.svg" alt="Idle Craft Drill" onerror="this.style.display='none'; this.parentElement.innerHTML='⛏️<br>Craft Drill';">
+                            <img src="images/idle-craft-drill.svg" alt="Idle Craft Drill"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='⛏️<br>Craft Drill';">
                         </div>
                         <div class="p-4">
                             <h3 class="text-xl font-bold mb-2">Idle Craft Drill</h3>
@@ -461,15 +519,19 @@
         <!-- About Section -->
         <section id="about" class="mb-8">
             <div class="bg-black/20 backdrop-blur-md border border-white/10 p-6 rounded-lg">
-                <h2 class="text-3xl font-bold text-white mb-6 text-center font-['Orbitron'] section-title">
+                <h2 class="text-3xl font-bold text-white mb-6 text-center font-['Poppins'] section-title">
                     <span class="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                         ABOUT ZENKERGAME ONLINE
                     </span>
                 </h2>
                 <div class="text-gray-300 space-y-4">
-                    <p>Welcome to Zenkergame Online, your destination for free online games! We've curated a collection of exciting games across multiple categories including casual, puzzle, retro, arcade, and action games.</p>
-                    <p>Our platform is designed to provide a seamless gaming experience directly in your browser, with no downloads required. All games are optimized for both desktop and mobile play.</p>
-                    <p>We regularly update our collection with new and exciting titles. If you have suggestions for games you'd like to see on our platform, feel free to contact us.</p>
+                    <p>Welcome to Zenkergame Online, your destination for free online games! We've curated a collection
+                        of exciting games across multiple categories including casual, puzzle, retro, arcade, and action
+                        games.</p>
+                    <p>Our platform is designed to provide a seamless gaming experience directly in your browser, with
+                        no downloads required. All games are optimized for both desktop and mobile play.</p>
+                    <p>We regularly update our collection with new and exciting titles. If you have suggestions for
+                        games you'd like to see on our platform, feel free to contact us.</p>
                     <p>Thank you for visiting Zenkergame Online. Happy gaming!</p>
                 </div>
             </div>
@@ -477,46 +539,73 @@
 
         <!-- 响应式矩形广告 -->
         <div class="max-w-4xl mx-auto my-6">
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center;"
-                 data-ad-client="ca-pub-8347946979767466"
-                 data-ad-slot="1234567890"
-                 data-ad-format="auto"
-                 data-ad-responsive="true"></ins>
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-8347946979767466"
+                data-ad-slot="1234567890" data-ad-format="auto" data-ad-responsive="true"></ins>
             <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
+                (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
     </main>
 
-    <footer class="bg-black/30 backdrop-blur-md border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="text-center text-gray-400">
-                <p>&copy; 2025 zenkergame.online. All rights reserved.</p>
+    <footer class="bg-black/20 border-t border-white/10 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Zenkergame Online</h3>
+                    <p class="text-gray-400 text-sm">Your premier destination for free online games. Play instantly
+                        without downloads.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-gray-300 mb-3">Games</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#casual" class="text-gray-400 hover:text-cyan-400">Casual Games</a></li>
+                        <li><a href="#retro" class="text-gray-400 hover:text-cyan-400">Retro Games</a></li>
+                        <li><a href="#arcade" class="text-gray-400 hover:text-cyan-400">Arcade Games</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-gray-300 mb-3">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="guides.html" class="text-gray-400 hover:text-cyan-400">Game Guides</a></li>
+                        <li><a href="reviews.html" class="text-gray-400 hover:text-cyan-400">Game Reviews</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-cyan-400">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-gray-300 mb-3">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 Zenkergame Online. All rights reserved.</p>
+                <p class="mt-2 text-sm">Bringing you the best free online gaming experiences since 2025.</p>
             </div>
         </div>
     </footer>
 
     <script>
         // 移动菜单切换
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
 
         // 导航链接高亮
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
-            
+
             function highlightNavOnScroll() {
                 let scrollY = window.pageYOffset;
-                
+
                 sections.forEach(section => {
                     const sectionHeight = section.offsetHeight;
                     const sectionTop = section.offsetTop - 100;
                     const sectionId = section.getAttribute('id');
-                    
+
                     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                         navLinks.forEach(link => {
                             link.classList.remove('active');
@@ -527,9 +616,11 @@
                     }
                 });
             }
-            
+
             window.addEventListener('scroll', highlightNavOnScroll);
         });
     </script>
+
 </body>
+
 </html>
