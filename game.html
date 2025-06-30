@@ -38,6 +38,26 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.2s ease;
             z-index: 1;
+            max-height: 100vh;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .game-frame {
+                aspect-ratio: auto;
+                height: calc(100vh - 200px);
+                width: 100%;
+                position: relative;
+            }
+
+            .game-container {
+                padding: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         .game-loader {
