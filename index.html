@@ -16,15 +16,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Zenkergame Online - An exciting game platform with various games across multiple categories. Experience intense action and strategic gameplay in this thrilling adventure.">
+        content="Play free online games at Zenkergame Online! Enjoy 12+ exciting games including puzzle, arcade, retro classics, and action games. No downloads required - play instantly in your browser.">
     <meta name="keywords"
-        content="Zenker Survivors, survival game, online games, arcade games, casual games, retro games">
-    <meta name="author" content="zenkergame.online">
-    <meta name="robots" content="index, follow">
+        content="free online games, browser games, puzzle games, arcade games, retro games, action games, casual games, HTML5 games, no download games, Zenker Survivors, 2048, Street Fighter">
+    <meta name="author" content="Zenkergame Online">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
     <link rel="canonical" href="https://zenkergame.online/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Zenkergame Online - Free Browser Games Collection">
+    <meta property="og:description" content="Play 12+ free online games including puzzle, arcade, retro, and action games. No downloads required - instant browser gaming experience.">
+    <meta property="og:image" content="https://zenkergame.online/images/zenker-survivors.svg">
+    <meta property="og:url" content="https://zenkergame.online/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zenkergame Online">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zenkergame Online - Free Browser Games">
+    <meta name="twitter:description" content="Play 12+ free online games instantly in your browser. Puzzle, arcade, retro, and action games available.">
+    <meta name="twitter:image" content="https://zenkergame.online/images/zenker-survivors.svg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#0f0f23">
+    <meta name="msapplication-TileColor" content="#0f0f23">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; frame-src https:; img-src 'self' data: https:;">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <title>Zenkergame Online - Game Collection</title>
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <title>Zenkergame Online - Play Free Browser Games | 12+ Games Collection</title>
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Zenkergame Online",
+        "description": "Play free online games at Zenkergame Online! Enjoy 12+ exciting games including puzzle, arcade, retro classics, and action games.",
+        "url": "https://zenkergame.online",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://zenkergame.online/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Zenkergame Online",
+            "url": "https://zenkergame.online"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Free Online Games Collection",
+        "description": "Collection of free browser games including puzzle, arcade, retro, and action games",
+        "numberOfItems": 12,
+        "itemListElement": [
+            {
+                "@type": "Game",
+                "position": 1,
+                "name": "2048 Game",
+                "description": "Classic number merging puzzle game",
+                "url": "https://zenkergame.online/game.html?id=2048",
+                "genre": "Puzzle",
+                "gamePlayMode": "SinglePlayer"
+            },
+            {
+                "@type": "Game",
+                "position": 2,
+                "name": "Zenker Survivors",
+                "description": "Survive waves of monsters in this roguelite action game",
+                "url": "https://zenkergame.online/game.html?id=zenker-survivors",
+                "genre": "Action",
+                "gamePlayMode": "SinglePlayer"
+            },
+            {
+                "@type": "Game",
+                "position": 3,
+                "name": "Street Fighter 2",
+                "description": "Classic arcade fighting game",
+                "url": "https://zenkergame.online/game.html?id=street-fighter-2",
+                "genre": "Fighting",
+                "gamePlayMode": "SinglePlayer"
+            }
+        ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
@@ -234,20 +319,26 @@
                     </span>
                 </div>
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link active">Home</a>
-                    <a href="#casual" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🎯
-                        Casual</a>
-                    <a href="#retro" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🕹️
-                        Retro</a>
-                    <a href="#arcade" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🏆
-                        Arcade</a>
-                    <a href="guides.html"
-                        class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">Guides</a>
-                    <a href="reviews.html"
-                        class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">Reviews</a>
-                    <a href="about.html"
-                        class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">About</a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link active">🏠 Home</a>
+                    <div class="relative group">
+                        <button class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🎮 Games</button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-black/80 backdrop-blur-md border border-white/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <a href="#casual" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">🎯 Casual & Puzzle</a>
+                            <a href="#retro" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">🕹️ Retro & Classic</a>
+                            <a href="#arcade" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">🏆 Arcade & Action</a>
+                        </div>
+                    </div>
+                    <a href="guides.html" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">📖 Guides</a>
+                    <a href="reviews.html" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">⭐ Reviews</a>
+                    <div class="relative group">
+                        <button class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">ℹ️ More</button>
+                        <div class="absolute top-full left-0 mt-2 w-40 bg-black/80 backdrop-blur-md border border-white/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <a href="about.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">About Us</a>
+                            <a href="privacy.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">Privacy</a>
+                            <a href="terms.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">Terms</a>
+                        </div>
+                    </div>
                 </nav>
 
                 <!-- Mobile menu button -->
@@ -266,21 +357,28 @@
             <!-- Mobile menu, show/hide based on menu state -->
             <div id="mobile-menu" class="md:hidden hidden pt-2 pb-2">
                 <div class="flex flex-col space-y-2">
-                    <a href="#" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">Home</a>
-                    <a href="#casual" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🎯
-                        Casual</a>
-                    <a href="#retro" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🕹️ Retro</a>
-                    <a href="#arcade" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🏆
-                        Arcade</a>
-                    <a href="guides.html"
-                        class="text-base font-medium text-gray-300 hover:text-cyan-400 block">Guides</a>
-                    <a href="reviews.html"
-                        class="text-base font-medium text-gray-300 hover:text-cyan-400 block">Reviews</a>
-                    <a href="about.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">About</a>
+                    <a href="/" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🏠 Home</a>
+                    <div class="border-l-2 border-cyan-400 ml-2 pl-2">
+                        <a href="#casual" class="text-sm font-medium text-gray-300 hover:text-cyan-400 block py-1">🎯 Casual & Puzzle</a>
+                        <a href="#retro" class="text-sm font-medium text-gray-300 hover:text-cyan-400 block py-1">🕹️ Retro & Classic</a>
+                        <a href="#arcade" class="text-sm font-medium text-gray-300 hover:text-cyan-400 block py-1">🏆 Arcade & Action</a>
+                    </div>
+                    <a href="guides.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">📖 Guides</a>
+                    <a href="reviews.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">⭐ Reviews</a>
+                    <a href="about.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">ℹ️ About</a>
+                    <a href="privacy.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🔒 Privacy</a>
+                    <a href="terms.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">📄 Terms</a>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 text-sm" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-gray-400">
+            <li><a href="/" class="hover:text-cyan-400">🏠 Home</a></li>
+        </ol>
+    </nav>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <section id="home" class="text-center mb-8 floating">
@@ -291,19 +389,70 @@
                 <br>
                 <span class="text-white text-3xl md:text-4xl">ONLINE</span>
             </h1>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-4 font-semibold">Explore our collection of exciting
-                games across multiple categories. Click on any game to start playing!</p>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-6 font-semibold">Explore our collection of 12+ exciting
+                games across multiple categories. No downloads required - play instantly in your browser!</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-md mx-auto mb-6">
+                <div class="relative">
+                    <input type="text" id="gameSearch" placeholder="Search games..." 
+                           class="w-full px-4 py-3 pl-12 bg-black/40 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400">
+                    <div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Game Stats -->
+            <div class="grid grid-cols-3 gap-4 max-w-md mx-auto mb-6">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-cyan-400">12+</div>
+                    <div class="text-sm text-gray-400">Games</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-green-400">Free</div>
+                    <div class="text-sm text-gray-400">To Play</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-purple-400">100%</div>
+                    <div class="text-sm text-gray-400">Browser</div>
+                </div>
+            </div>
 
-            <!-- 响应式横幅广告
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center; margin: 0 auto 2rem auto;"
-                 data-ad-layout="in-article"
-                 data-ad-format="auto"
-                 data-ad-client="ca-pub-8347946979767466"
-                 data-ad-slot="1234567890"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script> -->
+            <!-- 响应式横幅广告 -->
+            <div class="max-w-3xl mx-auto my-8">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-8347946979767466"
+                     data-ad-slot="1234567890"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <!-- 最近游戏和推荐 -->
+            <div id="recentGames" class="hidden">
+                <h3 class="text-xl font-semibold text-white mb-4">🕐 Recently Played</h3>
+                <div id="recentGamesList" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <!-- 动态生成的最近游戏 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门推荐 -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-white mb-4 text-center font-['Poppins']">
+                <span class="bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent">
+                    🔥 TRENDING NOW
+                </span>
+            </h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="trendingGames">
+                <!-- 将显示最高评分的游戏 -->
+            </div>
         </section>
 
         <!-- Casual Games Section -->
@@ -316,64 +465,107 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="casualGames">
                 <!-- 2048 Game -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="puzzle">
+                <div class="game-card rounded-lg overflow-hidden" data-category="puzzle" data-search="2048 puzzle number merge">
                     <a href="game.html?id=2048&title=2048%20Game&src=https://www.crazygames.com/embed/2048">
                         <div class="game-thumbnail">
                             <img src="images/2048_game.svg" alt="2048 Game"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🎮<br>2048';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.5
+                            </div>
+                            <button class="favorite-btn absolute top-2 left-2 bg-black/60 rounded-full w-8 h-8 flex items-center justify-center text-white hover:bg-black/80 transition-colors" data-game="2048">
+                                <span class="favorite-icon">🤍</span>
+                            </button>
                         </div>
                         <div class="p-4 relative z-10">
                             <h3 class="text-xl font-bold mb-2 text-white">2048 Game</h3>
-                            <p class="text-gray-300">Classic number merging puzzle game</p>
+                            <p class="text-gray-300 text-sm mb-2">Classic number merging puzzle game</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🎯 Puzzle</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Bubble Tanks 2 -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="arcade">
+                <div class="game-card rounded-lg overflow-hidden" data-category="arcade" data-search="bubble tanks shooter action">
                     <a
                         href="game.html?id=bubble-tanks-2&title=Bubble%20Tanks%202&src=https://www.crazygames.com/embed/bubble-tanks-2">
                         <div class="game-thumbnail">
                             <img src="images/bubble-tanks-2.svg" alt="Bubble Tanks 2"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🫧<br>Bubble Tanks';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.2
+                            </div>
                         </div>
                         <div class="p-4 relative z-10">
                             <h3 class="text-xl font-bold mb-2 text-white">Bubble Tanks 2</h3>
-                            <p class="text-gray-300">An exciting bubble-shooter game</p>
+                            <p class="text-gray-300 text-sm mb-2">An exciting bubble-shooter game</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🏆 Arcade</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Slope Car -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="puzzle">
+                <div class="game-card rounded-lg overflow-hidden" data-category="puzzle" data-search="slope car racing drive">
                     <a href="game.html?id=slope-car&title=Slope%20Car&src=https://www.crazygames.com/embed/slope-car">
                         <div class="game-thumbnail">
                             <img src="images/slope-car.svg" alt="Slope Car"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🚗<br>Slope Car';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.3
+                            </div>
                         </div>
                         <div class="p-4 relative z-10">
                             <h3 class="text-xl font-bold mb-2 text-white">Slope Car</h3>
-                            <p class="text-gray-300">Drive your car on a randomized slope</p>
+                            <p class="text-gray-300 text-sm mb-2">Drive your car on a randomized slope</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🎯 Casual</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- BlockBuster Puzzle -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="puzzle">
+                <div class="game-card rounded-lg overflow-hidden" data-category="puzzle" data-search="blockbuster puzzle block breaking">
                     <a
                         href="game.html?id=blockbuster-puzzle&title=BlockBuster%20Puzzle&src=https://www.crazygames.com/embed/blockbuster-puzzle">
                         <div class="game-thumbnail">
                             <img src="images/blockbuster-puzzle.svg" alt="BlockBuster Puzzle"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🧩<br>BlockBuster';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.1
+                            </div>
                         </div>
                         <div class="p-4 relative z-10">
                             <h3 class="text-xl font-bold mb-2 text-white">BlockBuster Puzzle</h3>
-                            <p class="text-gray-300">Classic block-breaking puzzle game</p>
+                            <p class="text-gray-300 text-sm mb-2">Classic block-breaking puzzle game</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🎯 Puzzle</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
             </div>
         </section>
+
+        <!-- 中间广告位 -->
+        <div class="max-w-4xl mx-auto my-8">
+            <ins class="adsbygoogle"
+                 style="display:block;"
+                 data-ad-format="rectangle"
+                 data-ad-client="ca-pub-8347946979767466"
+                 data-ad-slot="2345678901"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
 
         <!-- Retro Games Section -->
         <section id="retro" class="mb-8">
@@ -385,46 +577,67 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="retroGames">
                 <!-- Street Fighter 2 -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="retro">
+                <div class="game-card rounded-lg overflow-hidden" data-category="retro" data-search="street fighter fighting arcade classic">
                     <a
                         href="game.html?id=street-fighter-2&title=Street%20Fighter%202&src=https://www.crazygames.com/embed/street-fighter-2">
                         <div class="game-thumbnail">
                             <img src="images/street-fighter-2.svg" alt="Street Fighter 2"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🥊<br>Street Fighter';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.8
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Street Fighter 2</h3>
-                            <p class="text-gray-600">Classic arcade fighting game</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Street Fighter 2</h3>
+                            <p class="text-gray-300 text-sm mb-2">Classic arcade fighting game</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🕹️ Retro</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Bobb's World -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="retro">
+                <div class="game-card rounded-lg overflow-hidden" data-category="retro" data-search="bobbs world platformer adventure">
                     <a
                         href="game.html?id=bobbs-world&title=Bobb's%20World&src=https://www.crazygames.com/embed/bobb-s-world">
                         <div class="game-thumbnail">
                             <img src="images/bobbs-world.svg" alt="Bobb's World"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🌍<br>Bobbs World'">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.4
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Bobb's World</h3>
-                            <p class="text-gray-600">Classic platformer adventure</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Bobb's World</h3>
+                            <p class="text-gray-300 text-sm mb-2">Classic platformer adventure</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🕹️ Retro</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- 8 Ball Billiards Classic -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="sports">
+                <div class="game-card rounded-lg overflow-hidden" data-category="sports" data-search="8 ball billiards pool sports classic">
                     <a
                         href="game.html?id=8-ball-billiards-classic&title=8%20Ball%20Billiards%20Classic&src=https://www.crazygames.com/embed/8-ball-billiards-classic">
                         <div class="game-thumbnail">
                             <img src="images/8-ball-billiards-classic.svg" alt="8 Ball Billiards Classic"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🎱<br>8 Ball Pool';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.6
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">8 Ball Billiards Classic</h3>
-                            <p class="text-gray-600">Traditional pool game simulation</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">8 Ball Billiards Classic</h3>
+                            <p class="text-gray-300 text-sm mb-2">Traditional pool game simulation</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🕹️ Classic</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -441,76 +654,111 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="arcadeGames">
                 <!-- Endless Waves Survival -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="arcade">
+                <div class="game-card rounded-lg overflow-hidden" data-category="arcade" data-search="endless waves survival action arcade">
                     <a
                         href="game.html?id=endless-waves-survival&title=Endless%20Waves%20Survival&src=https://www.crazygames.com/embed/endless-waves-survival">
                         <div class="game-thumbnail">
                             <img src="images/endless-waves-survival.svg" alt="Endless Waves Survival"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='⚔️<br>Survival';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.3
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Endless Waves Survival</h3>
-                            <p class="text-gray-600">Survive against endless enemy waves</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Endless Waves Survival</h3>
+                            <p class="text-gray-300 text-sm mb-2">Survive against endless enemy waves</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🏆 Arcade</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Flag Arena -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="action">
+                <div class="game-card rounded-lg overflow-hidden" data-category="action" data-search="flag arena capture battle multiplayer">
                     <a
                         href="game.html?id=flag-arena&title=Flag%20Arena&src=https://www.crazygames.com/embed/flag-arena---capture-dominate">
                         <div class="game-thumbnail">
                             <img src="images/flag-arena.svg" alt="Flag Arena"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🏁<br>Flag Arena';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.0
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Flag Arena</h3>
-                            <p class="text-gray-600">Capture the flag multiplayer battle</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Flag Arena</h3>
+                            <p class="text-gray-300 text-sm mb-2">Capture the flag multiplayer battle</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🏆 Action</span>
+                                <span>👥 Multiplayer</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Zenker Survivors -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="action">
+                <div class="game-card rounded-lg overflow-hidden" data-category="action" data-search="zenker survivors roguelite monster action">
                     <a
                         href="game.html?id=zenker-survivors&title=Zenker%20Survivors&src=https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html">
                         <div class="game-thumbnail">
                             <img src="images/zenker-survivors.svg" alt="Zenker Survivors"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='👹<br>Zenker Survivors';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.7
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Zenker Survivors</h3>
-                            <p class="text-gray-600">Survive waves of monsters in this roguelite</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Zenker Survivors</h3>
+                            <p class="text-gray-300 text-sm mb-2">Survive waves of monsters in this roguelite</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🏆 Action</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Draw Crash Race -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="strategy">
+                <div class="game-card rounded-lg overflow-hidden" data-category="strategy" data-search="draw crash race car racing strategy">
                     <a
                         href="game.html?id=draw-crash-race&title=Draw%20Crash%20Race&src=https://www.crazygames.com/embed/draw-crash-race">
                         <div class="game-thumbnail">
                             <img src="images/draw-crash-race.svg" alt="Draw Crash Race"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='🏎️<br>Draw Race';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.1
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Draw Crash Race</h3>
-                            <p class="text-gray-600">Draw paths for your vehicle to race</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Draw Crash Race</h3>
+                            <p class="text-gray-300 text-sm mb-2">Draw paths for your vehicle to race</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🏆 Strategy</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Idle Craft Drill -->
-                <div class="game-card rounded-lg overflow-hidden" data-category="idle">
+                <div class="game-card rounded-lg overflow-hidden" data-category="idle" data-search="idle craft drill incremental resource">
                     <a
                         href="game.html?id=idle-craft-drill&title=Idle%20Craft%20Drill&src=https://www.crazygames.com/embed/idle-craft-drill">
                         <div class="game-thumbnail">
                             <img src="images/idle-craft-drill.svg" alt="Idle Craft Drill"
                                 onerror="this.style.display='none'; this.parentElement.innerHTML='⛏️<br>Craft Drill';">
+                            <div class="absolute top-2 right-2 bg-black/60 rounded px-2 py-1 text-xs text-white">
+                                ⭐ 4.2
+                            </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Idle Craft Drill</h3>
-                            <p class="text-gray-600">Incremental resource gathering game</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Idle Craft Drill</h3>
+                            <p class="text-gray-300 text-sm mb-2">Incremental resource gathering game</p>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span>🏆 Idle</span>
+                                <span>👤 Single Player</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -538,13 +786,44 @@
             </div>
         </section>
 
-        <!-- 响应式矩形广告 -->
-        <div class="max-w-4xl mx-auto my-6">
-            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-client="ca-pub-8347946979767466"
-                data-ad-slot="1234567890" data-ad-format="auto" data-ad-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+        <!-- 底部广告区域 -->
+        <div class="max-w-6xl mx-auto my-12 space-y-8">
+            <!-- 大型矩形广告 -->
+            <div class="text-center">
+                <ins class="adsbygoogle" 
+                     style="display:block;" 
+                     data-ad-client="ca-pub-8347946979767466"
+                     data-ad-slot="3456789012" 
+                     data-ad-format="auto" 
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <!-- 侧边栏样式广告 -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <ins class="adsbygoogle"
+                         style="display:block;"
+                         data-ad-format="rectangle"
+                         data-ad-client="ca-pub-8347946979767466"
+                         data-ad-slot="4567890123"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div>
+                    <ins class="adsbygoogle"
+                         style="display:block;"
+                         data-ad-format="rectangle"
+                         data-ad-client="ca-pub-8347946979767466"
+                         data-ad-slot="5678901234"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -592,6 +871,201 @@
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
+        });
+
+        // 游戏搜索功能
+        document.getElementById('gameSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const gameCards = document.querySelectorAll('.game-card');
+            
+            gameCards.forEach(card => {
+                const searchData = card.getAttribute('data-search') || '';
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                const isVisible = searchTerm === '' || 
+                    searchData.includes(searchTerm) ||
+                    title.includes(searchTerm) ||
+                    description.includes(searchTerm);
+                
+                if (isVisible) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.3s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // 显示/隐藏分类标题
+            const sections = document.querySelectorAll('#casual, #retro, #arcade');
+            sections.forEach(section => {
+                const visibleCards = section.querySelectorAll('.game-card[style*="block"], .game-card:not([style*="none"])');
+                if (searchTerm === '' || visibleCards.length > 0) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+
+        // 添加淡入动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // 用户留存功能
+        class UserEngagement {
+            constructor() {
+                this.favorites = JSON.parse(localStorage.getItem('zenkergame_favorites') || '[]');
+                this.recentGames = JSON.parse(localStorage.getItem('zenkergame_recent') || '[]');
+                this.gameStats = JSON.parse(localStorage.getItem('zenkergame_stats') || '{}');
+                this.init();
+            }
+
+            init() {
+                this.setupFavoriteButtons();
+                this.displayRecentGames();
+                this.displayTrendingGames();
+                this.trackGameClicks();
+            }
+
+            setupFavoriteButtons() {
+                document.querySelectorAll('.favorite-btn').forEach(btn => {
+                    const gameId = btn.getAttribute('data-game');
+                    const icon = btn.querySelector('.favorite-icon');
+                    
+                    // 设置初始状态
+                    if (this.favorites.includes(gameId)) {
+                        icon.textContent = '❤️';
+                    }
+
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        this.toggleFavorite(gameId, icon);
+                    });
+                });
+            }
+
+            toggleFavorite(gameId, icon) {
+                if (this.favorites.includes(gameId)) {
+                    this.favorites = this.favorites.filter(id => id !== gameId);
+                    icon.textContent = '🤍';
+                } else {
+                    this.favorites.push(gameId);
+                    icon.textContent = '❤️';
+                }
+                localStorage.setItem('zenkergame_favorites', JSON.stringify(this.favorites));
+            }
+
+            addToRecent(gameId, gameTitle) {
+                const recentGame = { id: gameId, title: gameTitle, timestamp: Date.now() };
+                this.recentGames = this.recentGames.filter(game => game.id !== gameId);
+                this.recentGames.unshift(recentGame);
+                this.recentGames = this.recentGames.slice(0, 8); // 保留最近8个游戏
+                localStorage.setItem('zenkergame_recent', JSON.stringify(this.recentGames));
+                this.displayRecentGames();
+            }
+
+            displayRecentGames() {
+                const container = document.getElementById('recentGamesList');
+                const section = document.getElementById('recentGames');
+                
+                if (this.recentGames.length === 0) {
+                    section.classList.add('hidden');
+                    return;
+                }
+
+                section.classList.remove('hidden');
+                container.innerHTML = this.recentGames.map(game => `
+                    <div class="bg-black/20 backdrop-blur-md border border-white/10 rounded-lg p-3 hover:border-cyan-400 transition-colors cursor-pointer" onclick="window.location.href='game.html?id=${game.id}'">
+                        <div class="text-sm font-semibold text-white truncate">${game.title}</div>
+                        <div class="text-xs text-gray-400">${this.getTimeAgo(game.timestamp)}</div>
+                    </div>
+                `).join('');
+            }
+
+            displayTrendingGames() {
+                const trendingContainer = document.getElementById('trendingGames');
+                const allGameCards = document.querySelectorAll('.game-card');
+                const gamesWithRatings = Array.from(allGameCards).map(card => {
+                    const rating = parseFloat(card.querySelector('.absolute').textContent.match(/[\d.]+/)[0]);
+                    return { element: card, rating: rating };
+                }).sort((a, b) => b.rating - a.rating).slice(0, 3);
+
+                trendingContainer.innerHTML = gamesWithRatings.map(game => {
+                    const clone = game.element.cloneNode(true);
+                    clone.classList.add('trending-game');
+                    return clone.outerHTML;
+                }).join('');
+            }
+
+            trackGameClicks() {
+                document.querySelectorAll('.game-card a').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        const gameTitle = link.querySelector('h3').textContent;
+                        const url = new URL(link.href);
+                        const gameId = url.searchParams.get('id');
+                        if (gameId) {
+                            this.addToRecent(gameId, gameTitle);
+                            this.updateGameStats(gameId);
+                        }
+                    });
+                });
+            }
+
+            updateGameStats(gameId) {
+                if (!this.gameStats[gameId]) {
+                    this.gameStats[gameId] = { plays: 0, totalTime: 0 };
+                }
+                this.gameStats[gameId].plays++;
+                localStorage.setItem('zenkergame_stats', JSON.stringify(this.gameStats));
+            }
+
+            getTimeAgo(timestamp) {
+                const diff = Date.now() - timestamp;
+                const minutes = Math.floor(diff / 60000);
+                const hours = Math.floor(diff / 3600000);
+                const days = Math.floor(diff / 86400000);
+
+                if (days > 0) return `${days}d ago`;
+                if (hours > 0) return `${hours}h ago`;
+                if (minutes > 0) return `${minutes}m ago`;
+                return 'Just now';
+            }
+        }
+
+        // 为所有游戏卡片添加收藏按钮
+        document.addEventListener('DOMContentLoaded', () => {
+            // 为每个游戏卡片添加收藏按钮
+            document.querySelectorAll('.game-card .game-thumbnail').forEach((thumbnail, index) => {
+                const gameCard = thumbnail.closest('.game-card');
+                const gameLink = gameCard.querySelector('a');
+                const url = new URL(gameLink.href);
+                const gameId = url.searchParams.get('id') || gameLink.href.split('id=')[1]?.split('&')[0] || 'game-' + index;
+                
+                if (!thumbnail.querySelector('.favorite-btn')) {
+                    const favoriteBtn = document.createElement('button');
+                    favoriteBtn.className = 'favorite-btn absolute top-2 left-2 bg-black/60 rounded-full w-8 h-8 flex items-center justify-center text-white hover:bg-black/80 transition-colors z-10';
+                    favoriteBtn.setAttribute('data-game', gameId);
+                    favoriteBtn.innerHTML = '<span class="favorite-icon">🤍</span>';
+                    
+                    favoriteBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+                    
+                    thumbnail.appendChild(favoriteBtn);
+                }
+            });
+            
+            // 初始化用户互动功能
+            new UserEngagement();
         });
 
         // 导航链接高亮
