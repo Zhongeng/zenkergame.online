@@ -17,50 +17,121 @@
     <meta name="author" content="zenkergame.online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://zenkergame.online/reviews.html">
+    
+    <!-- Hreflang Tags for International SEO -->
+    <link rel="alternate" hreflang="en" href="https://zenkergame.online/reviews.html">
+    <link rel="alternate" hreflang="en-US" href="https://zenkergame.online/reviews.html">
+    <link rel="alternate" hreflang="en-GB" href="https://zenkergame.online/reviews.html">
+    <link rel="alternate" hreflang="en-CA" href="https://zenkergame.online/reviews.html">
+    <link rel="alternate" hreflang="en-AU" href="https://zenkergame.online/reviews.html">
+    <link rel="alternate" hreflang="x-default" href="https://zenkergame.online/reviews.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Game Reviews & Ratings - Zenkergame Online | Honest Game Analysis">
+    <meta property="og:description" content="Read detailed reviews of all 20+ games on Zenkergame Online. Get insights on gameplay, graphics, difficulty, and overall experience before you play.">
+    <meta property="og:image" content="https://zenkergame.online/images/zenker-survivors.svg">
+    <meta property="og:url" content="https://zenkergame.online/reviews.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zenkergame Online">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Game Reviews & Ratings - Zenkergame Online">
+    <meta name="twitter:description" content="Read detailed reviews of all 20+ games on Zenkergame Online. Get insights on gameplay, graphics, difficulty, and overall experience.">
+    <meta name="twitter:image" content="https://zenkergame.online/images/zenker-survivors.svg">
+    
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <title>Game Reviews & Ratings - Zenkergame Online | Honest Game Analysis</title>
+    <title>Game Reviews & Ratings - Zenkergame Online | 20+ Games Analyzed & Rated</title>
+    
+    <!-- Breadcrumb Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://zenkergame.online/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Game Reviews",
+                "item": "https://zenkergame.online/reviews.html"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Structured Data for Game Reviews -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Game Reviews & Ratings - Zenkergame Online",
+        "description": "Read detailed reviews of all 20+ games on Zenkergame Online. Get insights on gameplay, graphics, difficulty, and overall experience before you play.",
+        "url": "https://zenkergame.online/reviews.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Zenkergame Online",
+            "url": "https://zenkergame.online"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Game Reviews Collection",
+            "description": "Comprehensive reviews of online games with ratings and analysis",
+            "numberOfItems": 20,
+            "itemListElement": [
+                {
+                    "@type": "Review",
+                    "position": 1,
+                    "itemReviewed": {
+                        "@type": "Game",
+                        "name": "Zenker Survivors",
+                        "description": "Action survival game with strategic gameplay"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.8",
+                        "bestRating": "5",
+                        "worstRating": "1"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Zenkergame Online"
+                    }
+                },
+                {
+                    "@type": "Review",
+                    "position": 2,
+                    "itemReviewed": {
+                        "@type": "Game",
+                        "name": "2048 Game",
+                        "description": "Classic number merging puzzle game"
+                    },
+                    "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4.5",
+                        "bestRating": "5",
+                        "worstRating": "1"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "Zenkergame Online"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
-            background-attachment: fixed;
-            color: #e2e8f0;
-            min-height: 100vh;
-        }
-        
-        .review-card {
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .review-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(59, 130, 246, 0.5);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-        
-        .star-rating {
-            color: #fbbf24;
-        }
-        
-        .rating-bar {
-            background: rgba(255, 255, 255, 0.1);
-            height: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .rating-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #fbbf24, #f59e0b);
-            transition: width 0.3s ease;
-        }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
@@ -91,219 +162,14 @@
             </p>
         </div>
 
-        <!-- 广告位 -->
-        <div class="text-center mb-8">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-8347946979767466"
-                 data-ad-slot="1234567890"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
         <div class="space-y-8">
-            <!-- Zenker Survivors Review -->
+            <!-- Golf Hit Review -->
             <div class="review-card rounded-lg p-6">
                 <div class="flex items-start space-x-4">
-                    <img src="images/zenker-survivors.svg" alt="Zenker Survivors" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <img src="images/golf-hit.svg" alt="Golf Hit" class="w-20 h-20 rounded-lg flex-shrink-0">
                     <div class="flex-1">
                         <div class="flex items-center justify-between mb-2">
-                            <h2 class="text-2xl font-bold text-cyan-400">Zenker Survivors</h2>
-                            <div class="flex items-center space-x-2">
-                                <div class="star-rating text-xl">★★★★★</div>
-                                <span class="text-lg font-semibold">4.8/5</span>
-                            </div>
-                        </div>
-                        <div class="grid md:grid-cols-4 gap-4 mb-4">
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 95%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.8/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 100%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">5.0/5</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            Zenker Survivors is an outstanding roguelike survival game that perfectly balances challenge and progression. The game features intense wave-based combat where players must survive increasingly difficult monster attacks while collecting experience and upgrades.
-                        </p>
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
-                                <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Addictive progression system</li>
-                                    <li>• Smooth, responsive controls</li>
-                                    <li>• Excellent replay value</li>
-                                    <li>• Balanced difficulty curve</li>
-                                    <li>• Satisfying upgrade mechanics</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
-                                <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Can become repetitive after long sessions</li>
-                                    <li>• Limited visual variety in environments</li>
-                                    <li>• No save progress between sessions</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mt-4 p-3 bg-blue-900/30 rounded">
-                            <p class="text-sm"><strong>Bottom Line:</strong> A must-play for fans of survival and roguelike games. The perfect blend of action and strategy that keeps you coming back for "just one more run."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2048 Review -->
-            <div class="review-card rounded-lg p-6">
-                <div class="flex items-start space-x-4">
-                    <img src="images/2048_game.svg" alt="2048 Game" class="w-20 h-20 rounded-lg flex-shrink-0">
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between mb-2">
-                            <h2 class="text-2xl font-bold text-cyan-400">2048 Game</h2>
-                            <div class="flex items-center space-x-2">
-                                <div class="star-rating text-xl">★★★★☆</div>
-                                <span class="text-lg font-semibold">4.5/5</span>
-                            </div>
-                        </div>
-                        <div class="grid md:grid-cols-4 gap-4 mb-4">
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 80%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.0/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 95%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.8/5</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            The classic 2048 puzzle game that took the world by storm. Simple to learn but incredibly challenging to master, this number-merging puzzle offers endless entertainment and mental stimulation.
-                        </p>
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
-                                <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Simple, intuitive gameplay</li>
-                                    <li>• Perfect for quick gaming sessions</li>
-                                    <li>• Excellent brain training</li>
-                                    <li>• Clean, minimalist design</li>
-                                    <li>• Highly addictive</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
-                                <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Can be frustrating when stuck</li>
-                                    <li>• Limited visual appeal</li>
-                                    <li>• Repetitive gameplay loop</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mt-4 p-3 bg-purple-900/30 rounded">
-                            <p class="text-sm"><strong>Bottom Line:</strong> A timeless puzzle classic that's perfect for players who enjoy strategic thinking and number games. Great for both casual and dedicated puzzle enthusiasts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Street Fighter 2 Review -->
-            <div class="review-card rounded-lg p-6">
-                <div class="flex items-start space-x-4">
-                    <img src="images/street-fighter-2.svg" alt="Street Fighter 2" class="w-20 h-20 rounded-lg flex-shrink-0">
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between mb-2">
-                            <h2 class="text-2xl font-bold text-cyan-400">Street Fighter 2</h2>
-                            <div class="flex items-center space-x-2">
-                                <div class="star-rating text-xl">★★★★★</div>
-                                <span class="text-lg font-semibold">4.7/5</span>
-                            </div>
-                        </div>
-                        <div class="grid md:grid-cols-4 gap-4 mb-4">
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 95%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.8/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 100%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">5.0/5</div>
-                            </div>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            The legendary fighting game that defined the genre. Street Fighter 2 remains one of the most influential and enjoyable fighting games ever created, with tight controls, memorable characters, and deep combat mechanics.
-                        </p>
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
-                                <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Iconic characters and moves</li>
-                                    <li>• Precise, responsive controls</li>
-                                    <li>• Deep combat system</li>
-                                    <li>• Timeless pixel art graphics</li>
-                                    <li>• Excellent replay value</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
-                                <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Steep learning curve for beginners</li>
-                                    <li>• AI can be unforgiving</li>
-                                    <li>• Limited single-player content</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mt-4 p-3 bg-red-900/30 rounded">
-                            <p class="text-sm"><strong>Bottom Line:</strong> A masterpiece of fighting game design that still holds up today. Essential for fighting game fans and a great introduction to the genre's fundamentals.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bubble Tanks 2 Review -->
-            <div class="review-card rounded-lg p-6">
-                <div class="flex items-start space-x-4">
-                    <img src="images/bubble-tanks-2.svg" alt="Bubble Tanks 2" class="w-20 h-20 rounded-lg flex-shrink-0">
-                    <div class="flex-1">
-                        <div class="flex items-center justify-between mb-2">
-                            <h2 class="text-2xl font-bold text-cyan-400">Bubble Tanks 2</h2>
+                            <h2 class="text-2xl font-bold text-cyan-400">Golf Hit</h2>
                             <div class="flex items-center space-x-2">
                                 <div class="star-rating text-xl">★★★★☆</div>
                                 <span class="text-lg font-semibold">4.3/5</span>
@@ -312,65 +178,193 @@
                         <div class="grid md:grid-cols-4 gap-4 mb-4">
                             <div>
                                 <div class="text-sm text-gray-400 mb-1">Gameplay</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 80%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.0/5</div>
-                            </div>
-                            <div>
-                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
                                 <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
                                 <div class="text-xs text-gray-400 mt-1">4.5/5</div>
                             </div>
                             <div>
-                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
                                 <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
                                 <div class="text-xs text-gray-400 mt-1">4.2/5</div>
                             </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 75%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">3.8/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
                         </div>
                         <p class="text-gray-300 mb-4">
-                            An innovative tank shooter where you grow and evolve your bubble tank by defeating enemies and collecting their parts. The unique growth mechanic and exploration elements make this a standout in the shooter genre.
+                            An entertaining golf simulator that challenges players to hit the ball as far as possible with strategic upgrades and perfect timing. With simple one-click gameplay and progressive difficulty, Golf Hit offers addictive gameplay that keeps you coming back for more.
                         </p>
                         <div class="grid md:grid-cols-2 gap-4">
                             <div>
                                 <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
                                 <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Unique growth and evolution system</li>
-                                    <li>• Satisfying progression mechanics</li>
-                                    <li>• Good variety in enemy types</li>
-                                    <li>• Exploration encourages discovery</li>
-                                    <li>• Creative visual design</li>
+                                    <li>• Simple, addictive gameplay</li>
+                                    <li>• Strategic upgrade system</li>
+                                    <li>• Satisfying progression</li>
+                                    <li>• Multiple unlockable skins</li>
+                                    <li>• Perfect for quick sessions</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
                                 <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Can feel grindy at times</li>
-                                    <li>• Limited variety in environments</li>
-                                    <li>• Some balance issues with upgrades</li>
+                                    <li>• Can feel repetitive</li>
+                                    <li>• Limited depth for hardcore players</li>
+                                    <li>• Some upgrades feel grindy</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="mt-4 p-3 bg-green-900/30 rounded">
-                            <p class="text-sm"><strong>Bottom Line:</strong> A creative and engaging shooter that offers something different from typical tank games. The growth system keeps you invested in long-term progression.</p>
+                            <p class="text-sm"><strong>Bottom Line:</strong> A fun and accessible golf game that perfectly balances simplicity with strategic depth. Great for casual players who enjoy progression-based gameplay and don't mind some repetition.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 8-Ball Billiards Review -->
+            <!-- WACKY FLIP Review -->
             <div class="review-card rounded-lg p-6">
                 <div class="flex items-start space-x-4">
-                    <img src="images/8-ball-billiards-classic.svg" alt="8-Ball Billiards" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <img src="images/wacky-flip.svg" alt="WACKY FLIP" class="w-20 h-20 rounded-lg flex-shrink-0">
                     <div class="flex-1">
                         <div class="flex items-center justify-between mb-2">
-                            <h2 class="text-2xl font-bold text-cyan-400">8-Ball Billiards Classic</h2>
+                            <h2 class="text-2xl font-bold text-cyan-400">WACKY FLIP</h2>
                             <div class="flex items-center space-x-2">
                                 <div class="star-rating text-xl">★★★★☆</div>
                                 <span class="text-lg font-semibold">4.2/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 80%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.0/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A physics-based platformer that challenges players to master the art of flipping. With precise timing mechanics and creative level design, WACKY FLIP offers a unique and entertaining gaming experience that tests both skill and patience.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Unique physics-based mechanics</li>
+                                    <li>• Satisfying flip controls</li>
+                                    <li>• Creative level progression</li>
+                                    <li>• Good difficulty curve</li>
+                                    <li>• Addictive "one more try" gameplay</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Can be frustrating for beginners</li>
+                                    <li>• Limited visual variety</li>
+                                    <li>• Some levels feel repetitive</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-teal-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A refreshingly different platformer that rewards precision and timing. Perfect for players who enjoy physics-based challenges and don't mind a bit of trial and error.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2048 Drop Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/2048-drop.svg" alt="2048 Drop" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">2048 Drop</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.3/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A fresh twist on the classic 2048 formula, combining the familiar number-merging mechanics with gravity-based dropping elements. This innovative approach creates a more dynamic and visually engaging puzzle experience.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Innovative gravity mechanics</li>
+                                    <li>• More dynamic than original 2048</li>
+                                    <li>• Satisfying drop animations</li>
+                                    <li>• Strategic depth increased</li>
+                                    <li>• Clean, modern interface</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Can be chaotic at times</li>
+                                    <li>• Less predictable than original</li>
+                                    <li>• Requires faster decision-making</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A brilliant evolution of the 2048 concept that adds new layers of strategy and excitement. Perfect for puzzle fans looking for a fresh take on a familiar formula.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2048 Italian Brainrot Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/2048-italian-brainrot.svg" alt="2048 Italian Brainrot" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">2048 Italian Brainrot</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.1/5</span>
                             </div>
                         </div>
                         <div class="grid md:grid-cols-4 gap-4 mb-4">
@@ -381,8 +375,136 @@
                             </div>
                             <div>
                                 <div class="text-sm text-gray-400 mb-1">Graphics</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 78%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">3.9/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A hilariously chaotic take on 2048 featuring Italian memes and brainrot culture. This parody version combines traditional number-merging with absurd humor and unexpected twists that keep players entertained while still challenging their puzzle-solving skills.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Hilarious meme integration</li>
+                                    <li>• Unique cultural twist</li>
+                                    <li>• Surprising gameplay elements</li>
+                                    <li>• Great for sharing laughs</li>
+                                    <li>• Still maintains puzzle depth</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Humor might not appeal to everyone</li>
+                                    <li>• Less serious than original</li>
+                                    <li>• Some meme references may age poorly</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-purple-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A perfect blend of puzzle gameplay and internet humor. If you enjoy memes and don't mind your 2048 with a side of absurdity, this is a must-try experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brain Lines Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/brain-lines.svg" alt="Brain Lines" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Brain Lines</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.4/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 92%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.6/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 80%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.0/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            An elegant puzzle game that challenges players to connect dots and create patterns with minimal moves. Brain Lines offers a perfect balance of simplicity and depth, making it accessible to newcomers while providing enough challenge for puzzle veterans.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Clean, minimalist design</li>
+                                    <li>• Intuitive line-drawing mechanics</li>
+                                    <li>• Progressive difficulty curve</li>
+                                    <li>• Relaxing yet challenging</li>
+                                    <li>• Perfect for short sessions</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Visual style might be too simple</li>
+                                    <li>• Limited soundtrack variety</li>
+                                    <li>• Some levels feel similar</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-green-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A masterfully crafted puzzle experience that proves simplicity can be deeply engaging. Ideal for players who enjoy thoughtful, methodical puzzle-solving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Merge Brainrot Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/merge-brainrot.svg" alt="Merge Brainrot" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Merge Brainrot</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.0/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
                             </div>
                             <div>
                                 <div class="text-sm text-gray-400 mb-1">Difficulty</div>
@@ -391,52 +513,679 @@
                             </div>
                             <div>
                                 <div class="text-sm text-gray-400 mb-1">Replayability</div>
-                                <div class="rating-bar"><div class="rating-fill" style="width: 75%"></div></div>
-                                <div class="text-xs text-gray-400 mt-1">3.8/5</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 78%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">3.9/5</div>
                             </div>
                         </div>
                         <p class="text-gray-300 mb-4">
-                            A solid digital recreation of the classic pool game. Features realistic physics and clean graphics that make for an authentic billiards experience in your browser.
+                            A chaotic merging game that combines traditional merge mechanics with internet culture and meme elements. This quirky puzzle game offers a unique blend of strategy and absurdity that creates an entertaining and often hilarious gaming experience.
                         </p>
                         <div class="grid md:grid-cols-2 gap-4">
                             <div>
                                 <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
                                 <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Realistic physics simulation</li>
-                                    <li>• Clean, polished graphics</li>
-                                    <li>• Authentic pool rules</li>
-                                    <li>• Good control system</li>
+                                    <li>• Creative meme integration</li>
+                                    <li>• Unpredictable gameplay</li>
+                                    <li>• Great for laughs</li>
+                                    <li>• Unique merging mechanics</li>
+                                    <li>• Social sharing potential</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Can be too chaotic</li>
+                                    <li>• Meme humor not for everyone</li>
+                                    <li>• Less strategic depth</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-orange-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A fun, lighthearted take on merging games that prioritizes entertainment over serious strategy. Perfect for casual gaming sessions with friends.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suika Watermelon Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/suika-watermelon.svg" alt="Suika Watermelon" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Suika Watermelon</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★★</div>
+                                <span class="text-lg font-semibold">4.6/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 95%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.7/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 92%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.6/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A charming physics-based puzzle game where players drop fruits to create larger fruits, culminating in the prized watermelon. With adorable graphics and satisfying merge mechanics, Suika Watermelon has captured the hearts of puzzle enthusiasts worldwide.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Adorable fruit graphics</li>
+                                    <li>• Satisfying physics</li>
+                                    <li>• Simple yet addictive</li>
+                                    <li>• Perfect for all ages</li>
                                     <li>• Relaxing gameplay</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
                                 <ul class="text-sm text-gray-300 space-y-1">
-                                    <li>• Limited game modes</li>
-                                    <li>• AI can be predictable</li>
-                                    <li>• No online multiplayer</li>
+                                    <li>• Can be luck-dependent</li>
+                                    <li>• Limited strategic depth</li>
+                                    <li>• May feel repetitive</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="mt-4 p-3 bg-yellow-900/30 rounded">
-                            <p class="text-sm"><strong>Bottom Line:</strong> A well-executed digital pool game that's perfect for casual players and pool enthusiasts alike. Great for practicing your skills or just relaxing.</p>
+                        <div class="mt-4 p-3 bg-red-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A delightful and addictive puzzle game that's perfect for casual gaming. Its charming presentation and satisfying mechanics make it easy to see why it became a viral sensation.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 底部广告 -->
-        <div class="text-center mt-12">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-8347946979767466"
-                 data-ad-slot="1234567890"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <!-- Snow Road Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/snow-road.svg" alt="Snow Road" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Snow Road</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.2/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 78%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">3.9/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A thrilling winter racing game that challenges players to navigate treacherous snowy roads at breakneck speeds. With stunning winter landscapes and realistic physics, Snow Road delivers an adrenaline-pumping experience that tests reflexes and precision driving skills.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Beautiful winter environments</li>
+                                    <li>• Realistic snow physics</li>
+                                    <li>• Smooth controls</li>
+                                    <li>• Progressive difficulty</li>
+                                    <li>• Immersive sound design</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Can be frustratingly difficult</li>
+                                    <li>• Limited vehicle variety</li>
+                                    <li>• Repetitive track design</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A beautifully crafted winter racing experience that captures the thrill and challenge of driving on snow. Perfect for players who enjoy realistic physics and stunning visuals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traffic Road Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/traffic-road.svg" alt="Traffic Road" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Traffic Road</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.0/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 78%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">3.9/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 80%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.0/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A fast-paced endless runner that challenges players to navigate through increasingly dense traffic. With simple one-touch controls and escalating difficulty, Traffic Road provides quick, addictive gameplay sessions perfect for mobile gaming.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Simple, intuitive controls</li>
+                                    <li>• Quick session gameplay</li>
+                                    <li>• Progressive difficulty</li>
+                                    <li>• Good for short breaks</li>
+                                    <li>• Smooth performance</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Repetitive gameplay loop</li>
+                                    <li>• Limited visual variety</li>
+                                    <li>• No deep progression system</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-yellow-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A solid endless runner that delivers exactly what it promises - simple, addictive traffic-dodging action. Great for quick gaming sessions on the go.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto X3M Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/moto-x3m.svg" alt="Moto X3M" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Moto X3M</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★★</div>
+                                <span class="text-lg font-semibold">4.5/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 95%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.7/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            An exceptional motorcycle stunt racing game that combines physics-based gameplay with creative level design. Moto X3M challenges players to navigate obstacle-filled tracks while performing spectacular stunts, offering a perfect blend of skill and creativity.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Excellent physics engine</li>
+                                    <li>• Creative level design</li>
+                                    <li>• Satisfying stunt mechanics</li>
+                                    <li>• Smooth difficulty progression</li>
+                                    <li>• Great replay value</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Some levels can be frustrating</li>
+                                    <li>• Occasional physics glitches</li>
+                                    <li>• Limited customization options</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-orange-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A standout motorcycle racing game that perfectly balances challenge and fun. With its excellent physics and creative levels, it's a must-play for fans of stunt racing games.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rocket Fortress Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/rocket-fortress.svg" alt="Rocket Fortress" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Rocket Fortress</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.3/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            An explosive action game that combines rocket-powered combat with strategic fortress building. Players must construct defenses while launching devastating attacks, creating a unique blend of tower defense and offensive strategy that keeps every match exciting and unpredictable.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Unique rocket combat mechanics</li>
+                                    <li>• Strategic base building</li>
+                                    <li>• Explosive visual effects</li>
+                                    <li>• Good multiplayer potential</li>
+                                    <li>• Varied weapon types</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Steep learning curve</li>
+                                    <li>• Can feel overwhelming</li>
+                                    <li>• Needs better tutorials</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-red-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A refreshingly different action game that successfully blends offense and defense. While it takes time to master, the explosive gameplay and strategic depth make it worth the effort.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blockbuster Puzzle Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/blockbuster-puzzle.svg" alt="Blockbuster Puzzle" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Blockbuster Puzzle</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.4/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 92%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.6/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A captivating puzzle game that challenges players to think strategically about block placement and resource management. With its clever level design and satisfying progression system, Blockbuster Puzzle offers hours of brain-teasing entertainment that grows more complex and rewarding as you advance.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Clever puzzle mechanics</li>
+                                    <li>• Satisfying progression</li>
+                                    <li>• Multiple solution paths</li>
+                                    <li>• Clean, intuitive interface</li>
+                                    <li>• Great difficulty curve</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Can feel repetitive</li>
+                                    <li>• Limited visual variety</li>
+                                    <li>• Some puzzles too abstract</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-purple-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A well-crafted puzzle experience that rewards strategic thinking and careful planning. Perfect for players who enjoy methodical problem-solving with multiple valid approaches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bobbs World Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/bobbs-world.svg" alt="Bobbs World" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Bobbs World</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.1/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 78%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">3.9/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A charming strategy game that combines world-building with tactical combat. Players guide Bobbs through various challenges while building and managing their own unique world, creating a delightful blend of resource management and strategic planning that appeals to both casual and hardcore strategy fans.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Charming art style</li>
+                                    <li>• Engaging world-building</li>
+                                    <li>• Tactical depth</li>
+                                    <li>• Accessible to newcomers</li>
+                                    <li>• Good tutorial system</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Slow pace may bore some</li>
+                                    <li>• Limited multiplayer options</li>
+                                    <li>• Repetitive resource gathering</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-green-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A delightful strategy game that successfully combines world-building with tactical gameplay. Its charming presentation and accessible mechanics make it perfect for strategy newcomers while offering enough depth for veterans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Draw Crash Race Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/draw-crash-race.svg" alt="Draw Crash Race" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Draw Crash Race</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.0/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 78%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">3.9/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 80%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.0/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            An innovative racing game that lets players draw their own vehicle paths and obstacles. This creative approach to racing strategy challenges players to think tactically about route planning while competing against others, resulting in a unique blend of creativity and competition that stands out in the racing genre.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Creative drawing mechanics</li>
+                                    <li>• Strategic route planning</li>
+                                    <li>• Unique racing concept</li>
+                                    <li>• Good for creativity</li>
+                                    <li>• Multiplayer potential</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Drawing controls can be imprecise</li>
+                                    <li>• Limited single-player content</li>
+                                    <li>• Needs more game modes</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-indigo-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A refreshingly creative take on racing games that successfully combines drawing mechanics with strategic gameplay. While it has some control issues, the unique concept and creative freedom make it worth experiencing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endless Waves Survival Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/endless-waves-survival.svg" alt="Endless Waves Survival" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Endless Waves Survival</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.2/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 85%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.2/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            An intense survival strategy game that tests players' ability to withstand increasingly difficult waves of enemies. With its deep upgrade system and tactical positioning requirements, Endless Waves Survival creates a compelling loop of planning, adapting, and surviving that keeps players engaged through countless challenging encounters.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Intense wave-based combat</li>
+                                    <li>• Deep upgrade system</li>
+                                    <li>• Strategic positioning</li>
+                                    <li>• High replayability</li>
+                                    <li>• Satisfying progression</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Can be brutally difficult</li>
+                                    <li>• Repetitive wave patterns</li>
+                                    <li>• Limited visual variety</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-teal-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> A challenging and addictive survival game that perfectly captures the tension of wave-based combat. Its strategic depth and upgrade systems make every run feel different and engaging.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Idle Craft Drill Review -->
+            <div class="review-card rounded-lg p-6">
+                <div class="flex items-start space-x-4">
+                    <img src="images/idle-craft-drill.svg" alt="Idle Craft Drill" class="w-20 h-20 rounded-lg flex-shrink-0">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold text-cyan-400">Idle Craft Drill</h2>
+                            <div class="flex items-center space-x-2">
+                                <div class="star-rating text-xl">★★★★☆</div>
+                                <span class="text-lg font-semibold">4.3/5</span>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Gameplay</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 90%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.5/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Graphics</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 82%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.1/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Difficulty</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 75%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">3.7/5</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-gray-400 mb-1">Replayability</div>
+                                <div class="rating-bar"><div class="rating-fill" style="width: 88%"></div></div>
+                                <div class="text-xs text-gray-400 mt-1">4.4/5</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            A satisfying idle game that combines crafting mechanics with resource extraction. Players manage automated drilling operations while crafting increasingly complex items, creating a perfect balance of active management and passive progression that keeps you coming back to optimize your production chains.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="text-green-400 font-semibold mb-2">✅ Pros</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Satisfying progression loop</li>
+                                    <li>• Good automation mechanics</li>
+                                    <li>• Crafting depth</li>
+                                    <li>• Perfect for idle play</li>
+                                    <li>• Regular updates</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-red-400 font-semibold mb-2">❌ Cons</h3>
+                                <ul class="text-sm text-gray-300 space-y-1">
+                                    <li>• Can feel grindy</li>
+                                    <li>• Limited late-game content</li>
+                                    <li>• Repetitive crafting</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-amber-900/30 rounded">
+                            <p class="text-sm"><strong>Bottom Line:</strong> An excellent idle crafting game that perfectly balances automation with active management. Its satisfying progression and crafting depth make it perfect for players who enjoy optimizing production systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Review Summary -->

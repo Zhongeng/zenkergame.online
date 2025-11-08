@@ -1,0 +1,20 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#4ECDC4"/>
+  
+  <!-- Game character/box -->
+  <rect x="80" y="60" width="40" height="40" fill="#FF6B6B" rx="8"/>
+  <rect x="85" y="65" width="30" height="30" fill="#FFE66D" rx="5"/>
+  
+  <!-- Flip arrows -->
+  <path d="M60 100 L40 100 L50 90 M40 100 L50 110" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M140 100 L160 100 L150 90 M160 100 L150 110" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Motion lines -->
+  <path d="M80 40 L80 20 M90 35 L90 15 M100 40 L100 20" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M80 160 L80 180 M90 165 L90 185 M100 160 L100 180" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Title text -->
+  <text x="100" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">WACKY</text>
+  <text x="100" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">FLIP</text>
+</svg>

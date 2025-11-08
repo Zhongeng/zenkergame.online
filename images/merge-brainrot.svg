@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1a1a2e"/>
+  
+  <!-- Grid/game board -->
+  <rect x="50" y="50" width="300" height="200" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
+  
+  <!-- Grid lines -->
+  <g stroke="#0f3460" stroke-width="1" opacity="0.5">
+    <line x1="100" y1="50" x2="100" y2="250"/>
+    <line x1="150" y1="50" x2="150" y2="250"/>
+    <line x1="200" y1="50" x2="200" y2="250"/>
+    <line x1="250" y1="50" x2="250" y2="250"/>
+    <line x1="300" y1="50" x2="300" y2="250"/>
+    
+    <line x1="50" y1="100" x2="350" y2="100"/>
+    <line x1="50" y1="150" x2="350" y2="150"/>
+    <line x1="50" y1="200" x2="350" y2="200"/>
+  </g>
+  
+  <!-- Brainrot characters (simplified meme faces) -->
+  <!-- Character 1 - Basic brainrot -->
+  <circle cx="125" cy="125" r="20" fill="#ff6b9d" stroke="#e91e63" stroke-width="2"/>
+  <circle cx="115" cy="120" r="3" fill="#000"/>
+  <circle cx="135" cy="120" r="3" fill="#000"/>
+  <path d="M115 135 Q125 140 135 135" stroke="#000" stroke-width="2" fill="none"/>
+  
+  <!-- Character 2 - Evolved brainrot -->
+  <circle cx="225" cy="175" r="25" fill="#4ecdc4" stroke="#26a69a" stroke-width="2"/>
+  <circle cx="210" cy="170" r="4" fill="#000"/>
+  <circle cx="240" cy="170" r="4" fill="#000"/>
+  <path d="M210 185 Q225 190 240 185" stroke="#000" stroke-width="2" fill="none"/>
+  <path d="M220 180 Q225 175 230 180" stroke="#000" stroke-width="1" fill="none"/>
+  
+  <!-- Character 3 - Higher tier -->
+  <circle cx="325" cy="150" r="30" fill="#ffd93d" stroke="#ffc107" stroke-width="2"/>
+  <circle cx="305" cy="145" r="5" fill="#000"/>
+  <circle cx="345" cy="145" r="5" fill="#000"/>
+  <path d="M305 165 Q325 175 345 165" stroke="#000" stroke-width="3" fill="none"/>
+  <circle cx="325" cy="160" r="8" fill="#ff5722"/>
+  
+  <!-- Drop indicator/arrow -->
+  <path d="M200 30 L200 10 L210 20 L200 10 L190 20" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+  
+  <!-- Merge arrows -->
+  <path d="M150 150 L175 150 M165 145 L175 150 L165 155" stroke="#4caf50" stroke-width="3" fill="none"/>
+  <path d="M275 150 L250 150 M260 145 L250 150 L260 155" stroke="#4caf50" stroke-width="3" fill="none"/>
+  
+  <!-- Score/points display -->
+  <rect x="60" y="260" width="80" height="25" fill="#2e7d32" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="100" y="277" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">SCORE</text>
+  
+  <!-- Meme text elements -->
+  <text x="200" y="280" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ff6b9d" text-anchor="middle">MERGE</text>
+  <text x="200" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4ecdc4" text-anchor="middle">BRAINROT</text>
+  
+  <!-- Decorative brain symbols -->
+  <path d="M70 80 Q75 75 80 80 Q85 75 90 80 Q95 75 100 80 Q95 85 90 90 Q85 85 80 90 Q75 85 70 90 Q65 85 70 80 Z" fill="#ff6b9d" opacity="0.6"/>
+  <path d="M330 80 Q335 75 340 80 Q345 75 350 80 Q355 75 360 80 Q355 85 350 90 Q345 85 340 90 Q335 85 330 90 Q325 85 330 80 Z" fill="#4ecdc4" opacity="0.6"/>
+</svg>

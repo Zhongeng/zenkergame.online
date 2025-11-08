@@ -1,0 +1,119 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#2c3e50"/>
+  
+  <!-- Grid pattern representing 2048 game board -->
+  <defs>
+    <pattern id="grid" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
+      <rect width="23" height="23" fill="#34495e" stroke="#2c3e50" stroke-width="2"/>
+    </pattern>
+    
+    <!-- Italian flag gradient -->
+    <linearGradient id="italianFlag" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#009246"/>
+      <stop offset="33%" style="stop-color:#009246"/>
+      <stop offset="33%" style="stop-color:#ffffff"/>
+      <stop offset="66%" style="stop-color:#ffffff"/>
+      <stop offset="66%" style="stop-color:#ce2b37"/>
+      <stop offset="100%" style="stop-color:#ce2b37"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Game board grid -->
+  <rect x="25" y="25" width="150" height="100" fill="url(#grid)" rx="5"/>
+  
+  <!-- Italian flag banner -->
+  <rect x="0" y="10" width="200" height="15" fill="url(#italianFlag)"/>
+  
+  <!-- Brainrot meme faces in grid cells -->
+  <!-- Top row -->
+  <circle cx="37" cy="37" r="8" fill="#f39c12"/>
+  <circle cx="62" cy="37" r="8" fill="#e74c3c"/>
+  <circle cx="87" cy="37" r="8" fill="#9b59b6"/>
+  <circle cx="112" cy="37" r="8" fill="#3498db"/>
+  
+  <!-- Second row -->
+  <circle cx="37" cy="62" r="8" fill="#1abc9c"/>
+  <circle cx="62" cy="62" r="8" fill="#f1c40f"/>
+  <circle cx="87" cy="62" r="8" fill="#e67e22"/>
+  <circle cx="112" cy="62" r="8" fill="#95a5a6"/>
+  
+  <!-- Third row -->
+  <circle cx="37" cy="87" r="8" fill="#34495e"/>
+  <circle cx="62" cy="87" r="8" fill="#d35400"/>
+  <circle cx="87" cy="87" r="8" fill="#c0392b"/>
+  <circle cx="112" cy="87" r="8" fill="#8e44ad"/>
+  
+  <!-- Fourth row -->
+  <circle cx="37" cy="112" r="8" fill="#27ae60"/>
+  <circle cx="62" cy="112" r="8" fill="#2980b9"/>
+  <circle cx="87" cy="112" r="8" fill="#16a085"/>
+  <circle cx="112" cy="112" r="8" fill="#f39c12"/>
+  
+  <!-- Eyes on meme faces -->
+  <!-- Top row eyes -->
+  <circle cx="34" cy="34" r="2" fill="#000"/>
+  <circle cx="40" cy="34" r="2" fill="#000"/>
+  <circle cx="59" cy="34" r="2" fill="#000"/>
+  <circle cx="65" cy="34" r="2" fill="#000"/>
+  <circle cx="84" cy="34" r="2" fill="#000"/>
+  <circle cx="90" cy="34" r="2" fill="#000"/>
+  <circle cx="109" cy="34" r="2" fill="#000"/>
+  <circle cx="115" cy="34" r="2" fill="#000"/>
+  
+  <!-- Second row eyes -->
+  <circle cx="34" cy="59" r="2" fill="#000"/>
+  <circle cx="40" cy="59" r="2" fill="#000"/>
+  <circle cx="59" cy="59" r="2" fill="#000"/>
+  <circle cx="65" cy="59" r="2" fill="#000"/>
+  <circle cx="84" cy="59" r="2" fill="#000"/>
+  <circle cx="90" cy="59" r="2" fill="#000"/>
+  <circle cx="109" cy="59" r="2" fill="#000"/>
+  <circle cx="115" cy="59" r="2" fill="#000"/>
+  
+  <!-- Third row eyes -->
+  <circle cx="34" cy="84" r="2" fill="#000"/>
+  <circle cx="40" cy="84" r="2" fill="#000"/>
+  <circle cx="59" cy="84" r="2" fill="#000"/>
+  <circle cx="65" cy="84" r="2" fill="#000"/>
+  <circle cx="84" cy="84" r="2" fill="#000"/>
+  <circle cx="90" cy="84" r="2" fill="#000"/>
+  <circle cx="109" cy="84" r="2" fill="#000"/>
+  <circle cx="115" cy="84" r="2" fill="#000"/>
+  
+  <!-- Fourth row eyes -->
+  <circle cx="34" cy="109" r="2" fill="#000"/>
+  <circle cx="40" cy="109" r="2" fill="#000"/>
+  <circle cx="59" cy="109" r="2" fill="#000"/>
+  <circle cx="65" cy="109" r="2" fill="#000"/>
+  <circle cx="84" cy="109" r="2" fill="#000"/>
+  <circle cx="90" cy="109" r="2" fill="#000"/>
+  <circle cx="109" cy="109" r="2" fill="#000"/>
+  <circle cx="115" cy="109" r="2" fill="#000"/>
+  
+  <!-- Numbers on some tiles -->
+  <text x="37" y="41" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">2</text>
+  <text x="62" y="41" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">4</text>
+  <text x="87" y="41" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">8</text>
+  <text x="112" y="41" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">16</text>
+  
+  <text x="37" y="66" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">32</text>
+  <text x="62" y="66" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">64</text>
+  <text x="87" y="66" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">128</text>
+  <text x="112" y="66" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">256</text>
+  
+  <!-- Brainrot text -->
+  <text x="100" y="140" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">BRAINROT</text>
+  <text x="100" y="148" text-anchor="middle" fill="#fff" font-size="8">2048</text>
+  
+  <!-- Sparkle effects -->
+  <circle cx="150" cy="30" r="3" fill="#f1c40f" opacity="0.8"/>
+  <circle cx="170" cy="50" r="2" fill="#e67e22" opacity="0.7"/>
+  <circle cx="160" cy="80" r="2.5" fill="#f39c12" opacity="0.9"/>
+  <circle cx="180" cy="100" r="2" fill="#d35400" opacity="0.6"/>
+  
+  <!-- Small Italian flag decoration -->
+  <rect x="165" y="115" width="20" height="3" fill="#009246"/>
+  <rect x="165" y="118" width="20" height="3" fill="#ffffff"/>
+  <rect x="165" y="121" width="20" height="3" fill="#ce2b37"/>
+</svg>

@@ -1,0 +1,43 @@
+<svg width="200" height="120" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="120" fill="#1a1a2e"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#16213e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="120" fill="url(#grid)"/>
+  
+  <!-- Slope track -->
+  <path d="M 0 80 Q 50 60 100 70 T 200 50" stroke="#ff6b6b" stroke-width="8" fill="none" opacity="0.8"/>
+  
+  <!-- Ball -->
+  <circle cx="60" cy="68" r="6" fill="#4ecdc4" stroke="#45b7b8" stroke-width="2"/>
+  
+  <!-- Motion lines -->
+  <line x1="30" y1="68" x2="50" y2="68" stroke="#4ecdc4" stroke-width="2" opacity="0.6"/>
+  <line x1="25" y1="65" x2="45" y2="65" stroke="#4ecdc4" stroke-width="1" opacity="0.4"/>
+  <line x1="25" y1="71" x2="45" y2="71" stroke="#4ecdc4" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Obstacles -->
+  <rect x="120" y="60" width="8" height="15" fill="#ff4757" rx="2"/>
+  <rect x="160" y="45" width="8" height="15" fill="#ff4757" rx="2"/>
+  
+  <!-- Speed lines -->
+  <line x1="180" y1="30" x2="195" y2="30" stroke="#ffa502" stroke-width="2" opacity="0.7"/>
+  <line x1="175" y1="35" x2="190" y2="35" stroke="#ffa502" stroke-width="1" opacity="0.5"/>
+  <line x1="180" y1="40" x2="195" y2="40" stroke="#ffa502" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Score display -->
+  <rect x="10" y="10" width="60" height="20" fill="#2c3e50" stroke="#34495e" stroke-width="1" rx="3"/>
+  <text x="40" y="23" text-anchor="middle" fill="#ecf0f1" font-size="10" font-family="Arial, sans-serif">Score: 1248</text>
+  
+  <!-- Game title -->
+  <text x="100" y="105" text-anchor="middle" fill="#4ecdc4" font-size="14" font-family="Arial, sans-serif" font-weight="bold">SLOPE XTREME</text>
+  
+  <!-- Neon glow effect -->
+  <circle cx="60" cy="68" r="8" fill="none" stroke="#4ecdc4" stroke-width="1" opacity="0.3"/>
+  <circle cx="60" cy="68" r="10" fill="none" stroke="#4ecdc4" stroke-width="1" opacity="0.2"/>
+</svg>

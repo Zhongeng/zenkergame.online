@@ -45,7 +45,7 @@ Zenkergame Online 是一个精心设计的游戏网站，通过 iframe 无缝集
 
 ### 🏆 街机动作类
 - **Zenker Survivors**: 生存类Roguelike游戏
-- **Bubble Tanks 2**: 太空泡泡射击游戏
+
 - **Endless Waves Survival**: 无尽波次生存挑战
 - **Flag Arena**: 夺旗竞技对战
 - **Draw Crash Race**: 绘制路径赛车游戏

@@ -1,0 +1,80 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="url(#bgGradient)"/>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#45b7d1;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="brainGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="clickGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Brain/meme character -->
+  <circle cx="100" cy="80" r="35" fill="url(#brainGradient)" stroke="#333" stroke-width="2"/>
+  
+  <!-- Brain texture lines -->
+  <path d="M75 70 Q100 65 125 70" stroke="#333" stroke-width="1.5" fill="none"/>
+  <path d="M80 80 Q100 75 120 80" stroke="#333" stroke-width="1.5" fill="none"/>
+  <path d="M85 90 Q100 85 115 90" stroke="#333" stroke-width="1.5" fill="none"/>
+  
+  <!-- Eyes -->
+  <circle cx="88" cy="75" r="4" fill="#333"/>
+  <circle cx="112" cy="75" r="4" fill="#333"/>
+  
+  <!-- Mouth -->
+  <ellipse cx="100" cy="85" rx="8" ry="4" fill="#333"/>
+  
+  <!-- Click effect -->
+  <circle cx="100" cy="130" r="25" fill="url(#clickGradient)" opacity="0.6"/>
+  <text x="100" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">CLICK!</text>
+  
+  <!-- Clicking hand -->
+  <g transform="translate(140, 120)">
+    <ellipse cx="0" cy="0" rx="8" ry="12" fill="#fdbcb4" stroke="#333" stroke-width="1"/>
+    <ellipse cx="-8" cy="-5" rx="4" ry="6" fill="#fdbcb4" stroke="#333" stroke-width="1"/>
+    <ellipse cx="8" cy="-5" rx="4" ry="6" fill="#fdbcb4" stroke="#333" stroke-width="1"/>
+  </g>
+  
+  <!-- Numbers/coins flying -->
+  <text x="40" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffd700">+100</text>
+  <text x="160" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ff6b6b">+50</text>
+  <text x="30" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4ecdc4">+25</text>
+  
+  <!-- Upgrade icons -->
+  <g transform="translate(30, 160)">
+    <rect x="-8" y="-8" width="16" height="16" fill="#ffd93d" stroke="#333" stroke-width="1" rx="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">UP</text>
+  </g>
+  
+  <g transform="translate(170, 160)">
+    <rect x="-8" y="-8" width="16" height="16" fill="#ff6b6b" stroke="#333" stroke-width="1" rx="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#fff">LVL</text>
+  </g>
+  
+  <!-- Sparkles/effects -->
+  <circle cx="60" cy="50" r="2" fill="#ffd700" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="140" cy="40" r="1.5" fill="#ff6b6b" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="170" cy="90" r="2" fill="#4ecdc4" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Title text -->
+  <text x="100" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Italian Brainrot</text>
+  <text x="100" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#666">Clicker 2</text>
+</svg>

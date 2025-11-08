@@ -17,33 +17,59 @@
     <meta name="author" content="zenkergame.online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://zenkergame.online/guides.html">
+    
+    <!-- Hreflang Tags for International SEO -->
+    <link rel="alternate" hreflang="en" href="https://zenkergame.online/guides.html">
+    <link rel="alternate" hreflang="en-US" href="https://zenkergame.online/guides.html">
+    <link rel="alternate" hreflang="en-GB" href="https://zenkergame.online/guides.html">
+    <link rel="alternate" hreflang="en-CA" href="https://zenkergame.online/guides.html">
+    <link rel="alternate" hreflang="en-AU" href="https://zenkergame.online/guides.html">
+    <link rel="alternate" hreflang="x-default" href="https://zenkergame.online/guides.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Game Guides & Tips - Zenkergame Online | Master Your Favorite Games">
+    <meta property="og:description" content="Master your favorite games with our comprehensive guides for 20+ games. Tips, tricks, and strategies for puzzle, action, arcade, and retro games.">
+    <meta property="og:image" content="https://zenkergame.online/images/zenker-survivors.svg">
+    <meta property="og:url" content="https://zenkergame.online/guides.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Zenkergame Online">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Game Guides & Tips - Zenkergame Online">
+    <meta name="twitter:description" content="Master your favorite games with our comprehensive guides for 20+ games. Tips, tricks, and strategies included.">
+    <meta name="twitter:image" content="https://zenkergame.online/images/zenker-survivors.svg">
+    
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <title>Game Guides & Tips - Zenkergame Online | Master Your Favorite Games</title>
+    
+    <!-- Breadcrumb Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://zenkergame.online/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Game Guides",
+                "item": "https://zenkergame.online/guides.html"
+            }
+        ]
+    }
+    </script>
+    
+    <title>Game Guides & Strategies - Zenkergame Online | Tips for 20+ Games</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
-            background-attachment: fixed;
-            color: #e2e8f0;
-            min-height: 100vh;
-        }
-        
-        .guide-card {
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .guide-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(59, 130, 246, 0.5);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
@@ -74,19 +100,6 @@
             </p>
         </div>
 
-        <!-- 广告位 -->
-        <div class="text-center mb-8">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-8347946979767466"
-                 data-ad-slot="1234567890"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- 2048 Guide -->
             <div class="guide-card rounded-lg p-6">
@@ -110,112 +123,464 @@
                 </div>
             </div>
 
-            <!-- Zenker Survivors Guide -->
+            <!-- 2048 Italian Brainrot Guide -->
             <div class="guide-card rounded-lg p-6">
                 <div class="flex items-center mb-4">
-                    <img src="images/zenker-survivors.svg" alt="Zenker Survivors" class="w-12 h-12 rounded mr-4">
-                    <h2 class="text-xl font-bold text-cyan-400">Zenker Survivors Guide</h2>
+                    <img src="images/2048-italian-brainrot.svg" alt="2048 Italian Brainrot" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">2048 Italian Brainrot Mastery</h2>
                 </div>
-                <p class="text-gray-300 mb-4">Survive longer and reach higher waves with these essential survival tips.</p>
+                <p class="text-gray-300 mb-4">Combine 2048 mechanics with Italian Brainrot memes for unique puzzle fun.</p>
                 <div class="space-y-3">
-                    <h3 class="font-semibold text-purple-400">Survival Strategies:</h3>
+                    <h3 class="font-semibold text-purple-400">Brainrot Strategies:</h3>
                     <ul class="text-sm space-y-1 text-gray-300">
-                        <li>• Keep moving - never stay in one place</li>
-                        <li>• Prioritize area damage upgrades early</li>
-                        <li>• Learn enemy movement patterns</li>
-                        <li>• Collect experience gems quickly</li>
-                        <li>• Balance offense and defense upgrades</li>
+                        <li>• Merge Italian Brainrot characters strategically</li>
+                        <li>• Learn meme character progression chains</li>
+                        <li>• Use classic 2048 corner strategy</li>
+                        <li>• Plan meme combinations ahead</li>
+                        <li>• Master the unique character hierarchy</li>
                     </ul>
                     <div class="mt-4 p-3 bg-red-900/30 rounded">
-                        <p class="text-sm"><strong>Advanced Tip:</strong> Create "safe zones" by clearing enemies in corners, then use these areas to collect upgrades safely.</p>
+                        <p class="text-sm"><strong>Pro Tip:</strong> The Italian Brainrot characters follow specific evolution paths - memorize them for faster progression.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Street Fighter 2 Guide -->
+            <!-- Brain Lines Guide -->
             <div class="guide-card rounded-lg p-6">
                 <div class="flex items-center mb-4">
-                    <img src="images/street-fighter-2.svg" alt="Street Fighter 2" class="w-12 h-12 rounded mr-4">
-                    <h2 class="text-xl font-bold text-cyan-400">Street Fighter 2 Combos</h2>
+                    <img src="images/brain-lines.svg" alt="Brain Lines" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Brain Lines Mastery</h2>
                 </div>
-                <p class="text-gray-300 mb-4">Master the classic fighting game with essential combos and techniques.</p>
+                <p class="text-gray-300 mb-4">Draw lines to solve physics-based puzzles and guide objects to their targets.</p>
                 <div class="space-y-3">
-                    <h3 class="font-semibold text-purple-400">Basic Combos:</h3>
+                    <h3 class="font-semibold text-purple-400">Drawing Techniques:</h3>
                     <ul class="text-sm space-y-1 text-gray-300">
-                        <li>• Ryu: ↓↘→ + Punch (Hadoken)</li>
-                        <li>• Ryu: →↓↘ + Kick (Tatsumaki)</li>
-                        <li>• Chun-Li: ↓↙← + Kick (Kikoken)</li>
-                        <li>• Ken: ↓↘→ + Punch (Hadoken)</li>
-                        <li>• Blanka: ← (charge) → + Punch</li>
+                        <li>• Draw smooth curves for better physics</li>
+                        <li>• Use gravity to your advantage</li>
+                        <li>• Plan your line before drawing</li>
+                        <li>• Create ramps and barriers strategically</li>
+                        <li>• Test different line angles</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-blue-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Sometimes the simplest line is the most effective - avoid overcomplicating your solutions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Merge Brainrot Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/merge-brainrot.svg" alt="Merge Brainrot" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Merge Brainrot Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Merge Italian Brainrot characters to create new memes and unlock content.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Merging Strategies:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Start with basic Brainrot characters</li>
+                        <li>• Learn the merge progression tree</li>
+                        <li>• Save rare characters for better merges</li>
+                        <li>• Balance speed with strategy</li>
+                        <li>• Discover hidden character combinations</li>
                     </ul>
                     <div class="mt-4 p-3 bg-yellow-900/30 rounded">
-                        <p class="text-sm"><strong>Fighting Tip:</strong> Master the timing of special moves and learn to cancel normal attacks into special moves for devastating combos.</p>
+                        <p class="text-sm"><strong>Pro Tip:</strong> Some characters have secret evolution paths - experiment with different merge combinations to discover them.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Bubble Tanks 2 Guide -->
+            <!-- Sugar Sugar Guide -->
             <div class="guide-card rounded-lg p-6">
                 <div class="flex items-center mb-4">
-                    <img src="images/bubble-tanks-2.svg" alt="Bubble Tanks 2" class="w-12 h-12 rounded mr-4">
-                    <h2 class="text-xl font-bold text-cyan-400">Bubble Tanks 2 Strategy</h2>
+                    <img src="images/sugar-sugar.svg" alt="Sugar Sugar" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Sugar Sugar Mastery</h2>
                 </div>
-                <p class="text-gray-300 mb-4">Grow your bubble tank and dominate the battlefield with smart upgrades.</p>
+                <p class="text-gray-300 mb-4">Draw lines to guide falling sugar into cups and solve sweet physics puzzles.</p>
                 <div class="space-y-3">
-                    <h3 class="font-semibold text-purple-400">Growth Strategy:</h3>
+                    <h3 class="font-semibold text-purple-400">Sugar Guidance Techniques:</h3>
                     <ul class="text-sm space-y-1 text-gray-300">
-                        <li>• Start by hunting smaller enemies</li>
-                        <li>• Collect bubbles to grow and upgrade</li>
-                        <li>• Balance speed vs. firepower upgrades</li>
-                        <li>• Use hit-and-run tactics on larger enemies</li>
-                        <li>• Explore different areas for variety</li>
-                    </ul>
-                    <div class="mt-4 p-3 bg-green-900/30 rounded">
-                        <p class="text-sm"><strong>Upgrade Tip:</strong> Focus on weapon upgrades early, then balance with armor and speed as you face tougher enemies.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 8-Ball Billiards Guide -->
-            <div class="guide-card rounded-lg p-6">
-                <div class="flex items-center mb-4">
-                    <img src="images/8-ball-billiards-classic.svg" alt="8-Ball Billiards" class="w-12 h-12 rounded mr-4">
-                    <h2 class="text-xl font-bold text-cyan-400">8-Ball Billiards Tips</h2>
-                </div>
-                <p class="text-gray-300 mb-4">Improve your pool game with proper technique and strategic thinking.</p>
-                <div class="space-y-3">
-                    <h3 class="font-semibold text-purple-400">Essential Techniques:</h3>
-                    <ul class="text-sm space-y-1 text-gray-300">
-                        <li>• Aim for the center of your target ball</li>
-                        <li>• Control cue ball position for next shot</li>
-                        <li>• Plan 2-3 shots ahead</li>
-                        <li>• Use English (spin) for better positioning</li>
-                        <li>• Play safe when you don't have a clear shot</li>
+                        <li>• Draw gentle slopes for smooth sugar flow</li>
+                        <li>• Use gravity to direct sugar naturally</li>
+                        <li>• Create funnels to concentrate sugar streams</li>
+                        <li>• Plan for multiple sugar sources</li>
+                        <li>• Time your drawings with sugar release</li>
                     </ul>
                     <div class="mt-4 p-3 bg-purple-900/30 rounded">
-                        <p class="text-sm"><strong>Strategy Tip:</strong> Don't just focus on making balls - position the cue ball for your next shot to maintain control of the table.</p>
+                        <p class="text-sm"><strong>Pro Tip:</strong> Sugar behaves like real particles - use curved lines and gentle angles for the most natural flow patterns.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Slope Car Guide -->
+            <!-- 2048 Drop Guide -->
             <div class="guide-card rounded-lg p-6">
                 <div class="flex items-center mb-4">
-                    <img src="images/slope-car.svg" alt="Slope Car" class="w-12 h-12 rounded mr-4">
-                    <h2 class="text-xl font-bold text-cyan-400">Slope Car Mastery</h2>
+                    <img src="images/2048-drop.svg" alt="2048 Drop" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">2048 Drop Mastery</h2>
                 </div>
-                <p class="text-gray-300 mb-4">Stay on the slope longer with precise control and smart maneuvering.</p>
+                <p class="text-gray-300 mb-4">Drop tiles strategically to create 2048 combinations in this physics-based variant.</p>
                 <div class="space-y-3">
-                    <h3 class="font-semibold text-purple-400">Control Tips:</h3>
+                    <h3 class="font-semibold text-purple-400">Drop Strategies:</h3>
                     <ul class="text-sm space-y-1 text-gray-300">
-                        <li>• Make small, precise movements</li>
-                        <li>• Anticipate the slope changes</li>
-                        <li>• Use momentum to your advantage</li>
-                        <li>• Stay centered when possible</li>
-                        <li>• React quickly to sudden drops</li>
+                        <li>• Time your drops with physics in mind</li>
+                        <li>• Create landing zones for combinations</li>
+                        <li>• Use bounce mechanics strategically</li>
+                        <li>• Plan multiple drops ahead</li>
+                        <li>• Master the timing of tile physics</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-green-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> The physics engine adds randomness - always have backup plans for your tile combinations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Golf Hit Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/golf-hit.svg" alt="Golf Hit" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Golf Hit Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Master the art of golf with perfect swings, strategic club selection, and course management to achieve the lowest score.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Swing Techniques:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Time your click for perfect angle</li>
+                        <li>• Aim for the center of the power meter</li>
+                        <li>• Upgrade strength for more power</li>
+                        <li>• Improve speed for faster ball flight</li>
+                        <li>• Enhance bounce for extra distance</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-green-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Score birdies, eagles, and albatrosses for bonus coins to upgrade your equipment faster.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mr Flip Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/mr-flip.svg" alt="Mr Flip" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Mr Flip Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Master the art of flipping and parkour movement through challenging levels.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Flip Techniques:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Time your flips for perfect landings</li>
+                        <li>• Use momentum to reach distant platforms</li>
+                        <li>• Chain flips together for combo points</li>
+                        <li>• Master wall-jump mechanics</li>
+                        <li>• Practice precision landing spots</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-red-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> The key to successful flips is timing - watch your character's rotation and land when they're upright.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snow Road Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/snow-road.svg" alt="Snow Road" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Snow Road Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Navigate treacherous snowy roads and survive the endless winter driving challenge.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Winter Driving Techniques:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Control your speed on icy surfaces</li>
+                        <li>• Anticipate curves and obstacles early</li>
+                        <li>• Use gentle steering movements</li>
+                        <li>• Maintain momentum on uphill sections</li>
+                        <li>• Watch for hidden ice patches</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-cyan-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> In snowy conditions, smooth and predictable movements are safer than sudden corrections - plan your route ahead.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traffic Road Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/traffic-road.svg" alt="Traffic Road" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Traffic Road Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Navigate through heavy traffic and avoid collisions while maintaining speed and flow.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Traffic Navigation Strategies:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Read traffic patterns and flow</li>
+                        <li>• Time lane changes perfectly</li>
+                        <li>• Maintain safe following distances</li>
+                        <li>• Use mirrors and check blind spots</li>
+                        <li>• Anticipate other drivers' movements</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-yellow-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Success in heavy traffic requires patience and anticipation - look several cars ahead and plan your moves early.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto X3M Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/moto-x3m.svg" alt="Moto X3M" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Moto X3M Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Perform insane stunts and overcome deadly obstacles in this high-octane motorcycle racing game.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Stunt Techniques:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Master front and back flips for speed boosts</li>
+                        <li>• Time your landings perfectly to maintain momentum</li>
+                        <li>• Use obstacles as ramps for big air</li>
+                        <li>• Balance speed with control on tricky sections</li>
+                        <li>• Learn the optimal routes through each level</li>
                     </ul>
                     <div class="mt-4 p-3 bg-orange-900/30 rounded">
-                        <p class="text-sm"><strong>Physics Tip:</strong> The car gains speed on downward slopes - use this momentum to climb upward sections more easily.</p>
+                        <p class="text-sm"><strong>Pro Tip:</strong> Don't just focus on stunts - sometimes the fastest route is the safest one. Practice makes perfect for the most challenging obstacles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rocket Fortress Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/rocket-fortress.svg" alt="Rocket Fortress" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Rocket Fortress Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Build and defend your fortress while launching rockets at enemy structures in this strategic action game.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Fortress Strategies:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Balance offense and defense in your build</li>
+                        <li>• Aim rockets for maximum structural damage</li>
+                        <li>• Reinforce weak points in your fortress</li>
+                        <li>• Time your attacks when enemies are vulnerable</li>
+                        <li>• Adapt your strategy based on enemy defenses</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-red-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> A well-built fortress is just as important as accurate rocket fire. Focus on creating stable structures that can withstand enemy attacks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blockbuster Puzzle Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/blockbuster-puzzle.svg" alt="Blockbuster Puzzle" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Blockbuster Puzzle Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Solve explosive puzzles by strategically placing bombs to clear blocks and advance through challenging levels.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Puzzle Solving Techniques:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Plan bomb placement for maximum effect</li>
+                        <li>• Create chain reactions for bonus points</li>
+                        <li>• Save special bombs for difficult sections</li>
+                        <li>• Study level layouts before acting</li>
+                        <li>• Use physics to your advantage</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-orange-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Sometimes the most obvious solution isn't the most efficient - experiment with different bomb placements to find optimal solutions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flag Arena Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/flag-arena.svg" alt="Flag Arena" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Flag Arena Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Capture and dominate flags in this strategic arena combat game where positioning and timing are everything.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Arena Strategies:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Control key choke points on the map</li>
+                        <li>• Coordinate attacks with teammates</li>
+                        <li>• Balance offense and defense</li>
+                        <li>• Use the environment for cover</li>
+                        <li>• Time flag captures strategically</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-red-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Map control is crucial - secure advantageous positions before attempting flag captures to maintain the upper hand.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Idle Craft Drill Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/idle-craft-drill.svg" alt="Idle Craft Drill" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Idle Craft Drill Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Manage resources and upgrade your drilling operation in this addictive idle crafting game.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Resource Management:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Prioritize efficient drill upgrades</li>
+                        <li>• Balance resource collection and crafting</li>
+                        <li>• Automate production when possible</li>
+                        <li>• Invest in long-term improvements</li>
+                        <li>• Monitor resource consumption rates</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-yellow-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> The key to idle games is setting up efficient automation - focus on upgrades that increase production while you're away.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bobbs World Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/bobbs-world.svg" alt="Bobbs World" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Bobbs World Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Navigate through challenging platform levels, collecting items and avoiding obstacles in this adventure game.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Platform Strategies:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Time your jumps precisely</li>
+                        <li>• Look for hidden passages and secrets</li>
+                        <li>• Learn enemy movement patterns</li>
+                        <li>• Collect power-ups strategically</li>
+                        <li>• Practice difficult sections repeatedly</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-green-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Patience is key - study each level's layout and enemy positions before rushing through.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Draw Crash Race Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/draw-crash-race.svg" alt="Draw Crash Race" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Draw Crash Race Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Draw your own vehicle and race through creative tracks while avoiding crashes and obstacles.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Drawing & Racing Tips:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Design vehicles with good balance</li>
+                        <li>• Plan your route before drawing</li>
+                        <li>• Use smooth curves for better control</li>
+                        <li>• Anticipate upcoming obstacles</li>
+                        <li>• Practice different vehicle designs</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-indigo-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Simple designs often work better than complex ones - focus on functionality over aesthetics for better performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endless Waves Survival Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/endless-waves-survival.svg" alt="Endless Waves Survival" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Endless Waves Survival Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Survive against increasingly difficult waves of enemies while managing limited resources and upgrades.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Wave Defense:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Establish strong defensive positions</li>
+                        <li>• Upgrade weapons strategically</li>
+                        <li>• Manage ammunition carefully</li>
+                        <li>• Learn enemy spawn patterns</li>
+                        <li>• Use environmental advantages</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-red-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Early waves are for resource gathering - don't waste all your resources on early defenses, save some for the tougher waves ahead.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WACKY FLIP Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/wacky-flip.svg" alt="WACKY FLIP" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">WACKY FLIP Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Master the art of flipping with precise timing and power control.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Flipping Techniques:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Hold longer for more powerful flips</li>
+                        <li>• Time your release for perfect landings</li>
+                        <li>• Use momentum to chain multiple flips</li>
+                        <li>• Aim for the center of platforms</li>
+                        <li>• Practice different flip angles</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-teal-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Watch the trajectory arc and release just before reaching the peak of your jump for optimal distance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Italian Brainrot Clicker 2 Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/italian-brainrot-clicker-2.svg" alt="Italian Brainrot Clicker 2" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Italian Brainrot Clicker 2</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Generate Italian Brainrot memes and characters with strategic clicking.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Clicking Strategies:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Click rapidly to generate memes faster</li>
+                        <li>• Unlock new characters with upgrades</li>
+                        <li>• Focus on meme generation multipliers</li>
+                        <li>• Balance clicking speed with automation</li>
+                        <li>• Discover rare Italian Brainrot characters</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-orange-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Combine manual clicking with auto-clickers for maximum meme generation efficiency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slope Xtreme Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/slope-xtreme.svg" alt="Slope Xtreme" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Slope Xtreme Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Navigate through endless 3D slopes with perfect reflexes and control.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Navigation Techniques:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Stay centered on the slope for better control</li>
+                        <li>• Anticipate upcoming obstacles and turns</li>
+                        <li>• Use gentle movements for precise steering</li>
+                        <li>• Build momentum on straight sections</li>
+                        <li>• Practice timing for sharp turns</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-indigo-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Focus on the path ahead and use peripheral vision to maintain awareness of upcoming challenges.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Color Rush Guide -->
+            <div class="guide-card rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                    <img src="images/color-rush.svg" alt="Color Rush" class="w-12 h-12 rounded mr-4">
+                    <h2 class="text-xl font-bold text-cyan-400">Color Rush Mastery</h2>
+                </div>
+                <p class="text-gray-300 mb-4">Navigate through colorful obstacles and match colors to progress.</p>
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-purple-400">Color Matching Strategies:</h3>
+                    <ul class="text-sm space-y-1 text-gray-300">
+                        <li>• Match your ball color with the correct obstacles</li>
+                        <li>• Time your movements with color changes</li>
+                        <li>• Look ahead to plan your route</li>
+                        <li>• Collect power-ups for color advantages</li>
+                        <li>• Practice quick color recognition</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-pink-900/30 rounded">
+                        <p class="text-sm"><strong>Pro Tip:</strong> Stay calm during rapid color changes and focus on the next safe zone rather than current obstacles.</p>
                     </div>
                 </div>
             </div>

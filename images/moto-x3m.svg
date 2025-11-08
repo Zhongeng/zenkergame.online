@@ -1,0 +1,59 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#87CEEB"/>
+  
+  <!-- Ground/Track -->
+  <rect x="0" y="140" width="200" height="60" fill="#8B4513"/>
+  <rect x="0" y="135" width="200" height="10" fill="#A0522D"/>
+  
+  <!-- Hills in background -->
+  <path d="M0 100 Q50 80 100 100 T200 100 L200 140 L0 140 Z" fill="#228B22"/>
+  
+  <!-- Motorcycle body -->
+  <g transform="translate(100, 110)">
+    <!-- Main body -->
+    <ellipse cx="0" cy="10" rx="25" ry="8" fill="#FF4500"/>
+    <rect x="-20" y="2" width="40" height="6" fill="#FF6347"/>
+    
+    <!-- Wheels -->
+    <circle cx="-15" cy="20" r="8" fill="#333" stroke="#000" stroke-width="1"/>
+    <circle cx="15" cy="20" r="8" fill="#333" stroke="#000" stroke-width="1"/>
+    <circle cx="-15" cy="20" r="4" fill="#666"/>
+    <circle cx="15" cy="20" r="4" fill="#666"/>
+    
+    <!-- Handlebars -->
+    <line x1="-5" y1="-5" x2="5" y2="-5" stroke="#333" stroke-width="3"/>
+    <line x1="-5" y1="-5" x2="-8" y2="-10" stroke="#333" stroke-width="2"/>
+    <line x1="5" y1="-5" x2="8" y2="-10" stroke="#333" stroke-width="2"/>
+    
+    <!-- Rider -->
+    <circle cx="0" cy="-15" r="6" fill="#FFB6C1"/>
+    <rect x="-3" y="-9" width="6" height="12" fill="#0000FF"/>
+    <rect x="-2" y="3" width="4" height="8" fill="#0000FF"/>
+    
+    <!-- Arms -->
+    <line x1="-3" y1="-5" x2="-8" y2="-8" stroke="#FFB6C1" stroke-width="3"/>
+    <line x1="3" y1="-5" x2="8" y2="-8" stroke="#FFB6C1" stroke-width="3"/>
+    
+    <!-- Helmet -->
+    <ellipse cx="0" cy="-18" rx="7" ry="5" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+    <ellipse cx="0" cy="-18" rx="5" ry="3" fill="#FFA500"/>
+  </g>
+  
+  <!-- Ramp/Jump -->
+  <polygon points="20,140 60,120 60,140" fill="#696969" stroke="#000" stroke-width="1"/>
+  <line x1="20" y1="140" x2="60" y2="120" stroke="#000" stroke-width="2"/>
+  
+  <!-- Speed lines -->
+  <line x1="130" y1="100" x2="150" y2="100" stroke="#FFF" stroke-width="2"/>
+  <line x1="135" y1="110" x2="155" y2="110" stroke="#FFF" stroke-width="2"/>
+  <line x1="125" y1="120" x2="145" y2="120" stroke="#FFF" stroke-width="2"/>
+  
+  <!-- X3M text -->
+  <text x="100" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFF" stroke="#000" stroke-width="1">X3M</text>
+  
+  <!-- Sparks/Effects -->
+  <circle cx="70" cy="125" r="2" fill="#FFD700"/>
+  <circle cx="75" cy="130" r="1.5" fill="#FFA500"/>
+  <circle cx="68" cy="135" r="1" fill="#FF4500"/>
+</svg>

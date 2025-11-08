@@ -1,0 +1,60 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#45b7d1;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#f9ca24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0932b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="characterGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#45b7d1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" fill="url(#bgGradient)" rx="15"/>
+  
+  <!-- Color blocks representing obstacles -->
+  <rect x="30" y="40" width="25" height="25" fill="#ff6b6b" rx="5"/>
+  <rect x="70" y="60" width="25" height="25" fill="#4ecdc4" rx="5"/>
+  <rect x="110" y="45" width="25" height="25" fill="#45b7d1" rx="5"/>
+  <rect x="150" y="70" width="25" height="25" fill="#f9ca24" rx="5"/>
+  
+  <rect x="20" y="120" width="25" height="25" fill="#f0932b" rx="5"/>
+  <rect x="60" y="140" width="25" height="25" fill="#eb4d4b" rx="5"/>
+  <rect x="100" y="130" width="25" height="25" fill="#6c5ce7" rx="5"/>
+  <rect x="140" y="150" width="25" height="25" fill="#a29bfe" rx="5"/>
+  
+  <!-- Main character (color-changing ball) -->
+  <circle cx="100" cy="100" r="20" fill="url(#characterGradient)" stroke="white" stroke-width="3"/>
+  
+  <!-- Motion lines showing movement -->
+  <g opacity="0.7">
+    <line x1="60" y1="100" x2="80" y2="100" stroke="white" stroke-width="2"/>
+    <line x1="60" y1="90" x2="75" y2="90" stroke="white" stroke-width="2"/>
+    <line x1="60" y1="110" x2="75" y2="110" stroke="white" stroke-width="2"/>
+  </g>
+  
+  <!-- Color change effect -->
+  <g opacity="0.6">
+    <circle cx="100" cy="100" r="30" fill="none" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
+    <circle cx="100" cy="100" r="35" fill="none" stroke="white" stroke-width="1" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Speed/power-up indicators -->
+  <g opacity="0.8">
+    <polygon points="130,95 140,90 140,100" fill="#fff"/>
+    <polygon points="135,105 145,100 145,110" fill="#fff"/>
+  </g>
+  
+  <!-- Score display -->
+  <rect x="140" y="15" width="45" height="20" fill="rgba(0,0,0,0.3)" rx="10"/>
+  <text x="162.5" y="27.5" text-anchor="middle" fill="white" font-size="12" font-weight="bold">0</text>
+  
+  <!-- Game title -->
+  <text x="100" y="185" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Color Rush</text>
+</svg>

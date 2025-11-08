@@ -1,0 +1,69 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#87CEEB"/>
+  
+  <!-- Sugar particles falling -->
+  <g id="sugar-particles">
+    <circle cx="30" cy="40" r="2" fill="white" opacity="0.8"/>
+    <circle cx="45" cy="35" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="60" cy="45" r="2.5" fill="white" opacity="0.9"/>
+    <circle cx="75" cy="30" r="1" fill="white" opacity="0.6"/>
+    <circle cx="90" cy="50" r="2" fill="white" opacity="0.8"/>
+    <circle cx="105" cy="25" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="120" cy="40" r="2" fill="white" opacity="0.8"/>
+    <circle cx="135" cy="35" r="1" fill="white" opacity="0.6"/>
+    <circle cx="150" cy="45" r="2.5" fill="white" opacity="0.9"/>
+    <circle cx="165" cy="30" r="1.5" fill="white" opacity="0.7"/>
+  </g>
+  
+  <!-- Drawn line/path -->
+  <path d="M 25 60 Q 50 80 75 70 T 125 85 Q 150 90 175 80" 
+        stroke="#8B4513" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Sugar cup/container -->
+  <g id="cup">
+    <path d="M 140 120 L 160 120 L 165 140 L 135 140 Z" 
+          fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+    <ellipse cx="150" cy="120" rx="10" ry="3" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+    <path d="M 135 140 Q 150 145 165 140" 
+          fill="none" stroke="#B8860B" stroke-width="2"/>
+  </g>
+  
+  <!-- Sugar flowing along the path -->
+  <g id="flowing-sugar">
+    <circle cx="40" cy="68" r="1.5" fill="white"/>
+    <circle cx="65" cy="72" r="2" fill="white"/>
+    <circle cx="90" cy="78" r="1" fill="white"/>
+    <circle cx="115" cy="82" r="1.5" fill="white"/>
+    <circle cx="140" cy="86" r="2" fill="white"/>
+    <circle cx="155" cy="118" r="1.5" fill="white"/>
+  </g>
+  
+  <!-- Pencil/drawing tool -->
+  <g id="pencil" transform="rotate(-30 50 90)">
+    <rect x="45" y="85" width="4" height="20" fill="#FFD700"/>
+    <polygon points="47,85 49,85 47,80 45,80" fill="#FF6347"/>
+    <rect x="46" y="105" width="2" height="8" fill="#32CD32"/>
+    <circle cx="47" cy="113" r="1" fill="#000"/>
+  </g>
+  
+  <!-- Additional sugar crystals -->
+  <g id="sugar-crystals">
+    <polygon points="25,150 30,145 35,150 30,155" fill="white" opacity="0.9"/>
+    <polygon points="50,160 55,155 60,160 55,165" fill="white" opacity="0.8"/>
+    <polygon points="75,155 80,150 85,155 80,160" fill="white" opacity="0.7"/>
+  </g>
+  
+  <!-- Game title -->
+  <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" 
+        font-size="16" font-weight="bold" fill="#2F4F4F">
+    SUGAR SUGAR
+  </text>
+  
+  <!-- Sparkle effects -->
+  <g id="sparkles" opacity="0.6">
+    <path d="M 20 20 L 22 24 L 26 22 L 24 18 L 20 20" fill="#FFD700"/>
+    <path d="M 170 25 L 172 29 L 176 27 L 174 23 L 170 25" fill="#FFD700"/>
+    <path d="M 90 15 L 92 19 L 96 17 L 94 13 L 90 15" fill="#FFD700"/>
+  </g>
+</svg>

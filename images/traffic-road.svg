@@ -1,0 +1,104 @@
+<svg width="200" height="112" viewBox="0 0 200 112" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roadGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C3E50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="200" height="112" fill="url(#skyGradient)"/>
+  
+  <!-- Clouds -->
+  <ellipse cx="30" cy="20" rx="15" ry="8" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="35" cy="18" rx="12" ry="6" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="160" cy="25" rx="18" ry="10" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="165" cy="23" rx="14" ry="7" fill="#FFFFFF" opacity="0.7"/>
+  
+  <!-- Road -->
+  <rect x="0" y="70" width="200" height="42" fill="url(#roadGradient)"/>
+  
+  <!-- Road lines -->
+  <line x1="0" y1="85" x2="200" y2="85" stroke="#FFD700" stroke-width="2" stroke-dasharray="20,10"/>
+  
+  <!-- Cars -->
+  <!-- Red car (main car) -->
+  <g transform="translate(100, 55)">
+    <!-- Car body -->
+    <rect x="-15" y="0" width="30" height="12" rx="3" fill="#E74C3C"/>
+    <!-- Car roof -->
+    <rect x="-10" y="-5" width="20" height="5" rx="2" fill="#C0392B"/>
+    <!-- Windows -->
+    <rect x="-8" y="-4" width="6" height="3" fill="#87CEEB"/>
+    <rect x="2" y="-4" width="6" height="3" fill="#87CEEB"/>
+    <!-- Wheels -->
+    <circle cx="-8" cy="12" r="3" fill="#2C3E50"/>
+    <circle cx="8" cy="12" r="3" fill="#2C3E50"/>
+    <!-- Headlights -->
+    <circle cx="-12" cy="8" r="2" fill="#F39C12"/>
+    <circle cx="12" cy="8" r="2" fill="#F39C12"/>
+  </g>
+  
+  <!-- Blue car (left) -->
+  <g transform="translate(50, 60)">
+    <rect x="-12" y="0" width="24" height="10" rx="2" fill="#3498DB"/>
+    <rect x="-8" y="-4" width="16" height="4" rx="2" fill="#2980B9"/>
+    <rect x="-6" y="-3" width="5" height="2" fill="#87CEEB"/>
+    <rect x="1" y="-3" width="5" height="2" fill="#87CEEB"/>
+    <circle cx="-6" cy="10" r="2.5" fill="#2C3E50"/>
+    <circle cx="6" cy="10" r="2.5" fill="#2C3E50"/>
+    <circle cx="-9" cy="6" r="1.5" fill="#F39C12"/>
+    <circle cx="9" cy="6" r="1.5" fill="#F39C12"/>
+  </g>
+  
+  <!-- Green car (right) -->
+  <g transform="translate(150, 58)">
+    <rect x="-13" y="0" width="26" height="11" rx="2" fill="#27AE60"/>
+    <rect x="-9" y="-4" width="18" height="4" rx="2" fill="#229954"/>
+    <rect x="-7" y="-3" width="5" height="2" fill="#87CEEB"/>
+    <rect x="2" y="-3" width="5" height="2" fill="#87CEEB"/>
+    <circle cx="-7" cy="11" r="2.5" fill="#2C3E50"/>
+    <circle cx="7" cy="11" r="2.5" fill="#2C3E50"/>
+    <circle cx="-10" cy="7" r="1.5" fill="#F39C12"/>
+    <circle cx="10" cy="7" r="1.5" fill="#F39C12"/>
+  </g>
+  
+  <!-- Speed lines -->
+  <line x1="40" y1="50" x2="20" y2="50" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
+  <line x1="45" y1="55" x2="25" y2="55" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
+  <line x1="140" y1="48" x2="120" y2="48" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
+  <line x1="145" y1="53" x2="125" y2="53" stroke="#FFFFFF" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Road signs -->
+  <!-- Speed limit sign -->
+  <g transform="translate(25, 65)">
+    <rect x="-8" y="-8" width="16" height="16" rx="2" fill="#FFFFFF" stroke="#E74C3C" stroke-width="2"/>
+    <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#E74C3C" font-weight="bold">60</text>
+  </g>
+  
+  <!-- Traffic light -->
+  <g transform="translate(175, 45)">
+    <rect x="-3" y="-15" width="6" height="15" fill="#34495E"/>
+    <circle cx="0" cy="-10" r="2" fill="#27AE60"/>
+    <circle cx="0" cy="-6" r="2" fill="#F39C12" opacity="0.5"/>
+    <circle cx="0" cy="-2" r="2" fill="#E74C3C" opacity="0.5"/>
+  </g>
+  
+  <!-- Trees in background -->
+  <g transform="translate(10, 40)">
+    <rect x="-1" y="5" width="2" height="10" fill="#8B4513"/>
+    <polygon points="-6,5 0,-5 6,5" fill="#228B22"/>
+    <polygon points="-4,0 0,-8 4,0" fill="#32CD32"/>
+  </g>
+  
+  <g transform="translate(190, 42)">
+    <rect x="-1" y="5" width="2" height="10" fill="#8B4513"/>
+    <polygon points="-6,5 0,-5 6,5" fill="#228B22"/>
+    <polygon points="-4,0 0,-8 4,0" fill="#32CD32"/>
+  </g>
+</svg>
