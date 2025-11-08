@@ -139,7 +139,7 @@ function loadRelatedGames(currentGameId) {
         const gameCard = document.createElement('div');
         gameCard.className = 'game-card bg-white rounded-lg overflow-hidden shadow-md';
         gameCard.innerHTML = `
-            <a href="game.html?id=${game.id}&title=${encodeURIComponent(game.title)}&src=${encodeURIComponent(game.src)}">
+            <a href="game.html?id=${game.id}&title=${encodeURIComponent(game.title)}">
                 <img src="${game.image}" alt="${game.title}" class="w-full h-32 object-cover" loading="lazy">
                 <div class="p-3">
                     <h3 class="text-lg font-bold">${game.title}</h3>

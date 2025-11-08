@@ -149,13 +149,41 @@
             }
         }
         
+        // 游戏数据源映射 - 隐藏实际链接
+        const gameSources = {
+            '2048': { title: '2048 Game', src: 'https://www.crazygames.com/embed/2048' },
+            '2048-italian-brainrot': { title: '2048 Italian Brainrot', src: 'https://game.azgame.io/2048-italian-brainrot/' },
+            'golf-hit': { title: 'Golf Hit', src: 'https://game.azgame.io/golf-hit/' },
+            'rocket-fortress': { title: 'Rocket Fortress', src: 'https://gamea.azgame.io/rocket-fortress/' },
+            'mr-flip': { title: 'Mr Flip', src: 'https://gamea.azgame.io/mr-flip/' },
+            'brain-lines': { title: 'Brain Lines', src: 'https://game.azgame.io/brain-lines/' },
+            'merge-brainrot': { title: 'Merge Brainrot', src: 'https://game.azgame.io/merge-brainrot/' },
+            '2048-drop': { title: '2048 Drop', src: 'https://game.azgame.io/2048-drop/' },
+            'slope-xtreme': { title: 'Slope Xtreme', src: 'https://gamea.azgame.io/slope-xtreme/' },
+            'moto-x3m': { title: 'Moto X3M', src: 'https://azgames.io/moto-x3m.embed/' },
+            'krunker': { title: 'Krunker', src: 'https://azgames.io/krunker.embed/' },
+            'sugar-sugar': { title: 'Sugar Sugar', src: 'https://azgames.io/sugar-sugar.embed' },
+            'snow-road': { title: 'Snow Road', src: 'https://game.azgame.io/snow-road/' },
+            'traffic-road': { title: 'Traffic Road', src: 'https://azgames.io/traffic-road.embed/' },
+            'wacky-flip': { title: 'WACKY FLIP', src: 'https://game.azgame.io/wacky-flip/' },
+            'color-rush': { title: 'Color Rush', src: 'https://game.azgame.io/color-rush/' },
+            'italian-brainrot-clicker-2': { title: 'Italian Brainrot Clicker 2', src: 'https://game.azgame.io/italian-brainrot-clicker-2/' }
+        };
+        
         // 加载游戏
         function loadGame() {
             try {
                 const params = getUrlParams();
                 const gameId = params.id || '';
-                const gameTitle = params.title || 'Game';
-                const gameSrc = params.src || '';
+                
+                // 从映射中获取游戏数据
+                const gameData = gameSources[gameId];
+                if (!gameData) {
+                    throw new Error('Game not found');
+                }
+                
+                const gameTitle = gameData.title;
+                const gameSrc = gameData.src;
                 
                 // 设置页面标题
                 const pageTitle = document.getElementById('page-title');
@@ -278,7 +306,7 @@
                     const gameCard = document.createElement('div');
                     gameCard.className = 'game-card bg-white rounded-lg overflow-hidden shadow-md';
                     gameCard.innerHTML = `
-                        <a href="game.html?id=${game.id}&title=${encodeURIComponent(game.title)}&src=${encodeURIComponent(game.src)}">
+                        <a href="game.html?id=${game.id}&title=${encodeURIComponent(game.title)}">
                             <img src="${game.image}" alt="${game.title}" class="w-full h-32 object-cover">
                             <div class="p-3">
                                 <h3 class="text-lg font-bold">${game.title}</h3>
