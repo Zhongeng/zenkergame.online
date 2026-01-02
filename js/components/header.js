@@ -1,67 +1,74 @@
 /**
- * Header Component
- * Reusable navigation header with mobile menu support
+ * Header Component - Neural Arcade Design
+ * Modern dark theme navigation with search functionality
  */
 
 const headerHTML = `
-<header class="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-        <div class="flex justify-between items-center">
-            <div class="text-2xl font-bold text-white font-['Poppins']">
-                <a href="index.html" class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    Zenkergame Online
-                </a>
-            </div>
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🏠 Home</a>
-                <div class="relative group">
-                    <button class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">🎮 Games</button>
-                    <div class="absolute top-full left-0 mt-2 w-48 bg-black/80 backdrop-blur-md border border-white/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="index.html#casual" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">🎮 Casual</a>
-                        <a href="index.html#puzzle" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">🧩 Puzzle</a>
-                        <a href="index.html#action" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">⚡ Action</a>
-                    </div>
+<header class="header-glass">
+    <nav class="container py-4">
+        <div class="flex items-center justify-between gap-4">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="relative">
+                    <img src="./favicon.svg" alt="Zenkergame" class="w-9 h-9 transition-transform group-hover:scale-110" onerror="this.style.display='none'">
+                    <div class="absolute inset-0 bg-purple-500/20 rounded-lg blur-xl group-hover:bg-purple-500/30 transition-all"></div>
                 </div>
-                <a href="guides.html" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">📖 Guides</a>
-                <a href="reviews.html" class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">⭐ Reviews</a>
-                <div class="relative group">
-                    <button class="text-sm font-medium text-gray-300 hover:text-cyan-400 nav-link">ℹ️ More</button>
-                    <div class="absolute top-full left-0 mt-2 w-40 bg-black/80 backdrop-blur-md border border-white/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="about.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">About Us</a>
-                        <a href="privacy.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">Privacy</a>
-                        <a href="terms.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10">Terms</a>
-                    </div>
-                </div>
-            </nav>
+                <span class="text-xl font-bold text-white font-display tracking-wide">ZENKERGAME</span>
+            </a>
 
-            <!-- Mobile menu button -->
-            <div class="md:hidden flex items-center">
-                <button type="button" id="mobile-menu-button"
-                    class="text-gray-300 hover:text-cyan-400 focus:outline-none" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center gap-1">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#casual" class="nav-link">Casual</a>
+                <a href="index.html#puzzle" class="nav-link">Puzzle</a>
+                <a href="index.html#action" class="nav-link">Action</a>
+                <a href="guides.html" class="nav-link">Guides</a>
+                <a href="reviews.html" class="nav-link">Reviews</a>
+            </div>
+
+            <!-- Search -->
+            <div class="hidden md:flex search-container">
+                <input type="text" id="header-search" placeholder="Search games..." class="search-input" autocomplete="off">
+                <button id="header-search-btn" class="search-btn" aria-label="Search">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </button>
             </div>
+
+            <!-- Mobile menu button -->
+            <button type="button" id="mobile-menu-button" class="mobile-menu-btn lg:hidden" aria-expanded="false" aria-label="Toggle menu">
+                <svg class="w-6 h-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg class="w-6 h-6 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
         </div>
 
-        <!-- Mobile menu, show/hide based on menu state -->
-        <div id="mobile-menu" class="md:hidden hidden pt-2 pb-2">
-            <div class="flex flex-col space-y-2">
-                <a href="index.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🏠 Home</a>
-                <div class="border-l-2 border-cyan-400 ml-2 pl-2">
-                    <a href="index.html#casual" class="text-sm font-medium text-gray-300 hover:text-cyan-400 block py-1">🎮 Casual</a>
-                    <a href="index.html#puzzle" class="text-sm font-medium text-gray-300 hover:text-cyan-400 block py-1">🧩 Puzzle</a>
-                    <a href="index.html#action" class="text-sm font-medium text-gray-300 hover:text-cyan-400 block py-1">⚡ Action</a>
-                </div>
-                <a href="guides.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">📖 Guides</a>
-                <a href="reviews.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">⭐ Reviews</a>
-                <a href="about.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">ℹ️ About</a>
-                <a href="privacy.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">🔒 Privacy</a>
-                <a href="terms.html" class="text-base font-medium text-gray-300 hover:text-cyan-400 block">📄 Terms</a>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:hidden hidden pt-4">
+            <div class="flex flex-col gap-1 mb-4">
+                <a href="index.html" class="nav-link mobile-nav-link">Home</a>
+                <a href="index.html#casual" class="nav-link mobile-nav-link">Casual</a>
+                <a href="index.html#puzzle" class="nav-link mobile-nav-link">Puzzle</a>
+                <a href="index.html#action" class="nav-link mobile-nav-link">Action</a>
+                <a href="guides.html" class="nav-link mobile-nav-link">Guides</a>
+                <a href="reviews.html" class="nav-link mobile-nav-link">Reviews</a>
+                <a href="about.html" class="nav-link mobile-nav-link">About</a>
+                <a href="privacy.html" class="nav-link mobile-nav-link">Privacy</a>
+                <a href="terms.html" class="nav-link mobile-nav-link">Terms</a>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="search-container" style="display: flex;">
+                <input type="text" id="mobile-search" placeholder="Search games..." class="search-input" style="width: 100%;" autocomplete="off">
+                <button id="mobile-search-btn" class="search-btn" aria-label="Search">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
@@ -70,19 +77,106 @@ const headerHTML = `
 
 function loadHeader() {
     const headerContainer = document.getElementById('header');
-    if (headerContainer) {
-        headerContainer.innerHTML = headerHTML;
+    if (!headerContainer) return;
 
-        // Add mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    headerContainer.innerHTML = headerHTML;
 
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = mobileMenuButton?.querySelector('.menu-icon');
+    const closeIcon = mobileMenuButton?.querySelector('.close-icon');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+
+            // Toggle icons
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            }
+
+            // Close menu when clicking a link
+            mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    if (menuIcon && closeIcon) {
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
             });
-        }
+        });
     }
+
+    // Search functionality
+    const setupSearch = (inputId, btnId) => {
+        const searchInput = document.getElementById(inputId);
+        const searchBtn = document.getElementById(btnId);
+
+        const performSearch = () => {
+            const query = searchInput?.value.trim().toLowerCase();
+            if (!query) {
+                // Reset if empty
+                document.querySelectorAll('.game-card').forEach(card => {
+                    card.style.display = '';
+                });
+                return;
+            }
+
+            // Search for games
+            const gameCards = document.querySelectorAll('.game-card');
+            let found = false;
+
+            gameCards.forEach(card => {
+                const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
+                const searchData = card.getAttribute('data-search')?.toLowerCase() || '';
+
+                if (title.includes(query) || desc.includes(query) || searchData.includes(query)) {
+                    card.style.display = '';
+                    found = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show message if no results
+            const noResults = document.getElementById('no-search-results');
+            if (noResults) {
+                noResults.style.display = found ? 'none' : 'block';
+            }
+        };
+
+        searchBtn?.addEventListener('click', performSearch);
+        searchInput?.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        // Real-time search
+        searchInput?.addEventListener('input', () => {
+            const query = searchInput?.value.trim();
+            if (query.length >= 2 || query.length === 0) {
+                performSearch();
+            }
+        });
+    };
+
+    setupSearch('header-search', 'header-search-btn');
+    setupSearch('mobile-search', 'mobile-search-btn');
+
+    // Highlight active nav link
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && (currentPath === href || currentPath.endsWith(href) || (currentPath === '/' && href === 'index.html'))) {
+            link.classList.add('active');
+        }
+    });
 }
 
 // Auto-load if DOM is ready

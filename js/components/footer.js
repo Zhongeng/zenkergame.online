@@ -1,44 +1,38 @@
 /**
- * Footer Component
- * Reusable footer with links and copyright
+ * Footer Component - Neural Arcade Design
+ * Modern dark theme footer with links
  */
 
 const footerHTML = `
-<footer class="bg-black/20 border-t border-white/10 mt-16">
-    <div class="max-w-7xl mx-auto px-4 py-8">
-        <div class="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-                <h3 class="text-lg font-semibold text-white mb-4">Zenkergame Online</h3>
-                <p class="text-gray-400 text-sm">Your premier destination for free online games. Play instantly
-                    without downloads.</p>
-            </div>
-            <div>
-                <h4 class="text-md font-semibold text-gray-300 mb-3">Games</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="index.html#casual" class="text-gray-400 hover:text-cyan-400">🎮 Casual Games</a></li>
-                    <li><a href="index.html#puzzle" class="text-gray-400 hover:text-cyan-400">🧩 Puzzle Games</a></li>
-                    <li><a href="index.html#action" class="text-gray-400 hover:text-cyan-400">⚡ Action Games</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-md font-semibold text-gray-300 mb-3">Resources</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="guides.html" class="text-gray-400 hover:text-cyan-400">Game Guides</a></li>
-                    <li><a href="reviews.html" class="text-gray-400 hover:text-cyan-400">Game Reviews</a></li>
-                    <li><a href="about.html" class="text-gray-400 hover:text-cyan-400">About Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-md font-semibold text-gray-300 mb-3">Legal</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="privacy.html" class="text-gray-400 hover:text-cyan-400">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400">Terms of Service</a></li>
-                </ul>
+<footer class="footer-glass">
+    <div class="container">
+        <!-- Logo and links -->
+        <div class="text-center mb-8">
+            <a href="index.html" class="inline-flex items-center gap-3 mb-6 group">
+                <div class="relative">
+                    <img src="./favicon.svg" alt="Zenkergame" class="w-10 h-10 transition-transform group-hover:scale-110" onerror="this.style.display='none'">
+                    <div class="absolute inset-0 bg-purple-500/10 rounded-lg blur-xl"></div>
+                </div>
+                <span class="text-2xl font-bold text-white font-display tracking-wide">ZENKERGAME</span>
+            </a>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="index.html">Home</a>
+                <a href="guides.html">Guides</a>
+                <a href="reviews.html">Reviews</a>
             </div>
         </div>
-        <div class="border-t border-white/10 pt-6 text-center text-gray-400">
-            <p>&copy; 2025 Zenkergame Online. All rights reserved.</p>
-            <p class="mt-2 text-sm">Bringing you the best free online gaming experiences since 2025.</p>
+
+        <!-- Disclaimer -->
+        <div class="footer-disclaimer">
+            <p>Disclaimer: Zenkergame is an independent website. It is not affiliated with any organizations. All game content is embedded from third-party sources. All trademarks and copyrighted content belong to their respective owners.</p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-8 text-muted text-small">
+            <p>&copy; 2025 Zenkergame. All rights reserved.</p>
         </div>
     </div>
 </footer>

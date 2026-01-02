@@ -4,137 +4,433 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHL12BQ5FS"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JHL12BQ5FS');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JHL12BQ5FS');
     </script>
-    <!-- AdSense 脚本 -->
+    <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347946979767466"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play games on Zenkergame Online - An exciting game platform with various games across multiple categories.">
+    <meta name="description" content="Play games on Zenkergame - An exciting game platform with various games.">
     <meta name="keywords" content="online games, arcade games, casual games, retro games">
     <meta name="author" content="zenkergame.online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://zenkergame.online">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <title id="page-title">Game - Zenkergame Online</title>
+    <title id="page-title">Game - Zenkergame</title>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="min-h-screen">
-    <header class="bg-white shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-gray-900 font-['Poppins']">Zenkergame Online</div>
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">Home</a>
-                    <a href="index.html#casual" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">🎯 Casual</a>
-                    <a href="index.html#retro" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">🕹️ Retro</a>
-                    <a href="index.html#arcade" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">🏆 Arcade</a>
-                    <a href="index.html#about" class="text-sm font-medium text-gray-700 hover:text-blue-600 nav-link">About</a>
-                </nav>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button type="button" id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile menu, show/hide based on menu state -->
-            <div id="mobile-menu" class="md:hidden hidden pt-2 pb-2">
-                <div class="flex flex-col space-y-2">
-                    <a href="index.html" class="text-base font-medium text-gray-700 hover:text-blue-600 block">Home</a>
-                    <a href="index.html#casual" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🎯 Casual</a>
-                    <a href="index.html#retro" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🕹️ Retro</a>
-                    <a href="index.html#arcade" class="text-base font-medium text-gray-700 hover:text-blue-600 block">🏆 Arcade</a>
-                    <a href="index.html#about" class="text-base font-medium text-gray-700 hover:text-blue-600 block">About</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+<body>
+    <div id="header"></div>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <section id="game-section" class="mb-8">
-            <h1 id="game-title" class="text-3xl font-bold text-gray-900 mb-4 text-center">Loading Game...</h1>
-            <div class="game-container">
-                <div id="game-frame-container" class="relative">
-                    <iframe 
-                        id="game-frame"
-                        class="game-frame"
-                        src=""
-                        title="Game"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                        <p>Your browser does not support iframes. Please try a different browser.</p>
-                    </iframe>
-                    <div class="game-loader" id="game-loader">
-                        <div class="spinner"></div>
-                        <p>Loading game...</p>
+    <main class="container py-6">
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Main Content (70%) -->
+            <article class="lg:w-[70%]">
+                <!-- Game Preview Card -->
+                <section class="card-dark mb-6">
+                    <h1 id="game-title" class="text-2xl font-bold mb-4">Loading Game...</h1>
+                    <div class="game-frame-container">
+                        <iframe id="game-frame" class="game-frame" src="" title="Game"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-between gap-4 mt-4">
+                        <div class="rating-stars" id="game-rating">
+                            <span>★★★★☆</span>
+                        </div>
+                        <div class="share-buttons">
+                            <button class="share-btn" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </button>
+                            <button class="share-btn" title="Share on Twitter" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=Check out this game!', '_blank')">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                            </button>
+                            <button class="share-btn" title="Copy Link" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied!')">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ad Banner -->
+                <div class="ad-banner">Advertisement</div>
+
+                <!-- Game Screenshots -->
+                <section class="card-dark">
+                    <h3 class="section-title">Screenshots</h3>
+                    <div class="screenshots-grid" id="game-screenshots">
+                        <!-- Using SVG icons as placeholders -->
+                        <div class="screenshot-item"><img id="game-ss-1" src="" alt="Screenshot 1" onerror="this.src='images/2048_game.svg'"></div>
+                        <div class="screenshot-item"><img id="game-ss-2" src="" alt="Screenshot 2" onerror="this.src='images/golf-hit.svg'"></div>
+                        <div class="screenshot-item"><img id="game-ss-3" src="" alt="Screenshot 3" onerror="this.src='images/rocket-fortress.svg'"></div>
+                        <div class="screenshot-item"><img id="game-ss-4" src="" alt="Screenshot 4" onerror="this.src='images/brain-lines.svg'"></div>
+                        <div class="screenshot-item"><img id="game-ss-5" src="" alt="Screenshot 5" onerror="this.src='images/merge-brainrot.svg'"></div>
+                    </div>
+                </section>
+
+                <!-- Game Info Table -->
+                <section class="game-info-table">
+                    <table>
+                        <tr><td>Rating:</td><td id="info-rating">4.5 (1234 votes)</td></tr>
+                        <tr><td>Played:</td><td id="info-plays">56,789 times</td></tr>
+                        <tr><td>Developer:</td><td id="info-developer">Loading...</td></tr>
+                        <tr><td>Released:</td><td id="info-released">Loading...</td></tr>
+                        <tr><td>Technology:</td><td>HTML5</td></tr>
+                        <tr><td>Classification:</td><td id="info-genres">Loading...</td></tr>
+                    </table>
+                </section>
+
+                <!-- Game Content -->
+                <section class="card">
+                    <h2 class="section-title">About This Game</h2>
+                    <p id="game-description">Loading game description...</p>
+
+                    <!-- Table of Contents -->
+                    <div class="table-of-contents">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#overview">Game Overview</a></li>
+                            <li><a href="#how-to-play">How to Play</a></li>
+                            <li><a href="#tips">Tips & Tricks</a></li>
+                        </ul>
+                    </div>
+
+                    <h3 id="overview" class="text-xl font-bold text-white mt-5 mb-3">Game Overview</h3>
+                    <p id="game-overview">Loading game overview...</p>
+
+                    <h3 id="how-to-play" class="text-xl font-bold text-white mt-5 mb-3">How to Play</h3>
+                    <div id="game-instructions" class="text-muted">Loading game instructions...</div>
+
+                    <h3 id="tips" class="text-xl font-bold text-white mt-5 mb-3">Tips & Tricks</h3>
+                    <ul class="list-disc list-inside text-muted space-y-2">
+                        <li>Start with the tutorial to learn basic controls</li>
+                        <li>Practice regularly to improve your skills</li>
+                        <li>Try different strategies to find what works best</li>
+                        <li>Don't give up - some games take time to master!</li>
+                    </ul>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="card">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <h4>Is this game free to play?</h4>
+                        <p>Yes! All games on Zenkergame are completely free to play. No downloads or installations required.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I play on mobile devices?</h4>
+                        <p>Most of our games are optimized for both desktop and mobile play. Check the game details for specific compatibility.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do I need to create an account?</h4>
+                        <p>No account needed! Just click and play instantly in your browser.</p>
+                    </div>
+                </section>
+
+                <!-- Comments Section (Disqus) -->
+                <section class="comments-section">
+                    <div class="comments-header">
+                        <h2 class="section-title">Comments</h2>
+                    </div>
+                    <div id="disqus_thread"></div>
+                </section>
+            </article>
+
+            <!-- Sidebar (30%) -->
+            <aside class="lg:w-[30%]">
+                <!-- Ad Banner -->
+                <div class="sidebar-section">
+                    <div class="ad-banner">Advertisement</div>
+                </div>
+
+                <!-- More Games -->
+                <div class="sidebar-section">
+                    <h3>More Games</h3>
+                    <div class="more-games-grid" id="more-games-container">
+                        <!-- Dynamically populated -->
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- 游戏说明部分 -->
-        <section id="game-description" class="mb-8">
-            <div class="bg-white p-4 rounded-lg shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">How to Play</h2>
-                <div id="game-instructions" class="text-gray-600">
-                    Loading game instructions...
-                </div>
-            </div>
-        </section>
-
-        <!-- 相关游戏推荐 -->
-        <section id="related-games" class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">You May Also Like</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="related-games-container">
-                <!-- 相关游戏将通过JavaScript动态加载 -->
-            </div>
-        </section>
+            </aside>
+        </div>
     </main>
 
-    <!-- 响应式矩形广告 -->
-    <div class="max-w-4xl mx-auto my-6">
-        <ins class="adsbygoogle"
-             style="display:block; text-align:center;"
-             data-ad-client="ca-pub-8347946979767466"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-ad-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+    <div id="footer"></div>
 
-    <footer class="bg-white border-t">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="text-center text-gray-600">
-                <p>&copy; 2025 zenkergame.online. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Disqus Script -->
     <script>
-        // 解析URL参数
+        var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://zenkergame.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <!-- Game Data and Scripts -->
+    <script>
+        // Game database with detailed information
+        const gameDatabase = {
+            '2048': {
+                title: '2048 Game',
+                src: 'https://www.crazygames.com/embed/2048',
+                rating: 4.5,
+                votes: 12345,
+                plays: 567890,
+                developer: 'Gabriele Cirulli',
+                released: 'March 2014',
+                genres: ['Puzzle', 'Casual', 'Brain Training'],
+                description: 'Play 2048 Game now and step into the world of number merging puzzles! Combine matching tiles to create higher numbers and reach the elusive 2048 tile.',
+                overview: '2048 is a classic single-player sliding tile puzzle game. The objective is to slide numbered tiles on a grid to combine them and create a tile with the number 2048. Each move slides all tiles in one direction, and tiles with the same number merge into one.',
+                instructions: 'Use arrow keys (or swipe on mobile) to move all tiles in one direction. When two tiles with the same number touch, they merge into one with the sum of their values. Try to reach the 2048 tile!',
+                screenshots: ['images/2048_game.svg', 'images/golf-hit.svg', 'images/brain-lines.svg', 'images/merge-brainrot.svg', 'images/2048-drop.svg']
+            },
+            '2048-italian-brainrot': {
+                title: '2048 Italian Brainrot',
+                src: 'https://game.azgame.io/2048-italian-brainrot/',
+                rating: 4.6,
+                votes: 8921,
+                plays: 234567,
+                developer: 'AZ Game',
+                released: 'January 2024',
+                genres: ['Puzzle', 'Meme', 'Casual'],
+                description: 'Play 2048 Italian Brainrot now and merge viral Italian memes to reach the ultimate Brainrot tile!',
+                overview: 'A hilarious twist on the classic 2048 game, featuring popular Italian Brainrot memes. Slide and combine matching meme tiles to create higher-tier characters and reach the ultimate Brainrot!',
+                instructions: 'Use arrow keys or swipe to move Italian Brainrot memes. When two matching memes touch, they merge into a higher-tier meme. Try to reach the rarest Brainrot characters!',
+                screenshots: ['images/2048-italian-brainrot.svg', 'images/merge-brainrot.svg', 'images/italian-brainrot-clicker-2.svg', 'images/brain-lines.svg', 'images/sugar-sugar.svg']
+            },
+            'golf-hit': {
+                title: 'Golf Hit',
+                src: 'https://game.azgame.io/golf-hit/',
+                rating: 4.3,
+                votes: 5432,
+                plays: 189456,
+                developer: 'AZ Game',
+                released: 'February 2024',
+                genres: ['Sports', 'Casual', 'Physics'],
+                description: 'Play Golf Hit now! Swing your club and hit the ball for maximum distance in this fun casual golf game.',
+                overview: 'Golf Hit is an addictive casual golf game where timing and precision are key. Click and drag to set your power and angle, then release to send the ball flying. Collect coins and unlock upgrades to improve your performance!',
+                instructions: 'Click and drag to aim and set power. Release to swing the ball. Try to achieve maximum distance while avoiding obstacles. Collect coins for bonus points!',
+                screenshots: ['images/golf-hit.svg', 'images/slope-xtreme.svg', 'images/traffic-road.svg', 'images/snow-road.svg', 'images/moto-x3m.svg']
+            },
+            'rocket-fortress': {
+                title: 'Rocket Fortress',
+                src: 'https://gamea.azgame.io/rocket-fortress/',
+                rating: 4.6,
+                votes: 7654,
+                plays: 345678,
+                developer: 'AZ Game',
+                released: 'March 2024',
+                genres: ['Strategy', 'Clicker', 'RPG'],
+                description: 'Play Rocket Fortress now! Defend your fortress with powerful rockets against waves of demons.',
+                overview: 'Rocket Fortress is an exciting clicker RPG where you must defend your fortress using holy rockets. Upgrade your missiles, recruit units, and defeat waves of demons and epic bosses!',
+                instructions: 'Click or press space to fire holy missiles at demons. Use collected souls to upgrade your rockets and recruit units. Defeat all waves of enemies and powerful bosses!',
+                screenshots: ['images/rocket-fortress.svg', 'images/mr-flip.svg', 'images/wacky-flip.svg', 'images/color-rush.svg', 'images/slope-xtreme.svg']
+            },
+            'mr-flip': {
+                title: 'Mr Flip',
+                src: 'https://gamea.azgame.io/mr-flip/',
+                rating: 4.4,
+                votes: 4321,
+                plays: 156789,
+                developer: 'AZ Game',
+                released: 'January 2024',
+                genres: ['Casual', 'Physics', 'Platformer'],
+                description: 'Play Mr Flip now! Master the art of flipping and land perfectly on platforms.',
+                overview: 'Mr Flip is a physics-based platformer where timing is everything. Jump and flip through challenging levels, landing perfectly on platforms to progress. Simple to learn, hard to master!',
+                instructions: 'Click or tap to jump and flip. Time your flips to land squarely on platforms. Find the right timing and rhythm to complete each level!',
+                screenshots: ['images/mr-flip.svg', 'images/wacky-flip.svg', 'images/brain-lines.svg', 'images/golf-hit.svg', 'images/snow-road.svg']
+            },
+            'brain-lines': {
+                title: 'Brain Lines',
+                src: 'https://game.azgame.io/brain-lines/',
+                rating: 4.5,
+                votes: 6789,
+                plays: 234567,
+                developer: 'AZ Game',
+                released: 'December 2023',
+                genres: ['Puzzle', 'Physics', 'Drawing'],
+                description: 'Play Brain Lines now! Draw lines to guide the ball and solve challenging physics puzzles.',
+                overview: 'Brain Lines is a creative physics puzzle game where you draw lines to guide a ball to its target. Use your creativity and knowledge of physics to solve each level!',
+                instructions: 'Draw lines with your mouse or finger. The lines become solid objects that guide the ball. Get the ball to the target area to complete each puzzle!',
+                screenshots: ['images/brain-lines.svg', 'images/sugar-sugar.svg', 'images/2048_game.svg', 'images/2048-drop.svg', 'images/merge-brainrot.svg']
+            },
+            'merge-brainrot': {
+                title: 'Merge Brainrot',
+                src: 'https://game.azgame.io/merge-brainrot/',
+                rating: 4.7,
+                votes: 9876,
+                plays: 456789,
+                developer: 'AZ Game',
+                released: 'February 2024',
+                genres: ['Puzzle', 'Meme', 'Casual'],
+                description: 'Play Merge Brainrot now! Drop and merge viral Brainrot memes in this addictive puzzle game.',
+                overview: 'Merge Brainrot is a hilarious merge puzzle game featuring viral internet memes. Drop matching memes together to merge them into higher-tier characters. Plan your moves strategically to create chain combos!',
+                instructions: 'Drop meme tiles from the top. When two matching memes touch, they merge into a higher-tier meme. Plan your drops carefully to create massive chain combos and reach the rarest memes!',
+                screenshots: ['images/merge-brainrot.svg', 'images/2048-italian-brainrot.svg', 'images/italian-brainrot-clicker-2.svg', 'images/2048-drop.svg', 'images/brain-lines.svg']
+            },
+            '2048-drop': {
+                title: '2048 Drop',
+                src: 'https://game.azgame.io/2048-drop/',
+                rating: 4.6,
+                votes: 5432,
+                plays: 198765,
+                developer: 'AZ Game',
+                released: 'January 2024',
+                genres: ['Puzzle', 'Casual', 'Strategy'],
+                description: 'Play 2048 Drop now! Drop numbered tiles and merge them to reach 2048!',
+                overview: 'A fresh take on the classic 2048 game! Drop numbered tiles from the top and merge matching numbers to create higher values. Strategy and planning are key to reaching 2048!',
+                instructions: 'Click to drop tiles from the top. When two tiles with the same number touch, they merge. Plan your drops carefully to create chains and reach 2048!',
+                screenshots: ['images/2048-drop.svg', 'images/2048_game.svg', 'images/2048-italian-brainrot.svg', 'images/merge-brainrot.svg', 'images/sugar-sugar.svg']
+            },
+            'slope-xtreme': {
+                title: 'Slope Xtreme',
+                src: 'https://gamea.azgame.io/slope-xtreme/',
+                rating: 4.7,
+                votes: 8765,
+                plays: 345678,
+                developer: 'AZ Game',
+                released: 'March 2024',
+                genres: ['Action', '3D', 'Endless Runner'],
+                description: 'Play Slope Xtreme now! Navigate a ball through an endless 3D slope filled with obstacles.',
+                overview: 'Slope Xtreme is an adrenaline-pumping 3D endless runner. Control a ball rolling down a treacherous slope, avoiding obstacles and staying on the narrow path. Test your reflexes!',
+                instructions: 'Use arrow keys or A/D to steer left and right. Avoid obstacles and stay on the slope. The further you go, the faster it gets. How long can you survive?',
+                screenshots: ['images/slope-xtreme.svg', 'images/color-rush.svg', 'images/traffic-road.svg', 'images/snow-road.svg', 'images/moto-x3m.svg']
+            },
+            'moto-x3m': {
+                title: 'Moto X3M',
+                src: 'https://azgames.io/moto-x3m.embed/',
+                rating: 4.4,
+                votes: 6543,
+                plays: 287654,
+                developer: 'Madpuffers',
+                released: 'October 2016',
+                genres: ['Racing', 'Stunts', 'Motorcycle'],
+                description: 'Play Moto X3M now! Perform crazy motorcycle stunts through challenging obstacle courses.',
+                overview: 'Moto X3M is a thrilling motorcycle stunt game. Race through obstacle courses, perform flips and tricks, and reach the finish line as fast as possible. Master the physics and become a stunt legend!',
+                instructions: 'Use arrow keys to control your motorcycle. Up to accelerate, down to brake/reverse, left/right to lean. Perform flips in the air for bonus points. Reach the finish line quickly!',
+                screenshots: ['images/moto-x3m.svg', 'images/traffic-road.svg', 'images/snow-road.svg', 'images/slope-xtreme.svg', 'images/golf-hit.svg']
+            },
+            'krunker': {
+                title: 'Krunker',
+                src: 'https://azgames.io/krunker.embed/',
+                rating: 4.5,
+                votes: 12345,
+                plays: 567890,
+                developer: 'Krunker',
+                released: 'January 2019',
+                genres: ['FPS', 'Shooter', 'Multiplayer'],
+                description: 'Play Krunker now! Fast-paced FPS multiplayer shooter action.',
+                overview: 'Krunker is a fast-paced first-person shooter with blocky graphics and intense multiplayer action. Choose your class, master different weapons, and dominate the arena!',
+                instructions: 'WASD to move, mouse to aim and shoot, R to reload, Space to jump. Master different classes with unique abilities. Play in various game modes like TDM, FFA, and Capture the Flag!',
+                screenshots: ['images/krunker.svg', 'images/traffic-road.svg', 'images/moto-x3m.svg', 'images/snow-road.svg', 'images/rocket-fortress.svg']
+            },
+            'sugar-sugar': {
+                title: 'Sugar Sugar',
+                src: 'https://azgames.io/sugar-sugar.embed',
+                rating: 4.5,
+                votes: 5432,
+                plays: 176543,
+                developer: 'Bart Bonte',
+                released: 'May 2011',
+                genres: ['Puzzle', 'Physics', 'Drawing'],
+                description: 'Play Sugar Sugar now! Draw lines to guide falling sugar into cups.',
+                overview: 'Sugar Sugar is a creative puzzle game where you draw lines to guide falling sugar into waiting cups. Use physics and creativity to solve each level!',
+                instructions: 'Draw lines with your mouse to guide the falling sugar. The sugar will follow your lines. Get the right amount of sugar into each cup to complete the level!',
+                screenshots: ['images/sugar-sugar.svg', 'images/brain-lines.svg', 'images/2048_game.svg', 'images/merge-brainrot.svg', 'images/2048-drop.svg']
+            },
+            'snow-road': {
+                title: 'Snow Road',
+                src: 'https://game.azgame.io/snow-road/',
+                rating: 4.3,
+                votes: 4321,
+                plays: 145678,
+                developer: 'AZ Game',
+                released: 'December 2023',
+                genres: ['Racing', 'Winter', 'Endless'],
+                description: 'Play Snow Road now! Steer your sled down snowy slopes and avoid obstacles.',
+                overview: 'Snow Road is an endless winter sledding adventure. Navigate your sled through treacherous snowy slopes, dodge obstacles, and collect gift boxes. Survive as long as you can!',
+                instructions: 'Use arrow keys or A/D to steer left and right. Avoid obstacles and collect gifts. The further you go, the faster it gets. Try to beat your high score!',
+                screenshots: ['images/snow-road.svg', 'images/slope-xtreme.svg', 'images/traffic-road.svg', 'images/golf-hit.svg', 'images/moto-x3m.svg']
+            },
+            'traffic-road': {
+                title: 'Traffic Road',
+                src: 'https://azgames.io/traffic-road.embed/',
+                rating: 4.6,
+                votes: 7654,
+                plays: 298765,
+                developer: 'Ketchapp',
+                released: 'June 2015',
+                genres: ['Action', 'Driving', 'Casual'],
+                description: 'Play Traffic Road now! Navigate through busy traffic and avoid collisions.',
+                overview: 'Traffic Road is an addictive driving game where you must navigate through heavy traffic. Switch lanes strategically, avoid collisions, and reach your destination safely!',
+                instructions: 'Use arrow keys or A/D to switch lanes. Time your moves carefully to avoid oncoming traffic. Collect coins for bonus points. How far can you go?',
+                screenshots: ['images/traffic-road.svg', 'images/moto-x3m.svg', 'images/snow-road.svg', 'images/slope-xtreme.svg', 'images/golf-hit.svg']
+            },
+            'wacky-flip': {
+                title: 'WACKY FLIP',
+                src: 'https://game.azgame.io/wacky-flip/',
+                rating: 4.2,
+                votes: 3456,
+                plays: 134567,
+                developer: 'AZ Game',
+                released: 'January 2024',
+                genres: ['Casual', 'Physics', 'Platformer'],
+                description: 'Play WACKY FLIP now! A wacky physics-based flipping adventure.',
+                overview: 'WACKY FLIP is a hilarious physics platformer. Flip through wacky levels, land on platforms, and overcome obstacles. Timing and precision are key!',
+                instructions: 'Click or tap to flip. Time your flips to land on platforms. Avoid falling and obstacles. Find the right timing to complete each level!',
+                screenshots: ['images/wacky-flip.svg', 'images/mr-flip.svg', 'images/brain-lines.svg', 'images/golf-hit.svg', 'images/rocket-fortress.svg']
+            },
+            'color-rush': {
+                title: 'Color Rush',
+                src: 'https://game.azgame.io/color-rush/',
+                rating: 4.4,
+                votes: 4567,
+                plays: 167890,
+                developer: 'AZ Game',
+                released: 'February 2024',
+                genres: ['Action', 'Casual', 'Color Matching'],
+                description: 'Play Color Rush now! Navigate through colorful obstacles by matching colors.',
+                overview: 'Color Rush is a vibrant endless runner where you must match colors to pass through obstacles. Switch your character color to pass through matching barriers. Test your reflexes!',
+                instructions: 'Click or tap to switch colors. Only pass through barriers that match your current color. Collect power-ups for bonus points. React quickly to survive!',
+                screenshots: ['images/color-rush.svg', 'images/slope-xtreme.svg', 'images/snow-road.svg', 'images/traffic-road.svg', 'images/golf-hit.svg']
+            },
+            'italian-brainrot-clicker-2': {
+                title: 'Italian Brainrot Clicker 2',
+                src: 'https://game.azgame.io/italian-brainrot-clicker-2/',
+                rating: 4.3,
+                votes: 6789,
+                plays: 223456,
+                developer: 'AZ Game',
+                released: 'March 2024',
+                genres: ['Casual', 'Clicker', 'Meme'],
+                description: 'Play Italian Brainrot Clicker 2 now! Click rapidly to generate Italian memes.',
+                overview: 'The sequel to the popular clicker game! Click rapidly to generate Italian Brainrot memes and characters. Upgrade your clicking power and unlock new memes. Build your ultimate collection!',
+                instructions: 'Click or tap rapidly to generate memes. Buy upgrades to increase your clicking power. Unlock new meme tiers and try to collect them all!',
+                screenshots: ['images/italian-brainrot-clicker-2.svg', 'images/2048-italian-brainrot.svg', 'images/merge-brainrot.svg', 'images/brain-lines.svg', 'images/wacky-flip.svg']
+            }
+        };
+
+        // Get URL parameters
         function getUrlParams() {
             try {
                 const params = {};
                 if (window.location && window.location.search) {
                     const queryString = window.location.search.substring(1);
                     const pairs = queryString.split('&');
-                    
                     for (let i = 0; i < pairs.length; i++) {
                         const pair = pairs[i].split('=');
                         if (pair[0] && pair[1]) {
@@ -148,191 +444,108 @@
                 return {};
             }
         }
-        
-        // 游戏数据源映射 - 隐藏实际链接
-        const gameSources = {
-            '2048': { title: '2048 Game', src: 'https://www.crazygames.com/embed/2048' },
-            '2048-italian-brainrot': { title: '2048 Italian Brainrot', src: 'https://game.azgame.io/2048-italian-brainrot/' },
-            'golf-hit': { title: 'Golf Hit', src: 'https://game.azgame.io/golf-hit/' },
-            'rocket-fortress': { title: 'Rocket Fortress', src: 'https://gamea.azgame.io/rocket-fortress/' },
-            'mr-flip': { title: 'Mr Flip', src: 'https://gamea.azgame.io/mr-flip/' },
-            'brain-lines': { title: 'Brain Lines', src: 'https://game.azgame.io/brain-lines/' },
-            'merge-brainrot': { title: 'Merge Brainrot', src: 'https://game.azgame.io/merge-brainrot/' },
-            '2048-drop': { title: '2048 Drop', src: 'https://game.azgame.io/2048-drop/' },
-            'slope-xtreme': { title: 'Slope Xtreme', src: 'https://gamea.azgame.io/slope-xtreme/' },
-            'moto-x3m': { title: 'Moto X3M', src: 'https://azgames.io/moto-x3m.embed/' },
-            'krunker': { title: 'Krunker', src: 'https://azgames.io/krunker.embed/' },
-            'sugar-sugar': { title: 'Sugar Sugar', src: 'https://azgames.io/sugar-sugar.embed' },
-            'snow-road': { title: 'Snow Road', src: 'https://game.azgame.io/snow-road/' },
-            'traffic-road': { title: 'Traffic Road', src: 'https://azgames.io/traffic-road.embed/' },
-            'wacky-flip': { title: 'WACKY FLIP', src: 'https://game.azgame.io/wacky-flip/' },
-            'color-rush': { title: 'Color Rush', src: 'https://game.azgame.io/color-rush/' },
-            'italian-brainrot-clicker-2': { title: 'Italian Brainrot Clicker 2', src: 'https://game.azgame.io/italian-brainrot-clicker-2/' }
-        };
-        
-        // 加载游戏
+
+        // Load game
         function loadGame() {
             try {
                 const params = getUrlParams();
                 const gameId = params.id || '';
-                
-                // 从映射中获取游戏数据
-                const gameData = gameSources[gameId];
+
+                const gameData = gameDatabase[gameId];
                 if (!gameData) {
                     throw new Error('Game not found');
                 }
-                
-                const gameTitle = gameData.title;
-                const gameSrc = gameData.src;
-                
-                // 设置页面标题
+
+                // Set page title
                 const pageTitle = document.getElementById('page-title');
-                if (pageTitle) pageTitle.textContent = `${gameTitle} - Zenkergame Online`;
-                
+                if (pageTitle) pageTitle.textContent = `${gameData.title} - Zenkergame`;
+
+                // Set game title
                 const gameTitleElement = document.getElementById('game-title');
-                if (gameTitleElement) gameTitleElement.textContent = gameTitle;
-                
-                // 设置iframe源
+                if (gameTitleElement) gameTitleElement.textContent = gameData.title;
+
+                // Set iframe source
                 const gameFrame = document.getElementById('game-frame');
-                if (gameFrame && gameSrc) {
-                    gameFrame.src = gameSrc;
-                    gameFrame.title = gameTitle;
-                    
-                    // 游戏加载完成后隐藏加载器
-                    gameFrame.onload = function() {
-                        const loader = document.getElementById('game-loader');
-                        if (loader) loader.style.display = 'none';
-                    };
-                } else {
-                    const loader = document.getElementById('game-loader');
-                    if (loader) loader.style.display = 'none';
-                    const instructions = document.getElementById('game-instructions');
-                    if (instructions) instructions.innerHTML = '<p class="text-red-500">Game source not found</p>';
+                if (gameFrame && gameData.src) {
+                    gameFrame.src = gameData.src;
+                    gameFrame.title = gameData.title;
                 }
-                
-                // 设置游戏说明
-                if (gameId) setGameInstructions(gameId);
-                
-                // 加载相关游戏
-                if (gameId) loadRelatedGames(gameId);
+
+                // Set rating
+                const ratingElement = document.getElementById('game-rating');
+                if (ratingElement) {
+                    const fullStars = Math.floor(gameData.rating);
+                    const hasHalf = gameData.rating % 1 >= 0.5;
+                    let starsHTML = '';
+                    for (let i = 0; i < 5; i++) {
+                        if (i < fullStars) {
+                            starsHTML += '★';
+                        } else if (i === fullStars && hasHalf) {
+                            starsHTML += '½';
+                        } else {
+                            starsHTML += '<span class="rating-star-empty">★</span>';
+                        }
+                    }
+                    ratingElement.innerHTML = `<span>${starsHTML}</span>`;
+                }
+
+                // Set game info table
+                document.getElementById('info-rating').textContent = `${gameData.rating} (${gameData.votes.toLocaleString()} votes)`;
+                document.getElementById('info-plays').textContent = `${gameData.plays.toLocaleString()} times`;
+                document.getElementById('info-developer').textContent = gameData.developer;
+                document.getElementById('info-released').textContent = gameData.released;
+                document.getElementById('info-genres').innerHTML = gameData.genres.map(g => `<a href="index.html" class="text-sm">${g}</a>`).join(', ');
+
+                // Set game content
+                document.getElementById('game-description').textContent = gameData.description;
+                document.getElementById('game-overview').textContent = gameData.overview;
+                document.getElementById('game-instructions').textContent = gameData.instructions;
+
+                // Set screenshots (using SVG icons)
+                const screenshots = gameData.screenshots || ['images/2048_game.svg', 'images/golf-hit.svg', 'images/rocket-fortress.svg', 'images/brain-lines.svg', 'images/merge-brainrot.svg'];
+                screenshots.forEach((ss, index) => {
+                    const imgElement = document.getElementById(`game-ss-${index + 1}`);
+                    if (imgElement) imgElement.src = ss;
+                });
+
+                // Load more games in sidebar
+                loadMoreGames(gameId);
+
             } catch (error) {
                 console.error('Error loading game:', error);
-                const loader = document.getElementById('game-loader');
-                if (loader) loader.style.display = 'none';
-                const instructions = document.getElementById('game-instructions');
-                if (instructions) instructions.innerHTML = '<p class="text-red-500">Error loading game. Please try refreshing the page.</p>';
+                document.getElementById('game-title').textContent = 'Game Not Found';
+                document.getElementById('game-description').textContent = 'Sorry, the requested game could not be found.';
             }
         }
-        
-        // 设置游戏说明
-        function setGameInstructions(gameId) {
-            try {
-                const gameInstructions = {
-                    '2048': 'Use arrow keys to move the tiles. When two tiles with the same number touch, they merge into one. Try to reach the 2048 tile!',
-                    '2048-italian-brainrot': 'Slide Italian Brainrot memes to merge them. Combine matching memes to create higher-tier characters and reach the ultimate Brainrot tile!',
-                    'golf-hit': 'Click and drag to set power and angle, release to hit the golf ball. Aim for maximum distance and collect coins for upgrades.',
-                    'rocket-fortress': 'Click or press space to fire holy missiles at demons and portals. Upgrade your missiles and recruit units to defeat waves of enemies and bosses.',
-                    'mr-flip': 'Master the art of flipping! Time your jumps perfectly to land on platforms and avoid obstacles. Flip your way to victory!',
-                    'brain-lines': 'Draw lines to guide the ball to the target. Use physics and creativity to solve each puzzle level.',
-                    'merge-brainrot': 'Drop and merge matching Brainrot memes to evolve them into higher-tier characters. Plan your moves strategically to create chain combos.',
-                    'rocket-fortress': 'Build and defend your fortress with powerful rockets! Strategically place rocket launchers, upgrade your defenses, and blast away incoming enemies. Master the art of explosive defense!',
-            '2048-drop': 'Drop numbered tiles and merge them to reach 2048! Use strategy to combine tiles and create higher numbers. Plan your moves carefully to achieve the ultimate goal of 2048!',
-            'slope-xtreme': 'Navigate a ball through an endless 3D slope! Control your speed and direction to avoid obstacles and stay on the track. Test your reflexes in this thrilling endless runner!',
-                    'moto-x3m': 'Perform crazy stunts on your motorcycle! Race through challenging obstacle courses, do flips and tricks, and reach the finish line as fast as possible. Master the physics and become a stunt legend!',
-                    'krunker': 'Fast-paced FPS multiplayer shooter! Use WASD to move, mouse to aim and shoot. Master different classes, weapons, and maps in this competitive online arena.',
-                    'sugar-sugar': 'Draw lines to guide the falling sugar into the cups. Use physics and creativity to solve each level.',
-                    'snow-road': 'Steer your sled down snowy slopes! Use arrow keys to dodge obstacles, jump over hazards, and collect gift boxes. Survive as long as possible in this endless winter adventure!',
-                    'traffic-road': 'Navigate through busy traffic! Control your vehicle to avoid collisions, switch lanes strategically, and reach your destination safely. Master the art of timing and reflexes!',
-                    'wacky-flip': 'Click and hold to charge your flip power, release to flip your character. Time your flips to land on platforms and reach the goal.',
-                    'color-rush': 'Navigate through colorful obstacles by matching colors! Switch your character color to pass through matching barriers and collect power-ups. Test your reflexes in this vibrant endless runner!',
-                    'italian-brainrot-clicker-2': 'Click rapidly to generate Italian Brainrot memes and characters! Upgrade your clicking power, unlock new memes, and build your ultimate Brainrot collection. The sequel to the popular clicker game!'
-                };
-                
-                const instructionsElement = document.getElementById('game-instructions');
-                if (instructionsElement) {
-                    instructionsElement.textContent = gameInstructions[gameId] || 'Use mouse and keyboard to play. Refer to in-game instructions for specific controls.';
-                }
-            } catch (error) {
-                console.error('Error setting game instructions:', error);
-                const instructionsElement = document.getElementById('game-instructions');
-                if (instructionsElement) {
-                    instructionsElement.textContent = 'Use mouse and keyboard to play. Refer to in-game instructions for specific controls.';
-                }
-            }
-        }
-        
-        // 加载相关游戏
-        function loadRelatedGames(currentGameId) {
-            try {
-                // 游戏数据
-                const allGames = [
-                    {id: '2048', title: '2048 Game', category: 'puzzle', image: 'images/2048_game.svg', src: 'https://www.crazygames.com/embed/2048'},
-                    {id: '2048-italian-brainrot', title: '2048 Italian Brainrot', category: 'puzzle', image: 'images/2048-italian-brainrot.svg', src: 'https://game.azgame.io/2048-italian-brainrot/'},
-                    {id: 'golf-hit', title: 'Golf Hit', category: 'sports', image: 'images/golf-hit.svg', src: 'https://game.azgame.io/golf-hit/'},
-                    {id: 'rocket-fortress', title: 'Rocket Fortress', category: 'strategy', image: 'images/rocket-fortress.svg', src: 'https://gamea.azgame.io/rocket-fortress/'},
-                    {id: 'mr-flip', title: 'Mr Flip', category: 'action', image: 'images/mr-flip.svg', src: 'https://gamea.azgame.io/mr-flip/'},
-                    {id: 'brain-lines', title: 'Brain Lines', category: 'puzzle', image: 'images/brain-lines.svg', src: 'https://game.azgame.io/brain-lines/'},
-                    {id: 'merge-brainrot', title: 'Merge Brainrot', category: 'puzzle', image: 'images/merge-brainrot.svg', src: 'https://game.azgame.io/merge-brainrot/'},
-                    {id: 'rocket-fortress', title: 'Rocket Fortress', category: 'action', image: 'images/rocket-fortress.svg', src: 'https://gamea.azgame.io/rocket-fortress/'},
-            {id: '2048-drop', title: '2048 Drop', category: 'puzzle', image: 'images/2048-drop.svg', src: 'https://game.azgame.io/2048-drop/'},
-            {id: 'slope-xtreme', title: 'Slope Xtreme', category: 'casual', image: 'images/slope-xtreme.svg', src: 'https://gamea.azgame.io/slope-xtreme/'},
-                    {id: 'moto-x3m', title: 'Moto X3M', category: 'action', image: 'images/moto-x3m.svg', src: 'https://azgames.io/moto-x3m.embed/'},
-                    {id: 'krunker', title: 'Krunker', category: 'action', image: 'images/krunker.svg', src: 'https://azgames.io/krunker.embed/'},
-                    {id: 'sugar-sugar', title: 'Sugar Sugar', category: 'puzzle', image: 'images/sugar-sugar.svg', src: 'https://azgames.io/sugar-sugar.embed'},
-                    {id: 'snow-road', title: 'Snow Road', category: 'action', image: 'images/snow-road.svg', src: 'https://game.azgame.io/snow-road/'},
-                    {id: 'traffic-road', title: 'Traffic Road', category: 'action', image: 'images/traffic-road.svg', src: 'https://azgames.io/traffic-road.embed/'},
-                    {id: 'wacky-flip', title: 'WACKY FLIP', category: 'casual', image: 'images/wacky-flip.svg', src: 'https://game.azgame.io/wacky-flip/'},
-                    {id: 'color-rush', title: 'Color Rush', category: 'casual', image: 'images/color-rush.svg', src: 'https://game.azgame.io/color-rush/'},
-                    {id: 'italian-brainrot-clicker-2', title: 'Italian Brainrot Clicker 2', category: 'casual', image: 'images/italian-brainrot-clicker-2.svg', src: 'https://game.azgame.io/italian-brainrot-clicker-2/'}
-                ];
-                
-                // 过滤掉当前游戏
-                const relatedGames = allGames.filter(game => game && game.id && game.id !== currentGameId);
-                
-                // 随机选择4个游戏
-                const shuffled = relatedGames.sort(() => 0.5 - Math.random());
-                const selected = shuffled.slice(0, 4);
-                
-                // 清空容器
-                const container = document.getElementById('related-games-container');
-                if (!container) return;
-                
-                container.innerHTML = '';
-                
-                // 添加相关游戏
-                selected.forEach(game => {
-                    if (!game || !game.id || !game.title || !game.image || !game.src) return;
-                    
-                    const gameCard = document.createElement('div');
-                    gameCard.className = 'game-card bg-white rounded-lg overflow-hidden shadow-md';
-                    gameCard.innerHTML = `
-                        <a href="game.html?id=${game.id}&title=${encodeURIComponent(game.title)}">
-                            <img src="${game.image}" alt="${game.title}" class="w-full h-32 object-cover">
-                            <div class="p-3">
-                                <h3 class="text-lg font-bold">${game.title}</h3>
-                            </div>
+
+        // Load more games in sidebar
+        function loadMoreGames(currentGameId) {
+            const container = document.getElementById('more-games-container');
+            if (!container) return;
+
+            const allGames = Object.keys(gameDatabase).filter(id => id !== currentGameId);
+            const selected = allGames.slice(0, 8);
+
+            container.innerHTML = selected.map(gameId => {
+                const game = gameDatabase[gameId];
+                return `
+                    <div class="more-game-item">
+                        <a href="game.html?id=${gameId}&title=${encodeURIComponent(game.title)}">
+                            <img src="${game.screenshots[0]}" alt="${game.title}" loading="lazy">
+                            <div class="more-game-item-title">${game.title}</div>
                         </a>
-                    `;
-                    container.appendChild(gameCard);
-                });
-            } catch (error) {
-                console.error('Error loading related games:', error);
-                // 静默失败，不显示相关游戏
-                const container = document.getElementById('related-games-container');
-                if (container) {
-                    container.innerHTML = '<p class="text-gray-500 text-center col-span-full">No related games available</p>';
-                }
-            }
+                    </div>
+                `;
+            }).join('');
         }
-        
-        // 移动菜单切换
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-        
-        // 页面加载完成后执行
+
+        // Load game on page load
         document.addEventListener('DOMContentLoaded', loadGame);
     </script>
+
+    <!-- Load components -->
+    <script src="js/components/header.js"></script>
+    <script src="js/components/footer.js"></script>
+
 </body>
 </html>
