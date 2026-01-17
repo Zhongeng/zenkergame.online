@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -m http.server:*)"
+      "Bash(python -m http.server:*)",
+      "Bash(mkdir:*)",
+      "Bash(timeout:*)"
     ]
   }
 }
